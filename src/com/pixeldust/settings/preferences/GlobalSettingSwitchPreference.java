@@ -17,8 +17,8 @@
 package com.pixeldust.settings.preferences;
 
 import android.content.Context;
-import android.preference.SwitchPreference;
 import android.provider.Settings;
+import android.support.v14.preference.SwitchPreference;
 import android.util.AttributeSet;
 
 public class GlobalSettingSwitchPreference extends SwitchPreference {
@@ -57,9 +57,8 @@ public class GlobalSettingSwitchPreference extends SwitchPreference {
     }
 
     @Override
-    protected boolean isPersisted() {
-        // Using getString instead of getInt so we can simply check for null
-        // instead of catching an exception. (All values are stored as strings.)
-        return Settings.Global.getString(getContext().getContentResolver(), getKey()) != null;
+    protected void onSetInitialValue(boolean restoreValue, Object defaultValue) {
+        setChecked(Settings.System.getString(getContext().getContentResolver(), getKey()) != null ? getPersistedBoolean(isChecked())
+                : (Boolean) defaultValue);
     }
 }
