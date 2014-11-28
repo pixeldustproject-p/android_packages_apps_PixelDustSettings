@@ -849,5 +849,7 @@
   <string name="keyboard_rotation_dialog">Diese Option erzwingt ein automatisches Drehen, während die Tastatur angezeigt wird. Es hat keine Auswirkung, wenn die automatische Drehung bereits aktiviert ist.</string>
   <string name="show_enter_key_title">Eingabetaste anzeigen</string>
   <string name="show_enter_key_summary">Eingabetaste anstelle der Emoticon-Taste anzeigen</string>
+  <string name="ime_switcher_notify">Eingabemethoden Benachrichtigung</string>
+  <string name="ime_switcher_notify_summary">Benachrichtigung für Eingabemethodenauswahl anzeigen</string>
 
 </resources>

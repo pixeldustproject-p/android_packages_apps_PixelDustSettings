@@ -22,6 +22,8 @@ import android.app.DialogFragment;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.os.UserHandle;
 import android.provider.SearchIndexableResource;
@@ -92,6 +94,14 @@ public class InputMethodsSettings extends SettingsPreferenceFragment implements
         mShowEnterKey.setChecked(Settings.System.getInt(getContentResolver(),
                 Settings.System.FORMAL_TEXT_INPUT, 0) == 1);
         mShowEnterKey.setOnPreferenceChangeListener(this);
+
+        // Enable or disable mStatusBarImeSwitcher based on boolean: config_show_cmIMESwitcher
+        boolean showCmImeSwitcher = getResources().getBoolean(
+                com.android.internal.R.bool.config_show_cmIMESwitcher);
+        if (!showCmImeSwitcher) {
+            getPreferenceScreen().removePreference(
+                    findPreference(Settings.System.STATUS_BAR_IME_SWITCHER));
+        }
     }
 
     public void updateRotationTimeout(int timeout) {
