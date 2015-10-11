@@ -24,4 +24,14 @@
         android:fragment="com.pixeldust.settings.fragments.VolumeSettings"
         android:title="@string/volume_title" />
 
+    <PreferenceCategory
+        android:key="back_key"
+        android:title="@string/hardware_keys_back_key_title" >
+
+        <com.pixeldust.settings.preferences.SecureSettingSwitchPreference
+            android:key="kill_app_longpress_back"
+            android:title="@string/kill_app_longpress_back"
+            android:summary="@string/kill_app_longpress_back_summary"
+            android:defaultValue="true" />
+    </PreferenceCategory>
 </PreferenceScreen>
