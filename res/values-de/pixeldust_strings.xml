@@ -830,6 +830,7 @@
   <string name="burn_in_protection_interval_title">Zeitabstand zwischen den Verschiebungen</string>
 
   <!-- IME General -->
+  <string name="dlg_ok">OK</string>
   <string name="default_string_ime">Standard</string>
   <string name="add">Hinzufügen</string>
   <string name="enabled">Aktiviert</string>
@@ -837,5 +838,16 @@
   <string name="help">Hilfe</string>
   <string name="reset_message">Alle Einstellungen auf die Grundeinstellungen zurücksetzen?</string>
   <string name="attention">Achtung</string>
+
+  <!-- Keyboard and IME  -->
+  <string name="disable_fullscreen_keyboard_title">Vollbild-Tastatur deaktivieren</string>
+  <string name="disable_fullscreen_keyboard_summary">Die Tastatur wird im Landscape-Modus niemals den gesamten Bildschirm einnehmen</string>
+  <string name="keyboard_rotation_toggle_title">Automatische Tastaturdrehung</string>
+  <string name="keyboard_rotation_toggle_summary">Automatisches Drehen erzwingen, wenn Tastatur angezeigt wird</string>
+  <string name="keyboard_rotation_timeout_title">Timeout für automatisches Drehen</string>
+  <string name="keyboard_rotation_timeout_summary">Deaktiviert den Sensor für die automatische Drehung <xliff:g id="rotate_timeout">%1$s</xliff:g> Sekunden, nachdem die Tastatur ausgeblendet ist</string>
+  <string name="keyboard_rotation_dialog">Diese Option erzwingt ein automatisches Drehen, während die Tastatur angezeigt wird. Es hat keine Auswirkung, wenn die automatische Drehung bereits aktiviert ist.</string>
+  <string name="show_enter_key_title">Eingabetaste anzeigen</string>
+  <string name="show_enter_key_summary">Eingabetaste anstelle der Emoticon-Taste anzeigen</string>
 
 </resources>
