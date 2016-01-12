@@ -201,4 +201,8 @@
     <!-- Quick Pulldown OS panel -->
     <string name="quick_settings_quick_pull_down">Pulldown statusbar from right side to show QS panel</string>
 
+    <!-- Disable OS on lockscreen -->
+    <string name="block_on_secure_keyguard_title">Disable quick settings</string>
+    <string name="block_on_secure_keyguard_summary">Disables quick settings on secure lockscreen</string>
+
 </resources>
