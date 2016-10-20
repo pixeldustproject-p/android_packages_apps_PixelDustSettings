@@ -505,4 +505,8 @@
   <string name="ambient_play_settings_title">\"Now Playing\" ausprobieren</string>
   <string name="ambient_play_settings_summary">Songtitel angezeigt bekommen, die im Hintergrund gespielt werden</string>
 
+  <!-- Navigation bar arrow keys -->
+  <string name="show_navbar_arrow_keys_title">Cursor-Tasten bei Tastatureingabe anzeigen</string>
+  <string name="show_navbar_arrow_keys_summary">Während der Tastatureingabe Cursor-Tasten links und rechts in der Navigationsleiste anzeigen</string>
+
 </resources>

@@ -30,6 +30,13 @@
         android:summary="@string/use_bottom_gesture_summary"
         android:defaultValue="false" />
 
+    <com.pixeldust.settings.preferences.SystemSettingSwitchPreference
+        android:key="navigation_bar_menu_arrow_keys"
+        android:title="@string/show_navbar_arrow_keys_title"
+        android:summary="@string/show_navbar_arrow_keys_summary"
+        android:dependency="navigation_bar_show"
+        android:defaultValue="false" />
+
     <Preference
             android:title="@string/navbar_tuner_title" >
             <intent android:action="android.intent.action.MAIN"

@@ -531,4 +531,8 @@
     <string name="ambient_play_settings_title">Check out \"Now Playing\"</string>
     <string name="ambient_play_settings_summary">Be notified of music being played around you</string>
 
+    <!-- Navigation bar arrow keys -->
+    <string name="show_navbar_arrow_keys_title">Show arrow keys while typing</string>
+    <string name="show_navbar_arrow_keys_summary">Display left and right cursor buttons in navigation bar while typing</string>
+
 </resources>
