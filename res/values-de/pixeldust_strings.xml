@@ -509,4 +509,8 @@
   <string name="show_navbar_arrow_keys_title">Cursor-Tasten bei Tastatureingabe anzeigen</string>
   <string name="show_navbar_arrow_keys_summary">Während der Tastatureingabe Cursor-Tasten links und rechts in der Navigationsleiste anzeigen</string>
 
+  <!-- Onehand UI mode -->
+  <string name="one_hand_mode_title">Einhandmodus aktivieren</string>
+  <string name="one_hand_mode_summary">Über die Navigationsleiste nach rechts oder links wischen, um in den Einhandmodus zu wechseln</string>
+
 </resources>
