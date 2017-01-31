@@ -81,7 +81,7 @@ public class ColorPickerDialog extends Dialog implements OnColorChangedListener,
         LayoutInflater inflater = (LayoutInflater) getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
         // null root seems fine here
-        View layout = inflater.inflate(R.layout.dialog_color_picker, null);
+        View layout = inflater.inflate(R.layout.dialog_pixel_color_picker, null);
 
         setContentView(layout);
         mKey = initKey;
