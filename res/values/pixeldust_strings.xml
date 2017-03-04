@@ -109,4 +109,11 @@
     <string name="face_auto_unlock_title">Face auto unlock</string>
     <string name="face_auto_unlock_summary">Dismiss lockscreen after face unlocking</string>
 
+    <!-- Gestures: navbar double tap to sleep -->
+    <string name="double_tap_sleep_nav_bar_title">Double-tap to sleep</string>
+    <string name="double_tap_sleep_nav_bar_summary">Double tap on the navigation bar to put the device to sleep</string>
+    <!-- Lockscreen double-tap to sleep -->
+    <string name="double_tap_sleep_anywhere_title">Lockscreen double-tap to sleep</string>
+    <string name="double_tap_sleep_anywhere_summary">Double-tap anywhere on the lockscreen to put the device to sleep</string>
+
 </resources>
