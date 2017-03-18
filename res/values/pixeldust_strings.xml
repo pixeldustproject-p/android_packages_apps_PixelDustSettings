@@ -499,4 +499,8 @@
     <string name="lock_clock_font_black">Black</string>
     <string name="lock_clock_font_black_italic">Black Italic</string>
 
+    <!-- Bluetooth battery status --> 
+    <string name="bluetooth_battery_title">Bluetooth battery status</string> 
+    <string name="bluetooth_battery_summary">Display battery status for the connected bluetooth device, if available</string>
+
 </resources>
