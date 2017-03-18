@@ -160,4 +160,10 @@
 
     </PreferenceCategory>
 
+    <com.pixeldust.settings.preferences.SystemSettingSwitchPreference
+        android:key="bluetooth_show_battery"
+        android:title="@string/bluetooth_battery_title"
+        android:summary="@string/bluetooth_battery_summary"
+        android:defaultValue="true"/>
+
 </PreferenceScreen>
