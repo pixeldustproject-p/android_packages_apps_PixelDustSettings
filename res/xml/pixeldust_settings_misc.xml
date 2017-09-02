@@ -24,4 +24,9 @@
          android:summary="@string/smart_pixels_summary"
          android:fragment="com.pixeldust.settings.fragments.SmartPixels" />
 
+    <Preference
+         android:key="wakelock_blocker"
+         android:fragment="com.pixeldust.settings.fragments.WakeLockBlocker"
+         android:title="@string/wakelock_blocker_title" />
+
 </PreferenceScreen>
