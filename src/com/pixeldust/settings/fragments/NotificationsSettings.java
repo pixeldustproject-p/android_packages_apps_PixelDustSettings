@@ -20,6 +20,11 @@ import android.content.Context;
 import android.os.Bundle;
 import android.provider.SearchIndexableResource;
 import android.provider.Settings;
+import android.support.v7.preference.ListPreference;
+import android.support.v7.preference.Preference;
+import android.support.v7.preference.PreferenceCategory;
+import android.support.v7.preference.PreferenceScreen;
+import android.support.v7.preference.Preference.OnPreferenceChangeListener;
 
 import com.android.internal.logging.nano.MetricsProto;
 import com.android.settings.R;
@@ -30,13 +35,25 @@ import com.android.settings.SettingsPreferenceFragment;
 import java.util.ArrayList;
 import java.util.List;
 
-public class NotificationsSettings extends SettingsPreferenceFragment implements Indexable {
+import com.pixeldust.settings.preferences.PixelDustSettingsUtils;
+
+public class NotificationsSettings extends SettingsPreferenceFragment implements
+         Indexable {
+
+    private static final String INCALL_VIB_OPTIONS = "incall_vib_options";
 
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
 
         addPreferencesFromResource(R.xml.pixeldust_settings_notifications);
+
+        PreferenceScreen prefScreen = getPreferenceScreen();
+
+        PreferenceCategory incallVibCategory = (PreferenceCategory) findPreference(INCALL_VIB_OPTIONS);
+        if (!PixelDustSettingsUtils.isVoiceCapable(getActivity())) {
+            prefScreen.removePreference(incallVibCategory);
+        }
     }
 
     @Override
