@@ -86,4 +86,8 @@
     <!-- Notification light settings -->
     <string name="notification_light_settings">Notifications light</string>
 
+    <!-- Navbar Settings -->
+    <string name="enable_navigation_bar_title">Enable navigation bar</string>
+    <string name="enable_navigation_bar_summary">Option to enable or disable the navigation bar</string>
+
 </resources>
