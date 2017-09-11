@@ -558,4 +558,17 @@
     <string name="edge_gestures_description_summary">Kurzanleitung:\nVon unten nach oben wischen, um die HOME-Geste auszulösen, dann gedrückt halten, um LETZTE APPS zu öffnen. Vom unteren linken oder unteren rechten Rand aus wischen für die ZURÜCK-Geste.</string>
     <string name="gesture_nav">Navigation</string>
 
+    <!-- Buttons backlight timeout -->
+    <string name="backlight_timeout_title">Timeout für die Hintergrundbeleuchtung der Tasten</string>
+    <string name="backlight_timeout_on">Immer aktiviert</string>
+    <string name="backlight_timeout_3s">3 sek</string>
+    <string name="backlight_timeout_default">5 sek (Standard)</string>
+    <string name="backlight_timeout_10s">10 sek</string>
+    <string name="backlight_timeout_15s">15 sek</string>
+    <string name="backlight_timeout_20s">20 sek</string>
+    <string name="backlight_timeout_30s">30 sek</string>
+
+    <!-- Enable keys backlight-->
+    <string name="button_brightness_title">Hintergrundbeleuchtung</string>
+
 </resources>
