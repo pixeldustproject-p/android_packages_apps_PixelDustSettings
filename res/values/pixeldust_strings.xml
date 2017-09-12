@@ -252,4 +252,9 @@
     <string name="battery_percent_outside">Show near icon</string>
     <string name="battery_percent_inside">Show inside icon</string>
 
+    <!-- Hide Apps from Recents -->
+    <string name="hide_apps_from_recents_title">Hide apps from recents</string>
+    <string name="hide_from_recents_add_app">Add App</string>
+    <string name="hide_apps_from_recents_summary">Select certian apps to hide in recents</string>
+
 </resources>
