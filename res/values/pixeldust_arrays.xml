@@ -15,4 +15,11 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
+    <!-- Base attributes available to CustomSeekBarPreference. -->
+    <declare-styleable name="CustomSeekBarPreference">
+        <attr name="interval" format="integer" />
+        <attr name="min" format="integer" />
+        <attr name="units" format="string|reference" />
+        <attr name="defaultText" format="string|reference" />
+    </declare-styleable>
 </resources>
