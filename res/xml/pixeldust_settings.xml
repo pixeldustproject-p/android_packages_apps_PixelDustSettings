@@ -77,7 +77,7 @@
         <Preference
             android:key="notifications_category"
             android:title="@string/notifications_title"
-            android:fragment="com.pixeldust.settings.fragments.NotificationSettings"
+            android:fragment="com.pixeldust.settings.fragments.NotificationsSettings"
             android:icon="@drawable/ic_settings_notifications"/>
 
         <!-- Misc -->
