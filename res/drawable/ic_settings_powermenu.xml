@@ -14,13 +14,18 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<vector xmlns:android="http://schemas.android.com/apk/res/android"
-    android:width="24dp"
-    android:height="24dp"
-    android:viewportWidth="24.0"
-    android:viewportHeight="24.0">
-
-    <path
-        android:fillColor="?*android:attr/colorControlNormal"
-        android:pathData="M7,24h2v-2L7,22v2zM11,24h2v-2h-2v2zM13,2h-2v10h2L13,2zM16.56,4.44l-1.45,1.45C16.84,6.94 18,8.83 18,11c0,3.31 -2.69,6 -6,6s-6,-2.69 -6,-6c0,-2.17 1.16,-4.06 2.88,-5.12L7.44,4.44C5.36,5.88 4,8.28 4,11c0,4.42 3.58,8 8,8s8,-3.58 8,-8c0,-2.72 -1.36,-5.12 -3.44,-6.56zM15,24h2v-2h-2v2z"/>
+<vector android:height="24dp" android:viewportHeight="2400.0"
+    android:viewportWidth="2400.0" android:width="24dp" xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="?android:attr/colorControlNormal"
+        android:pathData="M960,2361c-248,-57 -441,-168 -615,-352 -159,-170 -257,-361 -300,-584 -21,-108 -21,-335 0,-445 74,-388 369,-738 743,-880 132,-50 202,-63 372,-68 195,-5 275,5 419,54 190,65 337,160 479,309 163,171 265,366 307,588 22,118 20,351 -5,468 -63,302 -250,572 -514,744 -44,29 -99,62 -122,73 -59,30 -207,79 -292,97 -103,21 -371,19 -472,-4zM1455,2142c100,-28 144,-45 220,-87 209,-112 379,-313 450,-530 36,-113 40,-143 40,-325 0,-176 -1,-190 -28,-275 -95,-300 -301,-518 -589,-624 -210,-78 -426,-79 -676,-2 -19,6 -39,14 -45,19 -7,5 -28,15 -47,22 -63,24 -210,131 -271,199 -121,132 -195,269 -238,443 -29,120 -30,330 -1,444 102,401 403,677 805,738 73,11 311,-3 380,-22z" android:strokeColor="#00000000"/>
+    <path android:fillColor="?android:attr/colorControlNormal"
+        android:pathData="M1385,1850c-83,-13 -125,-27 -204,-66 -144,-71 -287,-252 -323,-409 -27,-119 -9,-315 38,-408 59,-116 176,-247 220,-247 23,0 104,79 104,101 0,10 -20,34 -45,54 -114,94 -179,270 -155,421 28,175 161,326 326,369 167,43 348,-6 457,-125 114,-125 151,-292 100,-455 -26,-81 -52,-123 -119,-190 -35,-34 -64,-69 -64,-77 0,-21 83,-98 106,-98 13,0 50,29 93,73 172,172 225,421 140,657 -26,73 -96,174 -163,236 -68,63 -207,144 -248,144 -11,0 -27,4 -36,9 -25,13 -170,20 -227,11z" android:strokeColor="#00000000"/>
+    <path android:fillColor="?android:attr/colorControlNormal"
+        android:pathData="M449,1713c-9,-10 -14,-42 -14,-88 0,-99 6,-105 114,-105 54,0 92,5 99,12 16,16 16,170 0,186 -7,7 -45,12 -99,12 -68,0 -89,-3 -100,-17z" android:strokeColor="#00000000"/>
+    <path android:fillColor="?android:attr/colorControlNormal"
+        android:pathData="M454,1309c-15,-17 -19,-36 -19,-94 0,-99 6,-105 114,-105 54,0 92,5 99,12 7,7 12,43 12,93 0,106 -8,115 -112,115 -63,0 -78,-3 -94,-21z" android:strokeColor="#00000000"/>
+    <path android:fillColor="?android:attr/colorControlNormal"
+        android:pathData="M1390,1291c-14,-27 -14,-725 0,-752 9,-16 22,-19 78,-19 40,0 73,5 80,12 16,16 17,729 2,759 -9,16 -22,19 -80,19 -58,0 -71,-3 -80,-19z" android:strokeColor="#00000000"/>
+    <path android:fillColor="?android:attr/colorControlNormal"
+        android:pathData="M454,899c-15,-17 -19,-36 -19,-94 0,-99 6,-105 114,-105 54,0 92,5 99,12 7,7 12,44 12,94 0,104 -10,114 -116,114 -59,0 -74,-3 -90,-21z" android:strokeColor="#00000000"/>
 </vector>
