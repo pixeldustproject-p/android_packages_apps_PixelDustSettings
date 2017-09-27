@@ -17,9 +17,17 @@
 package com.pixeldust.settings.fragments;
 
 import android.content.Context;
+import android.content.res.Resources;
+import android.hardware.fingerprint.FingerprintManager;
+import android.net.Uri;
 import android.os.Bundle;
 import android.provider.SearchIndexableResource;
 import android.provider.Settings;
+import android.support.v14.preference.SwitchPreference;
+import android.support.v7.preference.ListPreference;
+import android.support.v7.preference.Preference;
+import android.support.v7.preference.PreferenceCategory;
+import android.support.v7.preference.PreferenceScreen;
 
 import com.android.internal.logging.nano.MetricsProto;
 import com.android.settings.R;
@@ -32,11 +40,25 @@ import java.util.List;
 
 public class LockScreenSettings extends SettingsPreferenceFragment implements Indexable {
 
+    private static final String FINGERPRINT_VIB = "fingerprint_success_vib";
+
+    private FingerprintManager mFingerprintManager;
+    private SwitchPreference mFingerprintVib;
+
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
 
         addPreferencesFromResource(R.xml.pixeldust_settings_lockscreen);
+
+        final PreferenceScreen prefScreen = getPreferenceScreen();
+        Resources resources = getResources();
+
+        mFingerprintManager = (FingerprintManager) getActivity().getSystemService(Context.FINGERPRINT_SERVICE);
+        mFingerprintVib = (SwitchPreference) findPreference(FINGERPRINT_VIB);
+        if (mFingerprintManager == null){
+            prefScreen.removePreference(mFingerprintVib);
+        }
     }
 
     @Override
