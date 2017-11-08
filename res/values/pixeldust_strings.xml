@@ -204,6 +204,9 @@
     <!-- Heads up options -->
     <string name="heads_up_cat_title">Heads up</string>
     <string name="heads_up_cat_summary">Timeout, Snooze, Blacklist etc.</string>
+    <string name="heads_up_title">Enable</string>
+    <string name="heads_up_summary_enabled">Heads up notifications are enabled</string>
+    <string name="heads_up_summary_disabled">Heads up notifications are disabled</string>
 
     <!-- Disable OS on lockscreen -->
     <string name="block_on_secure_keyguard_title">Disable quick settings</string>
