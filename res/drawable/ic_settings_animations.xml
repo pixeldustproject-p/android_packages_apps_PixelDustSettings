@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2018 The Pixel Dust Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+         http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+  <path
+      android:pathData="M17.6214,11.9374m-5.4785,0a5.4785,5.4785 0,1 1,10.957 0a5.4785,5.4785 0,1 1,-10.957 0"
+      android:fillColor="#ffffff"/>
+  <path
+      android:pathData="M14.8887,6.5575C11.8577,6.5575 9.397,9.0184 9.397,12.0494C9.397,15.0803 11.8577,17.5411 14.8887,17.5411C12.9797,16.8635 11.4298,14.636 11.4298,12.0494C11.4298,9.4627 12.9797,7.2352 14.8887,6.5575Z"
+      android:fillColor="#ffffff"/>
+  <path
+      android:pathData="M11.8837,6.5575C8.8527,6.5575 6.3919,9.0184 6.3919,12.0494C6.3919,15.0803 8.8527,17.5411 11.8837,17.5411C9.9746,16.8635 8.4247,14.636 8.4247,12.0494C8.4247,9.4627 9.9746,7.2352 11.8837,6.5575Z"
+      android:fillColor="#ffffff"
+      android:fillAlpha="0.6"/>
+  <path
+      android:pathData="M9.1378,6.4588C6.1068,6.4588 3.646,8.9197 3.646,11.9507C3.646,14.9816 6.1068,17.4424 9.1378,17.4424C7.2287,16.7648 5.6788,14.5373 5.6788,11.9507C5.6788,9.364 7.2287,7.1365 9.1378,6.4588Z"
+      android:fillColor="#ffffff"
+      android:fillAlpha="0.4"/>
+  <path
+      android:pathData="M6.3919,6.5575C3.3609,6.5575 0.9001,9.0184 0.9001,12.0494C0.9001,15.0803 3.3609,17.5411 6.3919,17.5411C4.4828,16.8635 2.933,14.636 2.933,12.0494C2.933,9.4627 4.4828,7.2352 6.3919,6.5575Z"
+      android:fillColor="#ffffff"
+      android:fillAlpha="0.2"/>
+</vector>

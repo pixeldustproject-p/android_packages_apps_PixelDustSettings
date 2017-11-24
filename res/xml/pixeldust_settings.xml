@@ -80,6 +80,13 @@
             android:fragment="com.pixeldust.settings.fragments.NotificationsSettings"
             android:icon="@drawable/ic_homepage_notifications"/>
 
+        <!-- Animations -->
+        <Preference
+            android:key="animations_category"
+            android:title="@string/animations_title" 
+            android:fragment="com.pixeldust.settings.fragments.AnimationsSettings"
+            android:icon="@drawable/ic_settings_animations"/>
+
         <!-- Misc -->
         <Preference
             android:key="misc_category"
