@@ -90,6 +90,7 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements
     private ListPreference mClockDateFormat;
 
     private ListPreference mBatteryIconStyle;
+    private SwitchPreference mBatteryPercentage;
 
     @Override
     public void onCreate(Bundle icicle) {
@@ -172,11 +173,20 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements
         parseClockDateFormats();
 
 	// Battery styles
+        int batteryStyle = Settings.Secure.getInt(resolver,
+                Settings.Secure.STATUS_BAR_BATTERY_STYLE, 0);
         mBatteryIconStyle = (ListPreference) findPreference(BATTERY_STYLE);
-        mBatteryIconStyle.setValue(Integer.toString(Settings.Secure.getInt(resolver,
-                Settings.Secure.STATUS_BAR_BATTERY_STYLE, 0)));
+        mBatteryIconStyle.setValue(Integer.toString(batteryStyle));
         mBatteryIconStyle.setSummary(mBatteryIconStyle.getEntry());
         mBatteryIconStyle.setOnPreferenceChangeListener(this);
+
+        boolean show = Settings.System.getInt(resolver,
+                Settings.System.SHOW_BATTERY_PERCENT, 1) == 1;
+        mBatteryPercentage = (SwitchPreference) findPreference("show_battery_percent");
+        mBatteryPercentage.setChecked(show);
+        mBatteryPercentage.setOnPreferenceChangeListener(this);
+        boolean hideForcePercentage = batteryStyle == 6 || batteryStyle == 7; /*text or hidden style*/
+        mBatteryPercentage.setEnabled(!hideForcePercentage);
     }
 
     @Override
@@ -293,6 +303,14 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements
             Settings.Secure.putInt(getContentResolver(),
                     Settings.Secure.STATUS_BAR_BATTERY_STYLE, value);
             mBatteryIconStyle.setSummary(mBatteryIconStyle.getEntries()[index]);
+            boolean hideForcePercentage = value == 6;/*text*/
+            mBatteryPercentage.setEnabled(!hideForcePercentage);
+            return true;
+        } else  if (preference == mBatteryPercentage) {
+            boolean value = (Boolean) newValue;
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.SHOW_BATTERY_PERCENT, value ? 1 : 0);
+            mBatteryPercentage.setChecked(value);
             return true;
         }
         return false;
