@@ -65,6 +65,8 @@ import java.util.Map;
 public class StatusBarSettings extends SettingsPreferenceFragment implements
         OnPreferenceChangeListener, Indexable {
 
+    private static final String BATTERY_STYLE = "battery_style";
+
     private CustomSeekBarPreference mThreshold;
     private SystemSettingSwitchPreference mNetMonitor;
 
@@ -86,6 +88,8 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements
     private ListPreference mClockDateDisplay;
     private ListPreference mClockDateStyle;
     private ListPreference mClockDateFormat;
+
+    private ListPreference mBatteryIconStyle;
 
     @Override
     public void onCreate(Bundle icicle) {
@@ -165,7 +169,14 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements
         } else {
             mClockDateFormat.setValue(clkvalue);
         }
-         parseClockDateFormats();
+        parseClockDateFormats();
+
+	// Battery styles
+        mBatteryIconStyle = (ListPreference) findPreference(BATTERY_STYLE);
+        mBatteryIconStyle.setValue(Integer.toString(Settings.Secure.getInt(resolver,
+                Settings.Secure.STATUS_BAR_BATTERY_STYLE, 0)));
+        mBatteryIconStyle.setSummary(mBatteryIconStyle.getEntry());
+        mBatteryIconStyle.setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -275,6 +286,13 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements
                         Settings.System.STATUSBAR_CLOCK_DATE_FORMAT, (String) objValue);
                 }
             }
+            return true;
+        } else  if (preference.equals(mBatteryIconStyle)) {
+            int value = Integer.valueOf((String) objValue);
+            int index = mBatteryIconStyle.findIndexOfValue((String) objValue);
+            Settings.Secure.putInt(getContentResolver(),
+                    Settings.Secure.STATUS_BAR_BATTERY_STYLE, value);
+            mBatteryIconStyle.setSummary(mBatteryIconStyle.getEntries()[index]);
             return true;
         }
         return false;

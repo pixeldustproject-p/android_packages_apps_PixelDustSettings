@@ -90,4 +90,19 @@
             android:entryValues="@array/clock_date_format_entries_values"
             android:dependency="clock_date_display" />
 
+    <PreferenceCategory
+        android:key="battery_style_category"
+        android:title="@string/battery_style_category_title" >
+
+        <ListPreference
+            android:key="battery_style"
+            android:title="@string/battery_style_title"
+            android:summary="%s"
+            android:dialogTitle="@string/battery_style_title"
+            android:entries="@array/battery_style_entries"
+            android:entryValues="@array/battery_style_values"
+            android:defaultValue="0" />
+
+    </PreferenceCategory>
+
 </PreferenceScreen>
