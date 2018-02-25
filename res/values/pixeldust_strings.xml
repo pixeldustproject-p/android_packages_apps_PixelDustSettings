@@ -201,6 +201,10 @@
     <!-- Quick Pulldown OS panel -->
     <string name="quick_settings_quick_pull_down">Pulldown statusbar from right side to show QS panel</string>
 
+    <!-- Heads up options -->
+    <string name="heads_up_cat_title">Heads up</string>
+    <string name="heads_up_cat_summary">Timeout, Snooze, Blacklist etc.</string>
+
     <!-- Disable OS on lockscreen -->
     <string name="block_on_secure_keyguard_title">Disable quick settings</string>
     <string name="block_on_secure_keyguard_summary">Disables quick settings on secure lockscreen</string>
