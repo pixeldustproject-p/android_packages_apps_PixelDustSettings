@@ -196,6 +196,6 @@
 
     <!-- QuickSettings Panel Transparency -->
     <string name="panel_cat">Panel</string>
-    <string name="qs_panel_alpha_title">Transparency</string>
+    <string name="qs_panel_alpha_title">Opacity</string>
 
 </resources>
