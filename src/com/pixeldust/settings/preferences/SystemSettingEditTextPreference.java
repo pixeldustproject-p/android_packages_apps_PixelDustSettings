@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2017-2018 AICP
+ * Copyright (C) 2017 AICP
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,24 +17,24 @@
 package com.pixeldust.settings.preferences;
 
 import android.content.Context;
-import android.support.v7.preference.ListPreference;
+import android.support.v7.preference.EditTextPreference;
 import android.text.TextUtils;
 import android.util.AttributeSet;
-import android.provider.Settings;
 
-public class SystemSettingListPreference extends ListPreference {
+public class SystemSettingEditTextPreference extends EditTextPreference {
+    private boolean mAutoSummary = false;
 
-    public SystemSettingListPreference(Context context, AttributeSet attrs, int defStyle) {
+    public SystemSettingEditTextPreference(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
         setPreferenceDataStore(new SystemSettingsStore(context.getContentResolver()));
     }
 
-    public SystemSettingListPreference(Context context, AttributeSet attrs) {
+    public SystemSettingEditTextPreference(Context context, AttributeSet attrs) {
         super(context, attrs);
         setPreferenceDataStore(new SystemSettingsStore(context.getContentResolver()));
     }
 
-    public SystemSettingListPreference(Context context) {
+    public SystemSettingEditTextPreference(Context context) {
         super(context);
         setPreferenceDataStore(new SystemSettingsStore(context.getContentResolver()));
     }
@@ -43,15 +43,26 @@ public class SystemSettingListPreference extends ListPreference {
     protected void onSetInitialValue(boolean restoreValue, Object defaultValue) {
         // This is what default ListPreference implementation is doing without respecting
         // real default value:
-        //setValue(restoreValue ? getPersistedString(mValue) : (String) defaultValue);
+        //setText(restoreValue ? getPersistedString(mText) : (String) defaultValue);
         // Instead, we better do
-        setValue(restoreValue ? getPersistedString((String) defaultValue) : (String) defaultValue);
+        setText(restoreValue ? getPersistedString((String) defaultValue) : (String) defaultValue);
     }
 
-    protected boolean isPersisted() {
-        // Using getString instead of getInt so we can simply check for null
-        // instead of catching an exception. (All values are stored as strings.)
-        return Settings.Secure.getString(getContext().getContentResolver(), getKey()) != null;
+    @Override
+    public void setText(String text) {
+        super.setText(text);
+        if (mAutoSummary || TextUtils.isEmpty(getSummary())) {
+            setSummary(text, true);
+        }
     }
 
+    @Override
+    public void setSummary(CharSequence summary) {
+        setSummary(summary, false);
+    }
+
+    private void setSummary(CharSequence summary, boolean autoSummary) {
+        mAutoSummary = autoSummary;
+        super.setSummary(summary);
+    }
 }
