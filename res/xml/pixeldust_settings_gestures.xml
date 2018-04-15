@@ -36,4 +36,10 @@
         android:summary="@string/three_finger_gesture_summary"
         android:defaultValue="false" />
 
+    <com.pixeldust.settings.preferences.SystemSettingSwitchPreference
+        android:key="pocket_judge"
+        android:title="@string/pocket_judge_title"
+        android:summary="@string/pocket_judge_summary"
+        android:defaultValue="false" />
+
 </PreferenceScreen>
