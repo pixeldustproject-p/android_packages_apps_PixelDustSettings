@@ -55,6 +55,11 @@
         android:summary="@string/swap_volume_buttons_summary"
         android:defaultValue="false" />
 
+    <Preference
+        android:key="volume_steps"
+        android:title="@string/volume_steps_title"
+        android:fragment="com.pixeldust.settings.fragments.VolumeSteps" />
+
     <ListPreference
         android:key="volume_key_cursor_control"
         android:dialogTitle="@string/volbtn_cursor_control_title"
