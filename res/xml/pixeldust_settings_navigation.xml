@@ -24,6 +24,12 @@
         android:summary="@string/enable_navigation_bar_summary"
         android:defaultValue="true" />
 
+    <com.pixeldust.settings.preferences.SystemSettingSwitchPreference
+        android:key="use_bottom_gesture_navigation"
+        android:title="@string/use_bottom_gesture_title"
+        android:summary="@string/use_bottom_gesture_summary"
+        android:defaultValue="false" />
+
     <Preference
             android:title="@string/navbar_tuner_title" >
             <intent android:action="android.intent.action.MAIN"
