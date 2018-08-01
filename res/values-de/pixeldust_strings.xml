@@ -551,7 +551,8 @@
     <string name="edge_gestures_back_edges_left">Links</string> 
     <string name="edge_gestures_back_edges_right">Rechts</string> 
     <string name="edge_gestures_back_edges_both">Beide Seiten</string> 
-
+    <string name="edge_gestures_back_show_ui_feedback_title">Animation beim Verwenden der \"Zurück\"-Geste</string> 
+    <string name="edge_gestures_back_show_ui_feedback_summary">Im Randbereich eine Animation anzeigen, wenn die \"Zurück\"-Geste verwendet wird</string>
     <string name="gesture_nav">Navigation</string>
 
 </resources>
