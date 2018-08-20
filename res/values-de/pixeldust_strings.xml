@@ -570,5 +570,7 @@
 
     <!-- Enable keys backlight-->
     <string name="button_brightness_title">Hintergrundbeleuchtung</string>
+    <!-- Enable keys backlight-->
+    <string name="button_brightness_sw_title">Hintergrundbeleuchtung aktivieren</string>
 
 </resources>
