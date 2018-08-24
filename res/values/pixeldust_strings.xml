@@ -60,6 +60,8 @@
     <!-- Volume up exit do not disturb -->
     <string name="volbtn_up_zen_title">Volume up in do not disturb</string>
     <string name="volbtn_up_zen_summary">allow volume up to exit do not disturb mode</string>
+    <string name="vol_zen_title">Do not disturb switch</string>
+    <string name="vol_zen_summary">Show do not disturb swith on volume panel</string>
 
     <!-- Lockscreen icons -->
     <string name="lockscreen_tuner_title">Lockscreen shortcuts</string>

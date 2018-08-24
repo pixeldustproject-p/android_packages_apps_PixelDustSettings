@@ -29,4 +29,10 @@
         android:summary="@string/volbtn_down_zen_summary"
         android:defaultValue="true"/>
 
+    <com.pixeldust.settings.preferences.SecureSettingSwitchPreference
+        android:key="sysui_show_full_zen"
+        android:title="@string/vol_zen_title"
+        android:summary="@string/vol_zen_summary"
+        android:defaultValue="false"/>
+
 </PreferenceScreen>
