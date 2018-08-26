@@ -34,4 +34,10 @@
          android:fragment="com.pixeldust.settings.fragments.AlarmBlocker"
          android:title="@string/alarm_blocker_title" />
 
+    <com.pixeldust.settings.preferences.SystemSettingSwitchPreference
+         android:key="sensor_block"
+         android:title="@string/sensor_block_title"
+         android:summary="@string/sensor_block_summary"
+         android:defaultValue="false" />
+
 </PreferenceScreen>
