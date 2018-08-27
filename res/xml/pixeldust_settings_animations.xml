@@ -63,6 +63,14 @@
         android:persistent="false"
         android:defaultValue="2000" />
 
+    <ListPreference
+        android:key="anim_tile_interpolator"
+        android:title="@string/qs_tile_animation_interpolator_title"
+        android:entries="@array/qs_tile_animation_interpolator_entries"
+        android:entryValues="@array/qs_tile_animation_interpolator_values"
+        android:defaultValue="0"
+        android:persistent="false" />
+
     <ListPreference 
         android:key="screen_off_animation" 
         android:title="@string/screen_off_animation_title" 
