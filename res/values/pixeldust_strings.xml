@@ -88,8 +88,7 @@
     <!-- Navbar Settings -->
     <string name="enable_navigation_bar_title">Enable navigation bar</string>
     <string name="enable_navigation_bar_summary">Option to enable or disable the navigation bar</string>
-    <string name="swap_navigation_keys_title">Swap back and recents</string>
-    <string name="swap_navigation_keys_summary">Switch the back and recent buttons with each other</string>
+
     <!-- Navbar Animation -->
     <string name="pixel_navbar_anim_title">Pixel navbar animation</string>
     <string name="pixel_navbar_anim_summary">Requires a config change (display size, navbar position, reboot) themes may overwrite</string>
