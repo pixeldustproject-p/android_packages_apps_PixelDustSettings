@@ -258,6 +258,8 @@
     <string name="battery_percent_none">Don\'t show</string>
     <string name="battery_percent_outside">Show near icon</string>
     <string name="battery_percent_inside">Show inside icon</string>
+    <string name="show_battery_percent_on_qsb">Show percent on pull down</string>
+    <string name="show_battery_percent_on_qsb_summary">Always show percent on quick settings shade when pulling down</string>
 
     <!-- Hide Apps from Recents -->
     <string name="hide_apps_from_recents_title">Hide apps from recents</string>

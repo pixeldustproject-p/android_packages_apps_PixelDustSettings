@@ -262,6 +262,8 @@
   <string name="battery_percent_none">Nicht anzeigen</string>
   <string name="battery_percent_outside">Neben dem Symbol anzeigen</string>
   <string name="battery_percent_inside">Im Symbol anzeigen</string>
+  <string name="show_battery_percent_on_qsb">Akkustand in Prozent auch beim Herunterziehen</string>
+  <string name="show_battery_percent_on_qsb_summary">Akkustand in Prozent auch beim Herunterziehen der Schnelleinstellungenleiste anzeigen</string>
 
   <!-- Hide Apps from Recents -->
   <string name="hide_apps_from_recents_title">Ausgeblendete Apps</string>
