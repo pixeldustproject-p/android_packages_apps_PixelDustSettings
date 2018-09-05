@@ -961,4 +961,9 @@
     <string name="qstile_requires_unlocking_title">Secure tiles require unlocking</string>
     <string name="qstile_requires_unlocking_summary">The following quick tiles require unlocking before you can acccess them from lock screen: airplane, battery saver, bluetooth, cellular, data saver, nfc and wifi.</string>
 
+    <!-- Wakeup options -->
+    <string name="wakeup_when_plugged_unplugged_title">Wake up on charge</string>
+    <string name="wakeup_when_plugged_unplugged_summary">Wake up device if charger is plugged/unplugged.</string>
+    <string name="wake_cat">Wake option</string>
+
 </resources>

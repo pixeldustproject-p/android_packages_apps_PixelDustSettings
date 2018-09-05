@@ -931,4 +931,9 @@
   <string name="qstile_requires_unlocking_title">Sicherheitskritische Kacheln müssen entsperrt werden</string>
   <string name="qstile_requires_unlocking_summary">Die folgenden Kacheln erfordern das Entsperren bevor sie genutzt werden können: Flugmodus, Energiesparmodus, Bluetooth, Mobile Daten, Datensync, NFC und WLAN.</string>
 
+  <!-- Wakeup options -->
+  <string name="wakeup_when_plugged_unplugged_title">Display beim Ladevorgang einschalten</string>
+  <string name="wakeup_when_plugged_unplugged_summary">Display einschalten sobald Ladegerät angeschlossen/entfernt wird.</string>
+  <string name="wake_cat">Weckoptionen</string>
+
 </resources>

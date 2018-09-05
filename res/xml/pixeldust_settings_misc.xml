@@ -74,6 +74,18 @@
     </PreferenceCategory>
 
     <PreferenceCategory
+        android:key="wake_cat"
+        android:title="@string/wake_cat" >
+
+        <com.pixeldust.settings.preferences.GlobalSettingSwitchPreference
+            android:key="wake_when_plugged_or_unplugged"
+            android:title="@string/wakeup_when_plugged_unplugged_title"
+            android:summary="@string/wakeup_when_plugged_unplugged_summary"
+            android:defaultValue="true" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
         android:key="blocker_cat"
         android:title="@string/blocker_cat" >
 
