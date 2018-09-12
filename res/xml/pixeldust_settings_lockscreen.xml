@@ -58,10 +58,22 @@
         android:defaultValue="false" />
 
     <PreferenceCategory
+        android:key="lockscreen_clock"
+        android:title="@string/lockscreen_clock_category" />
+
+        <ListPreference
+            android:key="lock_clock_fonts"
+            android:title="@string/lock_clock_font_title"
+            android:entries="@array/lock_clock_fonts_entries"
+            android:entryValues="@array/lock_clock_fonts_values"
+            android:defaultValue="4"
+            android:persistent="false" />
+
+    <PreferenceCategory
         android:key="lockscreen_weather"
         android:title="@string/lockscreen_weather_category" />
 
-         <Preference
+        <Preference
             android:key="omnijaws_settings"
             android:title="@string/lockscreen_weather_settings_title"
             android:summary="@string/lockscreen_weather_settings_summary"

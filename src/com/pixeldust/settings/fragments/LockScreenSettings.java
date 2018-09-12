@@ -16,6 +16,7 @@
 
 package com.pixeldust.settings.fragments;
 
+import android.content.ContentResolver;
 import android.content.Context;
 import android.content.res.Resources;
 import android.hardware.fingerprint.FingerprintManager;
@@ -38,12 +39,14 @@ import com.android.settings.SettingsPreferenceFragment;
 import java.util.ArrayList;
 import java.util.List;
 
-public class LockScreenSettings extends SettingsPreferenceFragment implements Indexable {
+public class LockScreenSettings extends SettingsPreferenceFragment implements Indexable, Preference.OnPreferenceChangeListener {
 
     private static final String FINGERPRINT_VIB = "fingerprint_success_vib";
+    private static final String LOCK_CLOCK_FONTS = "lock_clock_fonts";
 
     private FingerprintManager mFingerprintManager;
     private SwitchPreference mFingerprintVib;
+    private ListPreference mLockClockFonts;
 
     @Override
     public void onCreate(Bundle icicle) {
@@ -59,6 +62,24 @@ public class LockScreenSettings extends SettingsPreferenceFragment implements In
         if (mFingerprintManager == null){
             prefScreen.removePreference(mFingerprintVib);
         }
+
+        // Lockscren Clock Fonts
+        mLockClockFonts = (ListPreference) findPreference(LOCK_CLOCK_FONTS);
+        mLockClockFonts.setValue(String.valueOf(Settings.System.getInt(
+                getContentResolver(), Settings.System.LOCK_CLOCK_FONTS, 4)));
+        mLockClockFonts.setSummary(mLockClockFonts.getEntry());
+        mLockClockFonts.setOnPreferenceChangeListener(this);
+    }
+
+    public boolean onPreferenceChange(Preference preference, Object newValue) {
+        if (preference == mLockClockFonts) {
+            Settings.System.putInt(getContentResolver(), Settings.System.LOCK_CLOCK_FONTS,
+                    Integer.valueOf((String) newValue));
+            mLockClockFonts.setValue(String.valueOf(newValue));
+            mLockClockFonts.setSummary(mLockClockFonts.getEntry());
+            return true;
+        }
+        return false;
     }
 
     @Override
