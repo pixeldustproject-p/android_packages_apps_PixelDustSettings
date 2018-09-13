@@ -38,6 +38,12 @@
         settings:min="0"
         settings:units="" />
 
+    <com.pixeldust.settings.preferences.SystemSettingSwitchPreference
+        android:key="use_old_mobiletype"
+        android:title="@string/use_old_mobiletype_title"
+        android:summary="@string/use_old_mobiletype_summary"
+        android:defaultValue="false" />
+
     <PreferenceCategory
         android:title="@string/status_bar_clock_title"/>
 
