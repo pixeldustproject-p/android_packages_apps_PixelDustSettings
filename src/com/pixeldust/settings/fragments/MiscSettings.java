@@ -16,12 +16,16 @@
 
 package com.pixeldust.settings.fragments;
 
+import android.content.ContentResolver;
 import android.content.Context;
 import android.os.Bundle;
+import android.os.UserHandle;
 import android.provider.SearchIndexableResource;
 import android.provider.Settings;
+import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceCategory;
 import android.support.v7.preference.PreferenceScreen;
+import android.support.v7.preference.Preference.OnPreferenceChangeListener;
 
 import com.android.internal.logging.nano.MetricsProto;
 import com.android.settings.R;
@@ -31,19 +35,25 @@ import com.android.settings.SettingsPreferenceFragment;
 
 import com.android.internal.util.pixeldust.PixeldustUtils;
 
+import com.pixeldust.settings.preferences.SystemSettingSeekBarPreference;
+
 import java.util.ArrayList;
 import java.util.List;
 
-public class MiscSettings extends SettingsPreferenceFragment implements Indexable {
+public class MiscSettings extends SettingsPreferenceFragment implements Indexable, Preference.OnPreferenceChangeListener {
 
     private static final String AMBIENT_PLAY_CAT_KEY = "ambient_play_cat";
+    private static final String BURN_INTERVAL_KEY = "burn_in_protection_interval";
+
     private PreferenceCategory mAmbientPlayCategory;
+    private SystemSettingSeekBarPreference mBurnInterval;
 
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
 
         addPreferencesFromResource(R.xml.pixeldust_settings_misc);
+        ContentResolver resolver = getActivity().getContentResolver();
 
         final PreferenceScreen prefScreen = getPreferenceScreen();
         Context mContext = getActivity();
@@ -52,6 +62,24 @@ public class MiscSettings extends SettingsPreferenceFragment implements Indexabl
             mAmbientPlayCategory = (PreferenceCategory) findPreference(AMBIENT_PLAY_CAT_KEY);
             prefScreen.removePreference(mAmbientPlayCategory);
         }
+
+        mBurnInterval = (SystemSettingSeekBarPreference) findPreference(BURN_INTERVAL_KEY);
+        int burninterval = Settings.System.getInt(resolver,
+                Settings.System.BURN_IN_PROTECTION_INTERVAL, 60);
+        mBurnInterval.setValue(burninterval);
+        mBurnInterval.setOnPreferenceChangeListener(this);
+    }
+
+    @Override
+    public boolean onPreferenceChange(Preference preference, Object newValue) {
+        ContentResolver resolver = getActivity().getContentResolver();
+        if (preference == mBurnInterval) {
+            int interval = (Integer) newValue;
+            Settings.System.putIntForUser(resolver,
+                    Settings.System.BURN_IN_PROTECTION_INTERVAL, interval, UserHandle.USER_CURRENT);
+            return true;
+        }
+        return false;
     }
 
     @Override

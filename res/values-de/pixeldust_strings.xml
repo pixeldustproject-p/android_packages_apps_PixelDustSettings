@@ -822,4 +822,10 @@
   <string name="dlg_reset_android">Standard</string>
   <string name="dlg_reset_bliss">Benutzerdefiniert</string>
 
+  <!-- Burn-in Protection -->
+  <string name="navigation_burnin_category">Einbrennschutz</string>
+  <string name="burn_in_protection_title">Einbrennschutz</string>
+  <string name="burn_in_protection_summary">Navigationsleisten- und Statuszeilen-Symbole verschieben, um ein Einbrennen zu verhindern</string>
+  <string name="burn_in_protection_interval_title">Zeitabstand zwischen den Verschiebungen</string>
+
 </resources>
