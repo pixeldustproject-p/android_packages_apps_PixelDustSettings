@@ -161,8 +161,11 @@
     <string name="network_traffic_state_summary">Show net activity in statusbar</string>
     <string name="network_traffic_autohide_threshold_title">Net activity autohide threshold (KB/s)</string>
 
-    <!-- Statusbar Clock -->
-    <string name="status_bar_clock_title">Clock settings</string>
+    <!-- Statusbar Clock & Date -->
+    <string name="date_cat">Date</string>
+    <string name="clock_cat">Clock</string>
+    <string name="status_bar_clock_font_style_title">Font style</string>
+    <string name="status_bar_clock_font_size_title">Font size</string>
     <string name="status_bar_clock_show">Show clock and date</string>
     <string name="status_bar_clock_style_title">Clock style</string>
     <string name="status_bar_clock_style_right">Right</string>
