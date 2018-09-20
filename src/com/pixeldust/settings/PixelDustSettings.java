@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2017 The Pixel Dust Project
+ * Copyright (C) 2018 The Pixel Dust Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,19 +16,25 @@
 
 package com.pixeldust.settings;
 
-import com.android.internal.logging.nano.MetricsProto;
-
 import android.app.Activity;
+import android.content.Context;
 import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
 import android.os.Bundle;
-import android.view.Surface;
 import android.preference.Preference;
-import com.android.settings.R;
+import android.provider.SearchIndexableResource;
+import android.view.Surface;
 
+import com.android.internal.logging.nano.MetricsProto;
+import com.android.settings.R;
+import com.android.settings.search.BaseSearchIndexProvider;
+import com.android.settings.search.Indexable;
 import com.android.settings.SettingsPreferenceFragment;
 
-public class PixelDustSettings extends SettingsPreferenceFragment {
+import java.util.ArrayList;
+import java.util.List;
+
+public class PixelDustSettings extends SettingsPreferenceFragment implements Indexable { 
 
     @Override
     public void onCreate(Bundle icicle) {
@@ -70,4 +76,23 @@ public class PixelDustSettings extends SettingsPreferenceFragment {
         }
         activity.setRequestedOrientation(frozenRotation);
     }
+
+    public static final Indexable.SearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
+            new BaseSearchIndexProvider() {
+                @Override
+                public List<SearchIndexableResource> getXmlResourcesToIndex(Context context,
+                        boolean enabled) {
+                    ArrayList<SearchIndexableResource> result =
+                            new ArrayList<SearchIndexableResource>();
+                     SearchIndexableResource sir = new SearchIndexableResource(context);
+                    sir.xmlResId = R.xml.pixeldust_settings;
+                    result.add(sir);
+                    return result;
+                }
+                @Override
+                public List<String> getNonIndexableKeys(Context context) {
+                    ArrayList<String> result = new ArrayList<String>();
+                    return result;
+                }
+    };
 }
