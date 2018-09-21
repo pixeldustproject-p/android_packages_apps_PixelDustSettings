@@ -143,6 +143,7 @@
     <!-- Volume rocker wake -->
     <string name="volume_rocker_wake_title">Volume wake</string>
     <string name="volume_rocker_wake_summary">Wake your device up by pressing the volume keys</string>
+    <string name="hardware_keys_vol_key_title">Volume button</string>
 
     <!-- Smart Pixels -->
     <string name="smart_pixels_title">Smart Pixels</string>

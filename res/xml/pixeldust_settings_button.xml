@@ -29,11 +29,17 @@
             android:entryValues="@array/torch_power_button_gesture_values" />
 
     </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="vol_key"
+        android:title="@string/hardware_keys_vol_key_title" >
  
-    <PreferenceScreen
-        android:key="volume_key"
-        android:fragment="com.pixeldust.settings.fragments.VolumeSettings"
-        android:title="@string/volume_title" />
+        <PreferenceScreen
+            android:key="volume_key"
+            android:fragment="com.pixeldust.settings.fragments.VolumeSettings"
+            android:title="@string/volume_title" />
+
+    </PreferenceCategory>
 
     <PreferenceCategory
         android:key="back_key"
