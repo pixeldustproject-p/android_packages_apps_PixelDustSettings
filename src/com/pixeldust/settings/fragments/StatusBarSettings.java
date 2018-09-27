@@ -213,6 +213,8 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements
         mClockDatePosition.setSummary(mClockDatePosition.getEntry());
         mClockDatePosition.setOnPreferenceChangeListener(this);
 
+        setDateOptions();
+
         mTextSymbol = (ListPreference) findPreference(TEXT_CHARGING_SYMBOL);
         mBatteryPercent = (ListPreference) findPreference(SHOW_BATTERY_PERCENT);
 
@@ -290,15 +292,7 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements
             Settings.System.putInt(resolver,
                     Settings.System.STATUSBAR_CLOCK_DATE_DISPLAY, clockDateDisplay);
             mClockDateDisplay.setSummary(mClockDateDisplay.getEntries()[index]);
-            if (clockDateDisplay == 0) {
-                mClockDateStyle.setEnabled(false);
-                mClockDateFormat.setEnabled(false);
-                mClockDatePosition.setEnabled(false);
-            } else {
-                mClockDateStyle.setEnabled(true);
-                mClockDateFormat.setEnabled(true);
-                mClockDatePosition.setEnabled(true);
-            }
+            setDateOptions();
             return true;
         } else if (preference == mClockDateStyle) {
             int clockDateStyle = Integer.valueOf((String) objValue);
@@ -389,6 +383,20 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements
             }
         }
         mClockDateFormat.setEntries(parsedDateEntries);
+    }
+
+    private void setDateOptions() {
+        int enableDateOptions = Settings.System.getInt(getActivity().getContentResolver(),
+                Settings.System.STATUSBAR_CLOCK_DATE_DISPLAY, 0);
+        if (enableDateOptions == 0) {
+            mClockDateStyle.setEnabled(false);
+            mClockDateFormat.setEnabled(false);
+            mClockDatePosition.setEnabled(false);
+        } else {
+            mClockDateStyle.setEnabled(true);
+            mClockDateFormat.setEnabled(true);
+            mClockDatePosition.setEnabled(true);
+        }
     }
 
     private void updateBatteryOptions(int batterystyle) {
