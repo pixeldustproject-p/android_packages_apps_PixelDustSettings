@@ -20,23 +20,60 @@ import android.content.Context;
 import android.os.Bundle;
 import android.provider.SearchIndexableResource;
 import android.provider.Settings;
+import android.support.v7.preference.ListPreference;
+import android.support.v7.preference.Preference;
+import android.support.v7.preference.PreferenceScreen;
+import android.support.v7.preference.Preference.OnPreferenceChangeListener;
+import android.support.v14.preference.SwitchPreference;
 
 import com.android.internal.logging.nano.MetricsProto;
+import com.android.internal.util.pixeldust.PixeldustUtils;
 import com.android.settings.R;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settings.search.Indexable;
 import com.android.settings.SettingsPreferenceFragment;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 
-public class RecentsSettings extends SettingsPreferenceFragment implements Indexable {
+public class RecentsSettings extends SettingsPreferenceFragment implements Indexable, OnPreferenceChangeListener {
+
+    private static final String RECENTS_COMPONENT_TYPE = "recents_component";
+
+    private ListPreference mRecentsComponentType;
 
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
 
         addPreferencesFromResource(R.xml.pixeldust_settings_recents);
+
+        // recents component type
+        mRecentsComponentType = (ListPreference) findPreference(RECENTS_COMPONENT_TYPE);
+        int type = Settings.System.getInt(getActivity().getContentResolver(),
+                Settings.System.RECENTS_COMPONENT, 0);
+        mRecentsComponentType.setValue(String.valueOf(type));
+        mRecentsComponentType.setSummary(mRecentsComponentType.getEntry());
+        mRecentsComponentType.setOnPreferenceChangeListener(this);
+    }
+
+    @Override
+    public boolean onPreferenceChange(Preference preference, Object objValue) {
+        if (preference == mRecentsComponentType) {
+            int type = Integer.valueOf((String) objValue);
+            int index = mRecentsComponentType.findIndexOfValue((String) objValue);
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.RECENTS_COMPONENT, type);
+            mRecentsComponentType.setSummary(mRecentsComponentType.getEntries()[index]);
+            if (type == 1) { // Disable swipe up gesture, if oreo type selected
+               Settings.Secure.putInt(getActivity().getContentResolver(),
+                    Settings.Secure.SWIPE_UP_TO_SWITCH_APPS_ENABLED, 0);
+            }
+            PixeldustUtils.showSystemUiRestartDialog(getContext());
+            return true;
+        }
+        return false;
     }
 
     @Override
