@@ -52,11 +52,7 @@
     <PreferenceCategory
         android:key="lockscreen_weather"
         android:title="@string/lockscreen_weather_category" />
-         <com.pixeldust.settings.preferences.SystemSettingSwitchPreference
-            android:key="lockscreen_weather_enabled"
-            android:title="@string/lockscreen_weather_enabled_title"
-            android:summary="@string/lockscreen_weather_enabled_summary"
-            android:defaultValue="false" />
+
          <Preference
             android:key="omnijaws_settings"
             android:title="@string/lockscreen_weather_settings_title"
