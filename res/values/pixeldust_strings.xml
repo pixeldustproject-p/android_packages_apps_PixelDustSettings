@@ -562,4 +562,14 @@
     <string name="edge_gestures_description_summary">Quick guide:\nSwipe from bottom to trigger Home gesture, keep it pressed to open recents. Swipe from bottom left or bottom right to go back.</string>
     <string name="gesture_nav">Navigation</string>
 
+    <!-- Battery Styles -->
+    <string name="battery_style_category_title">Battery level</string>
+    <string name="battery_percent_title">Battery percent</string>
+
+    <!-- Status bar - Battery percentage -->
+    <string name="status_bar_battery_percentage_title">Battery percentage</string>
+    <string name="status_bar_battery_percentage_default">Hidden</string>
+    <string name="status_bar_battery_percentage_text_inside">Inside the icon</string>
+    <string name="status_bar_battery_percentage_text_next">Next to the icon</string>
+
 </resources>
