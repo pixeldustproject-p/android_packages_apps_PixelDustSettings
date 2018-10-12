@@ -81,6 +81,15 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements
     public static final int CLOCK_DATE_STYLE_UPPERCASE = 2;
     private static final int CUSTOM_CLOCK_DATE_FORMAT_INDEX = 18;
     private static final String STATUS_BAR_CLOCK_DATE_POSITION = "statusbar_clock_date_position";
+    private static final String STATUS_BAR_BATTERY_STYLE = "status_bar_battery_style";
+    private static final String SHOW_BATTERY_PERCENT = "show_battery_percent";
+
+    public static final int BATTERY_STYLE_PORTRAIT = 0;
+    public static final int BATTERY_STYLE_CIRCLE = 1;
+    public static final int BATTERY_STYLE_DOTTED_CIRCLE = 2;
+    public static final int BATTERY_STYLE_SQUARE = 3;
+    public static final int BATTERY_STYLE_TEXT = 4;
+    public static final int BATTERY_STYLE_HIDDEN = 5;
 
     private SystemSettingSwitchPreference mStatusBarClockShow;
     private SystemSettingSwitchPreference mStatusBarSecondsShow;
@@ -93,6 +102,9 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements
 
     private CustomSeekBarPreference mClockSize;
     private ListPreference mClockFontStyle;
+
+    private ListPreference mBatteryStyle;
+    private ListPreference mBatteryPercent;
 
     @Override
     public void onCreate(Bundle icicle) {
@@ -199,6 +211,16 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements
         mClockDatePosition.setValue(String.valueOf(clockDatePosition));
         mClockDatePosition.setSummary(mClockDatePosition.getEntry());
         mClockDatePosition.setOnPreferenceChangeListener(this);
+
+        mBatteryPercent = (ListPreference) findPreference(SHOW_BATTERY_PERCENT);
+
+        mBatteryStyle = (ListPreference) findPreference(STATUS_BAR_BATTERY_STYLE);
+        int batterystyle = Settings.System.getIntForUser(resolver,
+                Settings.System.STATUS_BAR_BATTERY_STYLE, BATTERY_STYLE_CIRCLE,
+                UserHandle.USER_CURRENT);
+        mBatteryStyle.setOnPreferenceChangeListener(this);
+
+        updateBatteryOptions(batterystyle);
     }
 
     @Override
@@ -332,6 +354,10 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements
             mClockDatePosition.setSummary(mClockDatePosition.getEntries()[index]);
             parseClockDateFormats();
             return true;
+        } else if (preference == mBatteryStyle) {
+            int value = Integer.parseInt((String) objValue);
+            updateBatteryOptions(value);
+            return true;
         }
         return false;
     }
@@ -361,6 +387,10 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements
             }
         }
         mClockDateFormat.setEntries(parsedDateEntries);
+    }
+
+    private void updateBatteryOptions(int batterystyle) {
+        mBatteryPercent.setEnabled(batterystyle != BATTERY_STYLE_TEXT && batterystyle != BATTERY_STYLE_HIDDEN);
     }
 
     @Override
