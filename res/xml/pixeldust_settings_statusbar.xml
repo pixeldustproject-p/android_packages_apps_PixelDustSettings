@@ -119,7 +119,8 @@
             android:key="show_battery_percent"
             android:title="@string/show_battery_percent_title"
             android:entries="@array/battery_percent_entries"
-            android:entryValues="@array/battery_percent_values" />
+            android:entryValues="@array/battery_percent_values"
+            android:defaultValue="0" />
     </PreferenceCategory>
 
 </PreferenceScreen>

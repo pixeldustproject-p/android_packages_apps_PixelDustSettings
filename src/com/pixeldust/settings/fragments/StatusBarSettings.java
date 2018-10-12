@@ -50,6 +50,7 @@ import com.android.settings.search.Indexable;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.Utils;
 import com.android.settings.R;
+import com.android.settingslib.graph.BatteryMeterDrawableBase;
 
 import com.pixeldust.settings.preferences.CustomSeekBarPreference;
 import com.pixeldust.settings.preferences.SystemSettingSwitchPreference;
@@ -204,7 +205,7 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements
         valueIndex = mBatteryPercentage.findIndexOfValue(String.valueOf(showPercent));
         mBatteryPercentage.setSummary(mBatteryPercentage.getEntries()[valueIndex]);
         mBatteryPercentage.setOnPreferenceChangeListener(this);
-        boolean hideForcePercentage = batteryStyle == 6 || batteryStyle == 7; /*text or hidden style*/
+        boolean hideForcePercentage = batteryStyle == BatteryMeterDrawableBase.BATTERY_STYLE_TEXT;
         mBatteryPercentage.setEnabled(!hideForcePercentage);
     }
 
@@ -326,7 +327,7 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements
                     .findIndexOfValue((String) objValue);
             mBatteryIconStyle
                     .setSummary(mBatteryIconStyle.getEntries()[valueIndex]);
-            boolean hideForcePercentage = value == 6;/*text*/
+            boolean hideForcePercentage = value == BatteryMeterDrawableBase.BATTERY_STYLE_TEXT;
             mBatteryPercentage.setEnabled(!hideForcePercentage);
             return true;
         } else  if (preference == mBatteryPercentage) {
