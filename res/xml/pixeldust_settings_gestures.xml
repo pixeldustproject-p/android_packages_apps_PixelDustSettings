@@ -42,10 +42,22 @@
         android:summary="@string/pocket_judge_summary"
         android:defaultValue="false" />
 
-    <PreferenceScreen 
-        android:key="pa_pie_control" 
-        android:title="@string/pa_pie_control_title" 
-        android:summary="@string/pa_pie_control_summary" 
-        android:fragment="com.pixeldust.settings.fragments.PieSettings" /> 
+    <PreferenceCategory
+        android:key="gesture_nav"
+        android:title="@string/gesture_nav">
+
+        <PreferenceScreen 
+            android:key="pa_pie_control" 
+            android:title="@string/pa_pie_control_title" 
+            android:summary="@string/pa_pie_control_summary" 
+            android:fragment="com.pixeldust.settings.fragments.PieSettings" />
+
+        <Preference 
+            android:key="edge_gestures" 
+            android:title="@string/edge_gestures_title" 
+            android:summary="@string/edge_gestures_summary" 
+            android:fragment="com.pixeldust.settings.fragments.EdgeGesturesSettings"/>
+
+    </PreferenceCategory>
 
 </PreferenceScreen>

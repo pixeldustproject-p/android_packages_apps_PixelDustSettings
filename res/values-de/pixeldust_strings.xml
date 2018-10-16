@@ -538,4 +538,20 @@
     <string name="pa_pie_gravity_right">Rechts</string>
     <string name="pa_pie_gravity_left">Links</string>
 
+    <!-- Edge gestures --> 
+    <string name="edge_gestures_title">Edge Gesten</string> 
+    <string name="edge_gestures_feedback_duration_title">Dauer für haptisches Feedback</string> 
+    <string name="edge_gestures_long_press_delay_title">Verzögerung, bis \"lange Drücken\" beginnt</string> 
+    <string name="edge_gestures_back_category_title">\"Zurück\"-Geste</string> 
+    <string name="edge_gestures_back_edges_title">Position zum Auslösen der \"Zurück\"-Geste</string> 
+    <string name="edge_gestures_landscape_back_edges_title">Position im Landscape-Modus zum Auslösen der \"Zurück\"-Geste</string> 
+    <string name="edge_gestures_back_screen_percent_title">Die \"Zurück\"-Geste muss innerhalb des definierten Randbereichs ausgelöst werden</string> 
+    <string name="edge_gestures_back_screen_percent_summary">Größenverhältnis des Randbereichs in Prozent zum gesamten Display</string> 
+    <string name="edge_gestures_summary">Edge-Gesten für die Navigation verwenden</string>
+    <string name="edge_gestures_back_edges_left">Links</string> 
+    <string name="edge_gestures_back_edges_right">Rechts</string> 
+    <string name="edge_gestures_back_edges_both">Beide Seiten</string> 
+
+    <string name="gesture_nav">Navigation</string>
+
 </resources>
