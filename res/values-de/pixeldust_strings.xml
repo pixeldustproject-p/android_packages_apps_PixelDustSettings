@@ -513,4 +513,29 @@
   <string name="one_hand_mode_title">Einhandmodus aktivieren</string>
   <string name="one_hand_mode_summary">Über die Navigationsleiste nach rechts oder links wischen, um in den Einhandmodus zu wechseln</string>
 
+    <!-- Pie -->
+    <string name="pa_pie_control_summary">Edge- und Navigationssteuerung</string>
+    <string name="pa_pie_control_title">Pie Control</string> 
+    <string name="pie_enable_title">Pie Control verwenden</string>
+    <string name="pie_settings">Pie Control Einstellungen</string>
+    <string name="pie_settings_summary">Pie nach deinem Geschmack anpassen</string>
+    <string name="pie_theme_mode_title">UI Stil</string>
+    <string name="pie_auto">Automatisch</string>
+    <string name="pie_white">Hell</string>
+    <string name="pie_dark">Dunkel</string>
+    <string name="pie_battery_title">Akkuanzeige</string>
+    <string name="pie_battery_text">Nur Text</string>
+    <string name="pie_battery_circle">Nur Kreis</string>
+    <string name="pie_battery_both">Beides</string>
+    <string name="pie_status_indicator">Netzwerkanzeige</string>
+    <string name="pie_status_wifi">Nur WLAN</string>
+    <string name="pie_status_mobile">Nur mobiles Netzwerk</string>
+    <string name="pie_status_none">Keines</string>
+    <string name="pie_status_both">Beides</string>
+    <string name="pa_pie_gravity_title">Pie Position</string>
+    <string name="pa_pie_gravity_summary">Position festlegen, an der Pie Control angezeigt werden sollen</string>
+    <string name="pa_pie_gravity_bottom">Unten</string>
+    <string name="pa_pie_gravity_right">Rechts</string>
+    <string name="pa_pie_gravity_left">Links</string>
+
 </resources>
