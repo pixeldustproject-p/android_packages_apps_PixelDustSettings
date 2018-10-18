@@ -243,8 +243,8 @@
     <string name="block_on_secure_keyguard_summary">Disables quick settings on secure lockscreen</string>
 
     <!-- Power menu on lockscreen -->
-    <string name="lockscreen_enable_power_menu_title">Show power menu lock screen</string>
-    <string name="lockscreen_enable_power_menu_summary">This option will only disable the power menu on secure lock screens</string>
+    <string name="lockscreen_power_menu_disabled_title">Disable power menu on lock screen</string>
+    <string name="lockscreen_power_menu_disabled_summary">This will only disable the power menu on secure lock screens</string>
 
     <!-- Battery Styles -->
     <string name="battery_style_category_title">Battery level</string>
