@@ -20,6 +20,8 @@ import android.content.Context;
 import android.os.Bundle;
 import android.provider.SearchIndexableResource;
 import android.provider.Settings;
+import android.support.v7.preference.PreferenceCategory;
+import android.support.v7.preference.PreferenceScreen;
 
 import com.android.internal.logging.nano.MetricsProto;
 import com.android.settings.R;
@@ -27,16 +29,29 @@ import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settings.search.Indexable;
 import com.android.settings.SettingsPreferenceFragment;
 
+import com.android.internal.util.pixeldust.PixeldustUtils;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class MiscSettings extends SettingsPreferenceFragment implements Indexable {
+
+    private static final String AMBIENT_PLAY_CAT_KEY = "ambient_play_cat";
+    private PreferenceCategory mAmbientPlayCategory;
 
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
 
         addPreferencesFromResource(R.xml.pixeldust_settings_misc);
+
+        final PreferenceScreen prefScreen = getPreferenceScreen();
+        Context mContext = getActivity();
+
+        if (!PixeldustUtils.isAmbientPlayAvailable(mContext)) {
+            mAmbientPlayCategory = (PreferenceCategory) findPreference(AMBIENT_PLAY_CAT_KEY);
+            prefScreen.removePreference(mAmbientPlayCategory);
+        }
     }
 
     @Override

@@ -499,4 +499,8 @@
   <string name="volume_steps_voice_call_title">Lautstärkestufen: Sprachanruf</string>
   <string name="volume_steps_reset">Zurücksetzen</string>
 
+  <!-- Now playing -->
+  <string name="ambient_play_settings_title">\"Now Playing\" ausprobieren</string>
+  <string name="ambient_play_settings_summary">Songtitel angezeigt bekommen, die im Hintergrund gespielt werden</string>
+
 </resources>
