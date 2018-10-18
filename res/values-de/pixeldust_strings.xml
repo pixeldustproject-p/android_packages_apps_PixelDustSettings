@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2018 The Pixel Dust Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+         http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+  <!-- Categories -->
+  <string name="animations_title">Animationen</string>
+  <string name="button_title">Tasten</string>
+  <string name="gestures_title">Gesten</string>
+  <string name="lockscreen_title">Sperrbildschirm</string>
+  <string name="misc_title">Sonstiges</string>
+  <string name="navbar_title">Navigationsleiste</string>
+  <string name="powermenu_title">Ein/Aus-Tasten Menü</string>
+  <string name="quicksettings_title">Schnelleinstellungen</string>
+  <string name="recents_title">Anwendungsverlauf</string>
+  <string name="statusbar_title">Statusleiste</string>
+  <string name="volume_title">Lautstärke-Taste konfigurieren</string>
+  <string name="notifications_title">Benachrichtigungen</string>
+
+  <!-- General strings -->
+  <string name="ok">OK</string>
+  <string name="reset">Zurücksetzen</string>
+  <string name="cancel">Abbrechen</string>
+  <string name="save">Speichern</string>
+
+  <!-- Color Picker -->
+  <string name="dialog_color_picker">Farbwahl</string>
+  <string name="press_color_to_apply">Farbe berühren zum Auswählen</string>
+  <string name="arrow_right">→</string>
+  <string name="arrow_down">↓</string>
+  <string name="hex">Hex:</string>
+  <string name="hex_hint">#ff000000</string>
+  <string name="set">Übernehmen</string>
+  <string name="color_default">Standard</string>
+  <string name="hex_check_button_text">VORSCHAU</string>
+  <string name="hex_reset_button_text">ZURÜCKSETZEN</string>
+  <string name="longpress_info">Um Farbe zu speichern die Box lange drücken</string>
+
+  <!-- Incall vibrate options -->
+  <string name="incall_vibration_category">Vibrationssignale für Anrufe einstellen</string>
+  <string name="incall_vibrate_connect_title">Vibration bei Verbindung</string>
+  <string name="incall_vibrate_call_wait_title">Vibration beim Durchwählen</string>
+  <string name="incall_vibrate_disconnect_title">Vibration beim Beenden</string>
+
+  <!-- Statusbar Tuner -->
+  <string name="statusbar_items_title">Elemente der Statusleiste</string>
+
+  <!-- QuickSettings haptic feedback -->
+  <string name="tiles_cat">Kacheln</string>
+  <string name="quick_settings_vibrate_title">Bei Berührung vibrieren</string>
+  <string name="quick_settings_vibrate_summary">Bei Berührung der Schaltflächen vibrieren</string>
+
+  <!-- Lockscreen icons -->
+  <string name="lockscreen_tuner_title">Sperrbildschirm-Verknüpfungen</string>
+
+  <!-- Navbar tuner -->
+  <string name="navbar_tuner_title">Navigationsleisten Tasten</string>
+
+  <!-- Power Menu -->
+  <string name="powermenu_screenshot">Bildschirmfoto</string>
+  <string name="powermenu_power">Herunterfahren</string>
+  <string name="powermenu_restart">Neu starten</string>
+  <string name="powermenu_restart_recovery">Erweiterter Neustart</string>
+  <string name="powermenu_airplane">Flugmodus</string>
+  <string name="powermenu_settings">Einstellungen</string>
+  <string name="powermenu_lockdown">Sperren</string>
+  <string name="powermenu_users">Benutzer</string>
+  <string name="powermenu_logout">Abmelden</string>
+  <string name="powermenu_torch">Taschenlampe</string>
+
+  <!-- QS Brightness -->
+  <string name="brightness_cat">Helligkeit</string>
+  <string name="brightness_slider_title">Helligkeitsregler</string>
+  <string name="brightness_slider_summary">Helligkeitsregler oberhalb der Kacheln anzeigen</string>
+  <string name="brightness_icon_title">Symbol für Helligkeit</string>
+  <string name="brightness_icon_summary">Zeigt ein Symbol für die Helligkeit auf der linken Seite des Helligkeitsreglers, um die Auto-Helligkeit anzupassen</string>
+
+  <!-- Navbar Settings -->
+  <string name="enable_navigation_bar_title">Navigationsleiste anzeigen</string>
+  <string name="enable_navigation_bar_summary">Ermöglicht es die Navigationsleiste zu aktivieren oder zu deaktivieren</string>
+
+  <!-- Navbar Animation -->
+  <string name="pixel_navbar_anim_title">Pixel Homebutton Animation aktivieren</string>
+
+  <!-- kill app long press back -->
+  <string name="custom_back_key_title">App beenden mittels Zurück-Taste</string>
+  <string name="kill_app_longpress_back">Zurück-Taste zum App beenden verwenden</string>
+  <string name="kill_app_longpress_back_summary">Beenden der Anwendung im Vordergrund durch langes Drücken der \"Zurück\"-Taste erzwingen</string>
+  <string name="long_press_kill_delay">Verzögerung vor dem Beenden</string>
+
+  <!-- Lockscreen charging current indicator  -->
+  <string name="lockscreen_charging_current_title">Ladeinfo auf Sperrbildschirm</string>
+  <string name="lockscreen_charging_current_summary">Beim Ladevorgang die aktuelle Stromstärke, Spannung und Akku-Temperatur ermitteln und auf dem Sperrbildschirm anzeigen</string>
+
+  <!-- fingerprint authentication vibration -->
+  <string name="fprint_sucess_vib_title">Vibration bei Authentifizierung per Fingerabdruck</string>
+  <string name="fprint_sucess_vib_summary">Bei erfolgreicher Fingerabdruck-Erkennung vibrieren</string>
+
+  <string name="face_auto_unlock_title">Entsperren anhand Gesichtserkennungs-Funktion</string>
+  <string name="face_auto_unlock_summary">Sperrbildschirm nach Gesichtserkennung automatisch übergehen</string>
+
+  <!-- Statusbar double tap to sleep -->
+  <string name="double_tap_to_sleep_title">Statusleiste</string>
+  <string name="double_tap_to_sleep_summary">Zweimal auf die Statusleiste tippen, um das Gerät in den Ruhezustand zu versetzen</string>
+  <!-- Lockscreen double tap to sleep -->
+  <string name="double_tap_sleep_anywhere_title">Sperrbildschirm</string>
+  <string name="double_tap_sleep_anywhere_summary">Zweimal auf den Sperrbildschirm tippen, um das Gerät in den Ruhezustand zu versetzen</string>
+
+  <!-- Media art -->
+  <string name="media_art_title">Albumcover anzeigen</string>
+  <string name="media_art_summary">Albumcover auf dem Sperrbildschirm anzeigen</string>
+
+  <!-- Three-fingers-swipe to screenshot -->
+  <string name="three_finger_gesture">Drei-Finger-Geste</string>
+  <string name="three_finger_gesture_summary">Mit drei Fingern wischen, um ein Bildschirmfoto aufzunehmen</string>
+
+  <string name="use_bottom_gesture_title">Wischbewegungen zum Navigieren verwenden</string>
+  <string name="use_bottom_gesture_summary">Die Navigationsleiste muss zuvor deaktiviert sein. Nach oben wischen von links oder rechts für ZURÜCK. Nach oben in die Bildschirmmitte wischen für HOME. Nach oben wischen und halten für LETZTE ANWENDUNG</string>
+
+  <!-- Volume rocker music control -->
+  <string name="hardware_keys_volume_rocker_title">Lautstärke-Taste</string>
+  <string name="volume_button_music_control_title">Musik-Steuerung</string>
+  <string name="volume_button_music_control_summary">Bei abgeschaltetem Bildschirm durch langes Drücken der Lautstärketaste den Musiktitel wechseln. Nach oben zum nächsten und nach unten zum vorherigen Titel springen.</string>
+
+  <!-- Volume rocker wake -->
+  <string name="volume_rocker_wake_title">Aufwecken über Lautstärketasten</string>
+  <string name="volume_rocker_wake_summary">Drücken der Lautstärketasten beendet den Ruhezustand</string>
+  <string name="hardware_keys_vol_key_title">Lautstärketaste</string>
+
+  <!-- Smart Pixels -->
+  <string name="smart_pixels_title">Smart Pixels</string>
+  <string name="smart_pixels_summary">Durch das Abschalten von Bildschirm-Pixeln Energie sparen</string>
+  <string name="smart_pixels_enable_title">Smart Pixels aktivieren</string>
+  <string name="smart_pixels_enable_summary">Pixel zur Reduzierung des Stromverbrauchs abschalten</string>
+  <string name="smart_pixels_on_power_save_title">Bei Energiesparmodus automatisch aktivieren</string>
+  <string name="smart_pixels_on_power_save_summary">Smart Pixels aktivieren, wenn Energiesparmodus eingeschaltet ist</string>
+  <string name="smart_pixels_percent">Prozentsatz der abzuschaltenden Pixel</string>
+  <string name="smart_pixels_shift">Vor Einbrennen schützen durch Verlagern von Pixeln jede</string>
+  <string name="smart_pixels_shift_times_15sec">15 Sekunden</string>
+  <string name="smart_pixels_shift_times_30sec">30 Sekunden</string>
+  <string name="smart_pixels_shift_times_1min">1 Minute</string>
+  <string name="smart_pixels_shift_times_2min">2 Minuten</string>
+  <string name="smart_pixels_shift_times_5min">5 Minuten</string>
+  <string name="smart_pixels_shift_times_10min">10 Minuten</string>
+  <string name="smart_pixels_shift_times_20min">20 Minuten</string>
+  <string name="smart_pixels_shift_times_30min">30 Minuten</string>
+  <string name="smart_pixels_shift_times_1hour">1 Stunde</string>
+
+  <!-- Statusbar net monitor -->
+  <string name="network_traffic_state_title">Netzwerkverkehr</string>
+  <string name="network_traffic_state_summary">Netzwerkaktivität in Statusleiste anzeigen</string>
+  <string name="network_traffic_autohide_threshold_title">Netzwerkaktivität anzeigen ab (kB/s)</string>
+
+  <!-- Statusbar Clock & Date -->
+  <string name="date_cat">Datum</string>
+  <string name="clock_cat">Uhrzeit</string>
+  <string name="status_bar_clock_font_style_title">Schriftstil</string>
+  <string name="status_bar_clock_font_size_title">Schriftgröße</string>
+  <string name="status_bar_clock_show">Uhrzeit und Datum anzeigen</string>
+  <string name="status_bar_clock_style_title">Uhrzeit positionieren</string>
+  <string name="status_bar_clock_style_right">Uhrzeit rechts</string>
+  <string name="status_bar_clock_style_center">Uhrzeit mittig</string>
+  <string name="status_bar_clock_style_left">Uhrzeit links</string>
+  <string name="status_bar_am_pm_title">AM/PM-Format</string>
+  <string name="status_bar_am_pm_info">24-Stunden-Format ist aktiviert</string>
+  <string name="status_bar_am_pm_normal">Normale Schriftgröße</string>
+  <string name="status_bar_am_pm_small">Kleine Schriftgröße</string>
+  <string name="status_bar_am_pm_hidden">Nicht anzeigen (Standard)</string>
+  <string name="clock_seconds_display">Sekunden anzeigen</string>
+  <string name="clock_date_display">Datum</string>
+  <string name="clock_date_display_summary">Benutzerdefiniertes Datum vor der Uhrzeit anzeigen</string>
+  <string name="clock_date_display_none">Nicht anzeigen</string>
+  <string name="clock_date_display_small">Kleine Schriftgröße</string>
+  <string name="clock_date_display_normal">Normale Schriftgröße</string>
+  <string name="clock_date_style">Layout</string>
+  <string name="clock_date_style_normal">Normal</string>
+  <string name="clock_date_style_lowercase">Kleinbuchstaben</string>
+  <string name="clock_date_style_uppercase">Großbuchstaben</string>
+  <string name="clock_date_format_custom">Benutzerdefiniertes Java-Format</string>
+  <string name="clock_date_format">Format</string>
+  <string name="clock_date_string_edittext_title">Eingabe nur im vorgegebenen Datumsformat, z.B. MM/TT/JJ</string>
+  <string name="clock_date_string_edittext_summary">Zeichenfolge eingeben</string>
+  <string name="clock_date_right">Rechts neben der Uhrzeit</string>
+  <string name="clock_date_left">Links neben der Uhrzeit</string>
+  <string name="clock_date_position">Datum positionieren</string>
+
+  <!-- Torch Power button gestures -->
+  <string name="hardware_keys_power_key_title">Ein-/Aus-Taste</string>
+  <string name="torch_power_button_gesture_title">Taschenlampe über Ein-/Aus-Taste bei ausgeschaltetem Bildschirm</string>
+  <string name="torch_power_button_gesture_none">Ausgeschaltet</string>
+  <string name="torch_power_button_gesture_dt">Zum Einschalten der Taschenlampe Ein-/Aus-Taste doppelt drücken (kleine Verzögerung zum einfachem Tippen)</string>
+  <string name="torch_power_button_gesture_dt_toast">Die Geste für den Einsprung zur Kamera ist jetzt deaktiviert</string>
+  <string name="torch_power_button_gesture_lp">Ein-/Aus-Taste lange drücken zum Anschalten der Taschenlampe</string>
+
+  <!-- QuickSettings Panel Transparency -->
+  <string name="panel_cat">Panel</string>
+  <string name="qs_panel_alpha_title">Transparenz</string>
+
+  <!-- Quick Pulldown OS panel -->
+  <string name="quick_settings_quick_pull_down">Mit einem Finger die Statusleiste von rechts herunterziehen, um die Schnelleinstellungen anzuzeigen</string>
+
+  <!-- Heads up options -->
+  <string name="heads_up_cat_title">Pop-up-Benachrichtigungen</string>
+  <string name="heads_up_cat_summary">Whitelist, blacklist usw.</string>
+  <string name="heads_up_title">Aktivieren</string>
+  <string name="heads_up_summary_enabled">Pop-up-Benachrichtigungen EIN</string>
+  <string name="heads_up_summary_disabled">Pop-up-Benachrichtigungen AUS</string>
+  <string name="add_heads_up_package">App hinzufügen</string>
+  <string name="add_heads_up_blacklist_summary">Für folgende Apps Pop-ups deaktivieren</string>
+  <string name="heads_up_blacklist_title">Blacklist</string>
+
+  <!-- Heads up timeout -->
+  <string name="heads_up_time_out_title">Zeitbeschränkung</string>
+  <string name="heads_up_time_out_summary">Pop-up-Benachrichtigung werden für <xliff:g id="number">%d</xliff:g> Sekunden angezeigt</string>
+  <string name="heads_up_time_out_2sec">2 Sekunden</string>
+  <string name="heads_up_time_out_4sec">4 Sekunden</string>
+  <string name="heads_up_time_out_5sec">5 Sekunden</string>
+  <string name="heads_up_time_out_6sec">6 Sekunden</string>
+  <string name="heads_up_time_out_8sec">8 Sekunden</string>
+  <string name="heads_up_time_out_10sec">10 Sekunden</string>
+  <string name="heads_up_snooze_title">Schlummerfunktion</string>
+  <string name="heads_up_snooze_summary_one_minute">Durch das Hochwischen der Pop-up-Benachrichtigung werden alle Meldungen der entsprechenden App für 1 Minute pausiert</string>
+  <string name="heads_up_snooze_summary">Durch das Hochwischen der Pop-Up-Benachrichtigung, werden alle Meldungen der entsprechenden App für <xliff:g id="number">%d</xliff:g> Minuten pausiert.</string>
+  <string name="heads_up_snooze_disabled_summary">Schlummer-Zeit ist deaktiviert</string>
+  <string name="heads_up_snooze_1min">1 Minute</string>
+  <string name="heads_up_snooze_5min">5 Minuten</string>
+  <string name="heads_up_snooze_10min">10 Minuten</string>
+  <string name="heads_up_snooze_15min">15 Minuten</string>
+  <string name="heads_up_snooze_20min">20 Minuten</string>
+
+  <!-- Disable OS on lockscreen -->
+  <string name="block_on_secure_keyguard_title">Schnelleinstellungen deaktivieren</string>
+  <string name="block_on_secure_keyguard_summary">Sobald der Sperrbildschirm angezeigt wird, ist der Zugriff auf die Schnelleinstellungen nicht möglich</string>
+
+  <!-- Power menu on lockscreen -->
+  <string name="lockscreen_power_menu_disabled_title">Ein-/Aus-Menü verbergen</string>
+  <string name="lockscreen_power_menu_disabled_summary">Ein-/Aus-Menü auf abgesichertem Sperrbildschirm verbergen</string>
+
+  <!-- Battery Styles -->
+  <string name="battery_style_category_title">Akku-Symbol</string>
+  <string name="battery_style_title">Akku-Symbol (Design)</string>
+  <string name="battery_style_port">Porträt</string>
+  <string name="battery_style_circle">Kreis</string>
+  <string name="battery_style_dotted_circle">Kreis (gepunktet)</string>
+  <string name="battery_style_big_circle">Großer Kreis</string>
+  <string name="battery_style_big_dotted_circle">Großer gepunkteter Kreis</string>
+  <string name="battery_style_text">Text</string>
+  <string name="show_battery_percent_title">Akkustand in Prozent anzeigen</string>
+  <string name="battery_percent_none">Nicht anzeigen</string>
+  <string name="battery_percent_outside">Neben dem Symbol anzeigen</string>
+  <string name="battery_percent_inside">Im Symbol anzeigen</string>
+
+  <!-- Hide Apps from Recents -->
+  <string name="hide_apps_from_recents_title">Ausgeblendete Apps</string>
+  <string name="hide_from_recents_add_app">App hinzufügen</string>
+  <string name="hide_apps_from_recents_summary">Auswählen, welche Apps nicht im Anwendungsverlauf angezeigt werden</string>
+
+  <!-- Mobile type icon style -->
+  <string name="use_old_mobiletype_title">Mobilnetz-Symbole von Oreo verwenden</string>
+  <string name="use_old_mobiletype_summary">Symbole für Signalstärke und Mobilfunknetz im alten Stil darstellen</string>
+
+  <!-- Lockscreen weather -->
+  <string name="lockscreen_weather_category">Wetter</string>
+  <string name="lockscreen_weather_enabled_title">Auf Sperrbildschirm/Inaktivitätsdisplay zeigen</string>
+  <string name="lockscreen_weather_enabled_summary">Die Wetterinformationen auf dem Sperrbildschirm sowie auf dem Inaktivitätsdisplay anzeigen lassen</string>
+  <string name="lockscreen_weather_settings_title">Wetter Optionen einrichten</string>
+  <string name="lockscreen_weather_settings_summary">Wetterdienst und benutzerdefinierte Symbol-Pakete konfigurieren</string>
+  <string name="weather_config_title">Dienst und Wetteranbieter</string>
+  <string name="weather_config_summary">Berechtigung, Aktualisierungsintervall, und Dienstanbieter einrichten</string>
+  <string name="weather_icon_pack_title">Wetter-Symbolpaket</string>
+  <string name="weather_icon_pack_note">Hinweis\u003a Sie können neue Symbolpakete aus dem Play Store installieren, indem Sie nach \"Chronus icons\" suchen.</string>
+  <string name="weather_icon_pack_info_title">Das gewählte Wetter-Symbolpaket wird in den Schnelleinstellungen und auf dem Sperrbildschirm/Inaktivitätsdisplay verwendet.</string>
+  <string name="lockscreen_weather_show_city_title">Standort anzeigen</string>
+  <string name="lockscreen_weather_show_city_summary">Den Namen des aktiven Standortes vor dem Wetter-Symbol anzeigen</string>
+  <string name="lockscreen_weather_show_temp_title">Temperatur anzeigen</string>
+  <string name="lockscreen_weather_show_temp_summary">Die Temperatur für den Standort hinter dem Wetter-Symbol anzeigen</string>
+
+  <!-- AOKP custom system animations -->
+  <string name="animation_title">Display und Animationen</string>
+  <string name="system_animation_title">Systemanimationen</string>
+  <string name="activity_open_title">\"Aktivität starten\"-Animation</string>
+  <string name="activity_close_title">\"Aktivität beenden\"-Animation</string>
+  <string name="task_open_title">\"Anwendung öffnen\"-Animation</string>
+  <string name="task_close_title">\"Anwendung beenden\"-Animation</string>
+  <string name="task_move_to_front_title">\"Hole nach vorne\"-Animation</string>
+  <string name="task_move_to_back_title">\"Verschiebe nach hinten\"-Animation</string>
+  <string name="wallpaper_open_title">\"Hintergrundbild öffnen\"-Animation</string>
+  <string name="wallpaper_close_title">\"Hintergrundbild schließen\"-Animation</string>
+  <string name="wallpaper_intra_open_title">Animation beim Einblenden des Bildschirmhintergrunds</string>
+  <string name="wallpaper_intra_close_title">Animation beim Ausblenden des Bildschirmhintergrunds</string>
+  <string name="animation_duration_title">Dauer der Kachelanimation</string>
+  <string name="title_animation_no_override">Appbeeinflussung verhindern</string>
+  <string name="summary_animation_no_override">Apps davon abhalten, die Übergangsanimationen zu beeinflussen</string>
+  <string name="animation_duration_default">Standard</string>
+  <string name="disable_transition_animations_title">Übergangsanimationen deaktivieren</string>
+  <string name="disable_transition_animations_summary">Erzwingen, dass alle Übergangsanimationen deaktiviert sind</string>
+
+  <!-- Scrolling Cache -->
+  <string name="pref_scrollingcache_title">Scrolling Cache</string>
+  <string name="pref_scrollingcache_summary">Scrolling Cache kann die Bildlaufleistung auf Kosten des Speichers verbessern</string>
+  <string name="pref_scrollingcache_force_enable">Zwingend aktivieren</string>
+  <string name="pref_scrollingcache_default_enable">Standard aktivieren</string>
+  <string name="pref_scrollingcache_default_disable">Standard deaktivieren</string>
+  <string name="pref_scrollingcache_force_disable">Zwingend deaktivieren</string>
+
+  <!-- Toast Animation -->
+  <string name="toast_animation_title">Toast Animation</string>
+  <string name="toast_none_animation">Keine</string>
+  <string name="toast_default_animation">Standard</string>
+  <string name="toast_fade_animation">Verblassen</string>
+  <string name="toast_SlideRight_animation">Von rechts kommend</string>
+  <string name="toast_SlideLeft_animation">Von links kommend</string>
+  <string name="toast_Xylon_animation">Xylon</string>
+  <string name="toast_Toko_animation">Toko</string>
+  <string name="toast_Tn_animation">Tn</string>
+  <string name="toast_Honami_animation">Honami</string>
+  <string name="toast_FastFade_animation">Schnelles Verblassen</string>
+  <string name="toast_GrowFade_animation">Wachsendes Verblassen</string>
+  <string name="toast_GrowFadeCenter_animation">Wachsendes Verblassen (Mitte)</string>
+  <string name="toast_GrowFadeBottom_animation">Wachsendes Verblassen (Unten)</string>
+  <string name="toast_Translucent_animation">Transluzent</string>
+  <string name="toast_SlideLeftRight_animation">Von links nach rechts wischen</string>
+  <string name="toast_SlideRightLeft_animation">Von rechts nach links wischen</string>
+
+  <!-- ListView animation -->
+  <string name="listview_animation_title">Listenansicht animieren</string>
+  <string name="listview_off">Standard</string>
+  <string name="listview_wave_left">Welle (links)</string>
+  <string name="listview_wave_right">Welle (rechts)</string>
+  <string name="listview_alpha">Alpha</string>
+  <string name="listview_scale">Skalieren</string>
+  <string name="listview_stack_top">Stapel (oben)</string>
+  <string name="listview_stack_bottom">Stapel (unten)</string>
+  <string name="listview_unfold">Herausklappen</string>
+  <string name="listview_fold">Einklappen</string>
+  <string name="listview_translate_left">Verrücken (links)</string>
+  <string name="listview_translate_right">Verrücken (rechts)</string>
+
+  <!-- ListView interpolator -->
+  <string name="listview_interpolator_title">Listenansicht tnterpolieren</string>
+  <string name="listview_accelerate_interpolator">Beschleunigen</string>
+  <string name="listview_decelerate_interpolator">Verlangsamen</string>
+  <string name="listview_accelerate_decelerate_interpolator">Beschleunigen und verlangsamen</string>
+  <string name="listview_anticipate_interpolator">Antizipieren</string>
+  <string name="listview_overshoot_interpolator">Überschwingen</string>
+  <string name="listview_anticipate_overshoot_interpolator">Antizipieren und Überschwingen</string>
+  <string name="listview_bounce_interpolator">Hüpfen</string>
+
+  <!-- Screen Off animation --> 
+  <string name="screen_off_animation_title">Ausschaltanimation</string>
+  <string name="screen_off_animation_fade">Verblassen</string>
+  <string name="screen_off_animation_color">Farben verblassen</string>
+  <string name="screen_off_animation_crt">CRT</string>
+  <string name="screen_off_animation_scale">Skalieren</string>
+
+  <!-- Tiles animation style  -->
+  <string name="qs_tile_animation_category">Animierte Kacheln in den Schnelleinstellungen</string>
+  <string name="qs_tile_animation_style_title">Kachel-Animationsstil</string>
+  <string name="qs_tile_animation_duration_title">Dauer der Kachelanimation</string>
+  <string name="qs_tile_animation_style_off">Keine Animation</string>
+  <string name="qs_tile_animation_style_flip">Drehen</string>
+  <string name="qs_tile_animation_style_rotate">Rotieren</string>
+  <string name="qs_tile_animation_duration_low">Langsam</string>
+  <string name="qs_tile_animation_duration_default">Standard</string>
+  <string name="qs_tile_animation_duration_fast">Schnell</string>
+  <string name="qs_set_animation_style">Animationsstil: %1$s</string>
+  <string name="qs_set_animation_duration">Dauer der Kachelanimation: %1$s</string>
+
+  <string name="qs_tile_animation_interpolator_title">Animation interpolator</string> 
+  <string name="qs_tile_animation_interpolator_linearInterpolator">Linear</string>
+  <string name="qs_tile_animation_interpolator_accelerateInterpolator">Beschleunigen</string>
+  <string name="qs_tile_animation_interpolator_decelerateInterpolator">Verlangsamen</string>
+  <string name="qs_tile_animation_interpolator_accelerateDecelerateInterpolator">Beschleunigen und verlangsamen</string>
+  <string name="qs_tile_animation_interpolator_bounceInterpolator">Hüpfen</string>
+  <string name="qs_tile_animation_interpolator_overshootInterpolator">Überschwingen</string>
+  <string name="qs_tile_animation_interpolator_anticipateInterpolator">Antizipieren</string>
+  <string name="qs_tile_animation_interpolator_anticipateOvershootInterpolator">Antizipieren und Überschwingen</string>
+
+  <!-- Wakelock blocker -->
+  <string name="wakelock_blocker_title">Wakelocks blockieren</string>
+  <string name="wakelock_blocker_summary">Blockiere System-Wakelocks</string>
+  <string name="wakelock_blocker_save">Speichern</string>
+  <string name="wakelock_list_header">Verfügbare Wakelocks</string>
+  <string name="wakelock_blocker_reload">Erneut laden</string>
+
+  <!-- Alarm blocker -->
+  <string name="alarm_blocker_title">Alarme blockieren</string>
+  <string name="alarm_blocker_summary">Alarme blockieren während der Bildschirm aus ist</string>
+  <string name="alarm_blocker_save">Speichern</string>
+  <string name="alarm_list_header">Verfügbare Alarme</string>
+  <string name="alarm_blocker_reload">Erneut laden</string>
+
+  <!-- Label for feature switch [CHAR LIMIT=30] -->
+  <string name="switch_bar_on">Ein</string>
+
+  <!-- Label for feature switch [CHAR LIMIT=30] -->
+  <string name="switch_bar_off">Aus</string>
+
+  <!-- Pocket judge -->
+  <string name="pocket_judge_title">Taschen-Erkennung</string>
+  <string name="pocket_judge_summary">Verhindert Bildschirm und Tasteneingaben, wenn sich das Gerät in einer Tasche befindet</string>
+
+  <!-- HW Keys customization -->
+  <string name="picker_activities">Aktivitäten</string>
+  <string name="select_custom_app_title">Benutzerdefinierte App auswählen</string>
+  <string name="select_custom_activity_title">Benutzerdefinierte Aktivität auswählen</string>
+  <string name="profile_applist_title">Anwendungen</string>
+  <string name="choose_action_title">Aktion auswählen</string>
+  <string name="action_entry_default_action">Standardeinstellungen</string>
+  <string name="action_entry_select_app">Anwendung auswählen</string>
+  <string name="action_entry_custom_action">Benutzerdefinierte Aktion auswählen</string>
+  <string name="hardware_keys_home_key_title">Home-Taste</string>
+  <string name="hardware_keys_menu_key_title">Menüschaltfläche</string>
+  <string name="hardware_keys_assist_key_title">Suchen-Taste</string>
+  <string name="hardware_keys_appswitch_key_title">Anwendungsverlauf-Taste</string>
+  <string name="hardware_keys_back_key_title">Zurück-Taste</string>
+  <string name="hardware_keys_double_tap_summary">Doppeltes Tippen (Aktion)</string>
+  <string name="hardware_keys_single_tap_summary">Einfaches Drücken, Aktion setzen</string>
+  <string name="hardware_keys_long_press_summary">Langes Drücken (Aktion)</string>
+  <string name="hardware_keys_single_tap_title">Aktion für Einfaches Tippen</string>
+  <string name="hardware_keys_long_press_title">Langes Drücken</string>
+  <string name="hardware_keys_double_tap_title">Doppeltes Tippen</string>
+  <string name="hardware_keys_category">Hardware-Tasten</string>
+  <string name="hardware_keys_disable_title">Tasten deaktivieren</string>
+
+  <!-- ANBI -->
+  <string name="anbi_title">Versehentliches Berühren</string>
+  <string name="anbi_summary">Das Bedienen der Navigationstasten wird verhindert, während der Bildschirm berührt wird</string>
+
+  <!-- Volume key cursor control -->
+  <string name="hardware_keys_volume_keys_title">Lautstärketasten</string>
+  <string name="volbtn_cursor_control_title">Tastaturcursor steuern</string>
+  <string name="volbtn_cursor_control_off">Deaktiviert</string>
+  <string name="volbtn_cursor_control_on">Lautstärke hoch/runter bewegt den Cursor nach links/rechts</string>
+  <string name="volbtn_cursor_control_on_reverse">Lautstärke hoch/runter bewegt den Cursor nach rechts/links</string>
+
+  <!-- Volume swap buttons -->	
+  <string name="swap_volume_buttons_title">Neuorientierung</string>
+  <string name="swap_volume_buttons_summary">Lautstärketasten umkehren, wenn Display gedreht wird</string>
+
+  <!-- Sensor block per-package -->
+  <string name="sensor_block_title">App-Zugriff auf Sensoren blockieren</string>
+  <string name="sensor_block_summary">Den Zugriff auf bestimmte Sensoren für einige Apps blockieren, um den Akku zu schonen</string>
+
+  <!-- Lock Clock Fonts -->
+  <string name="lockscreen_clock_category">Sperrbildschirm-Uhr</string>
+  <string name="lock_clock_font_title">Schriftoptionen</string>
+  <string name="lock_clock_font_summary">Ermöglicht es die Standardschrift für die Uhranzeige zu ändern</string>
+  <string name="lock_clock_font_dialog_title">Schriftart für Uhranzeige auswählen</string>
+  <string name="lock_clock_font_stock">Normal</string>
+  <string name="lock_clock_font_bold">Fett</string>
+  <string name="lock_clock_font_italic">Kursiv</string>
+  <string name="lock_clock_font_bold_italic">Fett Kursiv</string>
+  <string name="lock_clock_font_light_italic">Dünn Kursiv</string>
+  <string name="lock_clock_font_thin_italic">Dünn Kursiv</string>
+  <string name="lock_clock_font_light">Leicht (Standard)</string>
+  <string name="lock_clock_font_thin">Dünn</string>
+  <string name="lock_clock_font_condensed_normal">Verkürzt</string>
+  <string name="lock_clock_font_condensed_italic">Verkürzt Kursiv</string>
+  <string name="lock_clock_font_condensed_bold">Verkürzt Fett</string>
+  <string name="lock_clock_font_condensed_bold_italic">Verkürzt Fett Kursiv</string>
+  <string name="lock_clock_font_condensed_light">Verkürzt Leicht</string>
+  <string name="lock_clock_font_condensed_light_italic">Verkürzt Leicht Kursiv</string> 
+  <string name="lock_clock_font_medium_normal">Mittel</string>
+  <string name="lock_clock_font_medium_italic">Mittel Kursiv</string>
+  <string name="lock_clock_font_black">Schwarz</string>
+  <string name="lock_clock_font_black_italic">Schwarz Kursiv</string>
+
+  <!-- Bluetooth battery status --> 
+  <string name="bluetooth_battery_title">Bluetooth Akkuladezustand</string> 
+  <string name="bluetooth_battery_summary">Akkuladezustand für ein verbundenes Bluetooth-Gerät anzeigen (falls verfügbar)</string>
+
+  <!-- AOSP Recents component Style -->
+  <string name="recents_component_type_title">Anwendungsverlauf umschalten</string>
+  <string name="recents_pie">Pie</string>
+  <string name="recents_oreo">Oreo</string>
+
+  <!-- Volume Steps -->
+  <string name="volume_steps_title">Lautstärkestufen</string>
+  <string name="volume_steps_alarm_title">Lautstärkestufen: Wecker</string>
+  <string name="volume_steps_dtmf_title">Lautstärkestufen: DTMF</string>
+  <string name="volume_steps_music_title">Lautstärkestufen: Musik</string>
+  <string name="volume_steps_notification_title">Lautstärkestufen: Benachrichtigung</string>
+  <string name="volume_steps_ring_title">Lautstärkestufen: Rufton</string>
+  <string name="volume_steps_system_title">Lautstärkestufen: System</string>
+  <string name="volume_steps_voice_call_title">Lautstärkestufen: Sprachanruf</string>
+  <string name="volume_steps_reset">Zurücksetzen</string>
+
+</resources>
