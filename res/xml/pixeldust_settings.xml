@@ -85,7 +85,7 @@
             android:key="animations_category"
             android:title="@string/animations_title" 
             android:fragment="com.pixeldust.settings.fragments.AnimationsSettings"
-            android:icon="@drawable/ic_settings_animations"/>
+            android:icon="@drawable/ic_homepage_animations"/>
 
         <!-- Misc -->
         <Preference
