@@ -57,7 +57,7 @@
             settings:units=""
             android:persistent="false" />
 
-        <com.pixeldust.settings.preferences.SystemSettingSwitchPreference
+        <com.pixeldust.settings.preferences.SecureSettingSwitchPreference
             android:key="quick_settings_quick_pull_down"
             android:title="@string/quick_settings_quick_pull_down"
             android:defaultValue="false" />
