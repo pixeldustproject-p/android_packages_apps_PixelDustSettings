@@ -30,26 +30,38 @@
 
     </PreferenceCategory>
 
-    <Preference
-         android:key="smart_pixels"
-         android:title="@string/smart_pixels_title"
-         android:summary="@string/smart_pixels_summary"
-         android:fragment="com.pixeldust.settings.fragments.SmartPixels" />
+    <PreferenceCategory
+        android:key="smart_pixels_cat"
+        android:title="@string/smart_pixels_title" >
 
-    <Preference
-         android:key="wakelock_blocker"
-         android:fragment="com.pixeldust.settings.fragments.WakeLockBlocker"
-         android:title="@string/wakelock_blocker_title" />
+        <Preference
+             android:key="smart_pixels"
+             android:title="@string/smart_pixels_title"
+             android:summary="@string/smart_pixels_summary"
+             android:fragment="com.pixeldust.settings.fragments.SmartPixels" />
 
-    <Preference
-         android:id="@+id/alarm_blocker"
-         android:fragment="com.pixeldust.settings.fragments.AlarmBlocker"
-         android:title="@string/alarm_blocker_title" />
+    </PreferenceCategory>
 
-    <com.pixeldust.settings.preferences.SystemSettingSwitchPreference
-         android:key="sensor_block"
-         android:title="@string/sensor_block_title"
-         android:summary="@string/sensor_block_summary"
-         android:defaultValue="false" />
+    <PreferenceCategory
+        android:key="blocker_cat"
+        android:title="@string/blocker_cat" >
+
+        <Preference
+             android:key="wakelock_blocker"
+             android:fragment="com.pixeldust.settings.fragments.WakeLockBlocker"
+             android:title="@string/wakelock_blocker_title" />
+
+        <Preference
+             android:id="@+id/alarm_blocker"
+             android:fragment="com.pixeldust.settings.fragments.AlarmBlocker"
+             android:title="@string/alarm_blocker_title" />
+
+        <com.pixeldust.settings.preferences.SystemSettingSwitchPreference
+             android:key="sensor_block"
+             android:title="@string/sensor_block_title"
+             android:summary="@string/sensor_block_summary"
+             android:defaultValue="false" />
+
+    </PreferenceCategory>
 
 </PreferenceScreen>
