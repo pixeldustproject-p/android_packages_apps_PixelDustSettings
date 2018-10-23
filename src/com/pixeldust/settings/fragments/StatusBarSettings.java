@@ -50,7 +50,6 @@ import com.android.settings.search.Indexable;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.Utils;
 import com.android.settings.R;
-import com.android.settingslib.graph.BatteryMeterDrawableBase;
 
 import com.pixeldust.settings.preferences.CustomSeekBarPreference;
 import com.pixeldust.settings.preferences.SystemSettingSwitchPreference;
@@ -65,9 +64,6 @@ import java.util.Map;
 
 public class StatusBarSettings extends SettingsPreferenceFragment implements
         OnPreferenceChangeListener, Indexable {
-
-    private static final String BATTERY_STYLE = "battery_style";
-    private static final String BATTERY_PERCENT = "show_battery_percent";
 
     private CustomSeekBarPreference mThreshold;
     private SystemSettingSwitchPreference mNetMonitor;
@@ -94,9 +90,6 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements
     private ListPreference mClockDateStyle;
     private ListPreference mClockDateFormat;
     private ListPreference mClockDatePosition;
-
-    private ListPreference mBatteryIconStyle;
-    private ListPreference mBatteryPercentage;
 
     private CustomSeekBarPreference mClockSize;
     private ListPreference mClockFontStyle;
@@ -206,25 +199,6 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements
         mClockDatePosition.setValue(String.valueOf(clockDatePosition));
         mClockDatePosition.setSummary(mClockDatePosition.getEntry());
         mClockDatePosition.setOnPreferenceChangeListener(this);
-
-	// Battery styles
-        int batteryStyle = Settings.Secure.getInt(resolver,
-                Settings.Secure.STATUS_BAR_BATTERY_STYLE, 0);
-        mBatteryIconStyle = (ListPreference) findPreference(BATTERY_STYLE);
-        mBatteryIconStyle.setValue(Integer.toString(batteryStyle));
-        int valueIndex = mBatteryIconStyle.findIndexOfValue(String.valueOf(batteryStyle));
-        mBatteryIconStyle.setSummary(mBatteryIconStyle.getEntries()[valueIndex]);
-        mBatteryIconStyle.setOnPreferenceChangeListener(this);
-
-        int showPercent = Settings.System.getInt(resolver,
-                Settings.System.SHOW_BATTERY_PERCENT, 1);
-        mBatteryPercentage = (ListPreference) findPreference(BATTERY_PERCENT);
-        mBatteryPercentage.setValue(Integer.toString(showPercent));
-        valueIndex = mBatteryPercentage.findIndexOfValue(String.valueOf(showPercent));
-        mBatteryPercentage.setSummary(mBatteryPercentage.getEntries()[valueIndex]);
-        mBatteryPercentage.setOnPreferenceChangeListener(this);
-        boolean hideForcePercentage = batteryStyle == BatteryMeterDrawableBase.BATTERY_STYLE_TEXT;
-        mBatteryPercentage.setEnabled(!hideForcePercentage);
     }
 
     @Override
@@ -349,26 +323,6 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements
                         Settings.System.STATUSBAR_CLOCK_DATE_FORMAT, (String) objValue);
                 }
             }
-            return true;
-        } else  if (preference.equals(mBatteryIconStyle)) {
-            int value = Integer.valueOf((String) objValue);
-            Settings.Secure.putInt(getContentResolver(),
-                    Settings.Secure.STATUS_BAR_BATTERY_STYLE, value);
-            int valueIndex = mBatteryIconStyle
-                    .findIndexOfValue((String) objValue);
-            mBatteryIconStyle
-                    .setSummary(mBatteryIconStyle.getEntries()[valueIndex]);
-            boolean hideForcePercentage = value == BatteryMeterDrawableBase.BATTERY_STYLE_TEXT;
-            mBatteryPercentage.setEnabled(!hideForcePercentage);
-            return true;
-        } else  if (preference == mBatteryPercentage) {
-            int value = Integer.valueOf((String) objValue);
-            Settings.System.putInt(resolver,
-                    Settings.System.SHOW_BATTERY_PERCENT, value);
-            int valueIndex = mBatteryPercentage
-                    .findIndexOfValue((String) objValue);
-            mBatteryPercentage
-                    .setSummary(mBatteryPercentage.getEntries()[valueIndex]);
             return true;
         } else if (preference == mClockDatePosition) {
             int val = Integer.parseInt((String) objValue);

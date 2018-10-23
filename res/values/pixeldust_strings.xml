@@ -245,22 +245,6 @@
     <string name="lockscreen_power_menu_disabled_title">Disable power menu on lock screen</string>
     <string name="lockscreen_power_menu_disabled_summary">This will only disable the power menu on secure lock screens</string>
 
-    <!-- Battery Styles -->
-    <string name="battery_style_category_title">Battery level</string>
-    <string name="battery_style_title">Battery icon style</string>
-    <string name="battery_style_port">Portrait</string>
-    <string name="battery_style_circle">Circle</string>
-    <string name="battery_style_dotted_circle">Dotted circle</string>
-    <string name="battery_style_big_circle">Big circle</string>
-    <string name="battery_style_big_dotted_circle">Big dotted circle</string>
-    <string name="battery_style_text">Text</string>
-    <string name="show_battery_percent_title">Show battery percentage</string>
-    <string name="battery_percent_none">Don\'t show</string>
-    <string name="battery_percent_outside">Show near icon</string>
-    <string name="battery_percent_inside">Show inside icon</string>
-    <string name="show_battery_percent_on_qsb">Show percent on pull down</string>
-    <string name="show_battery_percent_on_qsb_summary">Always show percent on quick settings shade when pulling down</string>
-
     <!-- Hide Apps from Recents -->
     <string name="hide_apps_from_recents_title">Hide apps from recents</string>
     <string name="hide_from_recents_add_app">Add App</string>
@@ -500,10 +484,6 @@
     <string name="lock_clock_font_medium_italic">Medium Italic</string>
     <string name="lock_clock_font_black">Black</string>
     <string name="lock_clock_font_black_italic">Black Italic</string>
-
-    <!-- Bluetooth battery status --> 
-    <string name="bluetooth_battery_title">Bluetooth battery status</string> 
-    <string name="bluetooth_battery_summary">Display battery status for the connected bluetooth device, if available</string>
 
     <!-- AOSP Recents component Style -->
     <string name="recents_component_type_title">Stock Recents Style</string>
