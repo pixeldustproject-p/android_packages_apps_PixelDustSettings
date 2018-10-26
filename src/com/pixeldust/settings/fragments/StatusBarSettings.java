@@ -88,9 +88,8 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements
     public static final int BATTERY_STYLE_PORTRAIT = 0;
     public static final int BATTERY_STYLE_CIRCLE = 1;
     public static final int BATTERY_STYLE_DOTTED_CIRCLE = 2;
-    public static final int BATTERY_STYLE_SQUARE = 3;
-    public static final int BATTERY_STYLE_TEXT = 4;
-    public static final int BATTERY_STYLE_HIDDEN = 5;
+    public static final int BATTERY_STYLE_TEXT = 3;
+    public static final int BATTERY_STYLE_HIDDEN = 4;
 
     private SystemSettingSwitchPreference mStatusBarClockShow;
     private SystemSettingSwitchPreference mStatusBarSecondsShow;
@@ -219,7 +218,7 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements
 
         mBatteryStyle = (ListPreference) findPreference(STATUS_BAR_BATTERY_STYLE);
         int batterystyle = Settings.System.getIntForUser(resolver,
-                Settings.System.STATUS_BAR_BATTERY_STYLE, BATTERY_STYLE_CIRCLE,
+                Settings.System.STATUS_BAR_BATTERY_STYLE, BATTERY_STYLE_PORTRAIT,
                 UserHandle.USER_CURRENT);
         mBatteryStyle.setOnPreferenceChangeListener(this);
 
