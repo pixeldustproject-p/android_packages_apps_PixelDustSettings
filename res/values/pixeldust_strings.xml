@@ -792,5 +792,8 @@
 
     <!-- Lockscreen Weather -->
     <string name="lockscreen_weather_category">Weather</string>
+    <string name="weather_unit">Temperature unit</string>
+    <string name="weather_unit_metric" translatable="false">Celsius</string>
+    <string name="weather_unit_imperial" translatable="false">Fahrenheit</string>
 
 </resources>

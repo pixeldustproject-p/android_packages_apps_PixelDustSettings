@@ -752,5 +752,6 @@
 
   <!-- Lockscreen Weather -->
   <string name="lockscreen_weather_category">Wetter</string>
+  <string name="weather_unit">Temperatur-Einheit</string>
 
 </resources>
