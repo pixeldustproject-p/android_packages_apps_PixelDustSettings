@@ -20,12 +20,13 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.os.UserHandle;
 import android.provider.Settings;
+import android.preference.Preference.OnPreferenceChangeListener;
 import android.support.v7.preference.PreferenceCategory;
 import android.support.v14.preference.SwitchPreference;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.ListPreference;
 
-import com.pixeldust.settings.preferences.ColorPickerPreference;
+import net.margaritov.preference.colorpicker.ColorPickerPreference;
 import com.pixeldust.settings.preferences.CustomSeekBarPreference;
 import com.android.internal.logging.nano.MetricsProto;
 import com.android.settings.R;

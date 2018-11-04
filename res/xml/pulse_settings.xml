@@ -37,7 +37,7 @@
         android:summary="@string/pulse_auto_color_summary"
         android:dependency="eos_fling_show_pulse" />
 
-    <com.pixeldust.settings.preferences.ColorPickerPreference
+    <net.margaritov.preference.colorpicker.ColorPickerPreference
         android:key="eos_fling_pulse_color"
         android:title="@string/fling_pulse_color"
         android:summary="@string/fling_pulse_color_summary"
