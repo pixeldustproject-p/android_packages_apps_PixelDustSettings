@@ -672,6 +672,8 @@
   <string name="pulse_accent_color_summary">Wenn diese Option aktiviert ist, dann verwendet Pulse die aktuelle Akzentfarbe. Dadurch wird die Lavalampe deaktiviert.</string>
   <string name="fling_pulse_color">Pulse Farbe</string>
   <string name="fling_pulse_color_summary">Wird auch als Ersatz für die automatische Farbe verwendet.</string>
+  <string name="fling_smoothing_enabled_title">Glätten ein</string>
+  <string name="fling_smoothing_enabled_summary">Die Blöcke werden flüssiger animiert</string>
   <string name="eos_fling_lavalamp_title">Lava-Lampe einschalten</string>
   <string name="eos_fling_lavalamp_summary">Pulse wechselt automatisch die Farben in einem Lavalampen-Stil</string>
   <string name="pulse_advanced_category">Erweitert</string>
