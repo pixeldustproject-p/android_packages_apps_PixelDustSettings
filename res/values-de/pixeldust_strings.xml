@@ -305,7 +305,7 @@
   <string name="wallpaper_close_title">\"Hintergrundbild schließen\"-Animation</string>
   <string name="wallpaper_intra_open_title">Animation beim Einblenden des Bildschirmhintergrunds</string>
   <string name="wallpaper_intra_close_title">Animation beim Ausblenden des Bildschirmhintergrunds</string>
-  <string name="animation_duration_title">Dauer der Kachelanimation</string>
+  <string name="animation_duration_title">Animationsdauer</string>
   <string name="title_animation_no_override">Appbeeinflussung verhindern</string>
   <string name="summary_animation_no_override">Apps davon abhalten, die Übergangsanimationen zu beeinflussen</string>
   <string name="animation_duration_default">Standard</string>
