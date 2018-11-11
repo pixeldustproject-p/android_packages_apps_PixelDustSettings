@@ -750,4 +750,11 @@
   <string name="smartbar_double_tap_sleep_title">Zweimal auf Navigationsleiste tippen für Ruhezustand</string>
   <string name="smartbar_double_tap_sleep_summary">Für Ruhezustand zweimal auf einen leeren Teil der Navigationsleiste tippen</string>
 
+  <!-- Stock Recents/Overview icon pack support -->
+  <string name="recents_icon_pack_title">Symbolpaket</string>
+  <string name="recents_icon_pack_summary">Benutzerdefiniertes Symbolpaket für den Anwendungsverlauf anwenden</string>
+  <string name="no_iconpacks_summary">Keine Symbolpakete installiert</string>
+  <string name="dialog_pick_iconpack_title">Symbolpaket auswählen</string>
+  <string name="default_iconpack_title">Standard Icons</string>
+
 </resources>
