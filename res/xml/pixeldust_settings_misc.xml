@@ -24,9 +24,9 @@
 
         <Preference
             android:key="ambient_play"
-            android:title="@string/ambient_play_settings_title"
-            android:summary="@string/ambient_play_settings_summary"
-            android:fragment="com.android.settings.AmbientPlaySettings" />
+            android:title="@string/ambient_play_title"
+            android:summary="@string/ambient_play_summary"
+            android:fragment="com.android.settings.pixeldust.ambient.AmbientPlaySettings" />
 
     </PreferenceCategory>
 
