@@ -228,7 +228,7 @@
 
   <!-- Heads up timeout -->
   <string name="heads_up_time_out_title">Zeitbeschränkung</string>
-  <string name="heads_up_time_out_summary">Pop-up-Benachrichtigung werden für <xliff:g id="number">%d</xliff:g> Sekunden angezeigt</string>
+  <string name="heads_up_time_out_summary">Pop-up-Benachrichtigungen werden für <xliff:g id="number">%d</xliff:g> Sekunden angezeigt</string>
   <string name="heads_up_time_out_2sec">2 Sekunden</string>
   <string name="heads_up_time_out_4sec">4 Sekunden</string>
   <string name="heads_up_time_out_5sec">5 Sekunden</string>
@@ -244,6 +244,10 @@
   <string name="heads_up_snooze_10min">10 Minuten</string>
   <string name="heads_up_snooze_15min">15 Minuten</string>
   <string name="heads_up_snooze_20min">20 Minuten</string>
+
+  <!-- Less boring heads up option -->
+  <string name="less_boring_heads_up_title">Weniger Störungen durch Pop-up-Benachrichtigungen</string>
+  <string name="less_boring_heads_up_summary">Pop-up-Benachrichtigungen nur für die Telefon- oder Nachrichten-App anzeigen, wenn diese nicht im Vordergrund sind</string>
 
   <!-- Disable OS on lockscreen -->
   <string name="block_on_secure_keyguard_title">Schnelleinstellungen deaktivieren</string>
