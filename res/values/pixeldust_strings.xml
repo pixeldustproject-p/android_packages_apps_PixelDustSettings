@@ -242,6 +242,10 @@
     <string name="heads_up_snooze_15min">15 minutes</string>
     <string name="heads_up_snooze_20min">20 minutes</string>
 
+    <!-- Less boring heads up option -->
+    <string name="less_boring_heads_up_title">Less boring heads up</string>
+    <string name="less_boring_heads_up_summary">Show heads up only for dialer or messaging app</string>
+
     <!-- Disable OS on lockscreen -->
     <string name="block_on_secure_keyguard_title">Disable quick settings</string>
     <string name="block_on_secure_keyguard_summary">Disables quick settings on secure lockscreen</string>
