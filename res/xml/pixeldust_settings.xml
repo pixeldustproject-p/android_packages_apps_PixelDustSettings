@@ -87,6 +87,14 @@
             android:fragment="com.pixeldust.settings.fragments.AnimationsSettings"
             android:icon="@drawable/ic_homepage_animations"/>
 
+        <!-- Privacy Guard -->
+        <Preference
+            android:key="privacy_guard_manager"
+            android:fragment="com.android.settings.privacyguard.PrivacyGuardManager"
+            android:title="@string/app_ops_settings_title"
+            android:layout="@layout/preference_pd_appops"
+            android:icon="@drawable/ic_homepage_appops"/>
+
         <!-- Misc -->
         <Preference
             android:key="misc_category"

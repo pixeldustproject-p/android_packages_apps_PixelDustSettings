@@ -24,6 +24,7 @@
   <string name="misc_title">Sonstiges</string>
   <string name="navbar_title">Navigationsleiste</string>
   <string name="powermenu_title">Ein/Aus-Tasten Menü</string>
+  <string name="app_ops_settings_title">Datenschutz</string>
   <string name="quicksettings_title">Schnelleinstellungen</string>
   <string name="recents_title">Anwendungsverlauf</string>
   <string name="statusbar_title">Statusleiste</string>
