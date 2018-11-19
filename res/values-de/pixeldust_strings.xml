@@ -285,22 +285,6 @@
   <string name="use_old_mobiletype_title">Mobilnetz-Symbole von Oreo verwenden</string>
   <string name="use_old_mobiletype_summary">Symbole für Signalstärke und Mobilfunknetz im alten Stil darstellen</string>
 
-  <!-- Lockscreen weather -->
-  <string name="lockscreen_weather_category">Wetter</string>
-  <string name="lockscreen_weather_enabled_title">Auf Sperrbildschirm/Inaktivitätsdisplay zeigen</string>
-  <string name="lockscreen_weather_enabled_summary">Die Wetterinformationen auf dem Sperrbildschirm sowie auf dem Inaktivitätsdisplay anzeigen lassen</string>
-  <string name="lockscreen_weather_settings_title">Wetter Optionen einrichten</string>
-  <string name="lockscreen_weather_settings_summary">Wetterdienst und benutzerdefinierte Symbol-Pakete konfigurieren</string>
-  <string name="weather_config_title">Dienst und Wetteranbieter</string>
-  <string name="weather_config_summary">Berechtigung, Aktualisierungsintervall, und Dienstanbieter einrichten</string>
-  <string name="weather_icon_pack_title">Wetter-Symbolpaket</string>
-  <string name="weather_icon_pack_note">Hinweis\u003a Sie können neue Symbolpakete aus dem Play Store installieren, indem Sie nach \"Chronus icons\" suchen.</string>
-  <string name="weather_icon_pack_info_title">Das gewählte Wetter-Symbolpaket wird in den Schnelleinstellungen und auf dem Sperrbildschirm/Inaktivitätsdisplay verwendet.</string>
-  <string name="lockscreen_weather_show_city_title">Standort anzeigen</string>
-  <string name="lockscreen_weather_show_city_summary">Den Namen des aktiven Standortes vor dem Wetter-Symbol anzeigen</string>
-  <string name="lockscreen_weather_show_temp_title">Temperatur anzeigen</string>
-  <string name="lockscreen_weather_show_temp_summary">Die Temperatur für den Standort hinter dem Wetter-Symbol anzeigen</string>
-
   <!-- AOKP custom system animations -->
   <string name="animation_title">Display und Animationen</string>
   <string name="system_animation_title">Systemanimationen</string>
@@ -773,5 +757,8 @@
   <string name="dialog_pick_iconpack_title">Symbolpaket auswählen</string>
   <string name="default_iconpack_title">Standard Icons</string>
   <string name="recents_icon_pack_help_text">Sie können neue Symbolpakete aus dem Play Store installieren, indem Sie nach \"icon pack\" und \"theme\" für ADW Launcher, Apex Launcher, GO Launcher, Launcher Pro oder Nova Launcher suchen.</string>
+
+  <!-- Lockscreen Weather -->
+  <string name="lockscreen_weather_category">Wetter</string>
 
 </resources>
