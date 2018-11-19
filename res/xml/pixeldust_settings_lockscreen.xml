@@ -73,10 +73,4 @@
         android:key="lockscreen_weather"
         android:title="@string/lockscreen_weather_category" />
 
-        <Preference
-            android:key="omnijaws_settings"
-            android:title="@string/lockscreen_weather_settings_title"
-            android:summary="@string/lockscreen_weather_settings_summary"
-            android:fragment="com.pixeldust.settings.fragments.OmniJawsSettings" />
-
 </PreferenceScreen>
