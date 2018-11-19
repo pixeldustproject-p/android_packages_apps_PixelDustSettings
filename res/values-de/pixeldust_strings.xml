@@ -887,4 +887,11 @@
   <string name="audio_panel_view_voice_title">Sprache</string>
   <string name="audio_panel_view_bt_sco_title">Bluetooth</string>
 
+  <!-- Ambient Music ticker -->
+  <string name="force_ambient_for_media_pref_title">Ambient-Musik-Ticker</string>
+  <string name="force_ambient_for_media_pref_summary">Musik-Ticker konfigurieren</string>
+  <string name="ambient_ticker_footer">Dieses Feature zeigt Informationen über den gerade wiedergegebenen Song auf dem Sperrbildschirm und/oder auf dem Inaktivitätsdisplay an.\n\nDies funktioniert sobald ein Song wiedergegeben wird und ohne dass das Inaktivitätsdisplay aktiviert ist.\n\nDie Ansicht stellt den Songtitel mittig auf dem Bildschirms dar.\n\nSie können auf den Songtitel doppeltippen, um zum nächsten Song zu springen.</string>
+  <string name="force_ambient_for_media_title">Einschalten</string>
+  <string name="ambient_title">Ambient Musik</string>
+
 </resources>

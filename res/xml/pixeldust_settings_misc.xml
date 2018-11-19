@@ -19,6 +19,18 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
     <PreferenceCategory
+        android:key="ambient_cat"
+        android:title="@string/ambient_title" >
+
+    <Preference
+        android:key="force_ambient_for_media_pref"
+        android:fragment="com.pixeldust.settings.fragments.AmbientTicker"
+        android:title="@string/force_ambient_for_media_pref_title"
+        android:summary="@string/force_ambient_for_media_pref_summary"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
         android:key="rounded_corners_cat"
         android:title="@string/corners_title" >
 
