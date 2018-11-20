@@ -84,10 +84,10 @@
 
   <!-- QS Brightness -->
   <string name="brightness_cat">Helligkeit</string>
-  <string name="brightness_slider_title">Helligkeitsregler</string>
-  <string name="brightness_slider_summary">Helligkeitsregler oberhalb der Kacheln anzeigen</string>
+  <string name="brightness_slider_title">Helligkeitsregler anzeigen</string>
+  <string name="brightness_slider_summary">Helligkeitsregler in den Schnelleinstellungen anzeigen</string>
   <string name="brightness_icon_title">Symbol für Helligkeit</string>
-  <string name="brightness_icon_summary">Zeigt ein Symbol für die Helligkeit auf der linken Seite des Helligkeitsreglers, um die Auto-Helligkeit anzupassen</string>
+  <string name="brightness_icon_summary">Symbol für die Helligkeit auf der rechten Seite des Helligkeitsreglers anzeigen, um den Auto-Helligkeits-Modus umzuschalten</string>
 
   <!-- Quick Settings brightness slider -->
   <string name="qs_brightness_position_bottom_title">Helligkeitsregler unten</string>
