@@ -81,9 +81,9 @@
     <!-- QS Brightness -->
     <string name="brightness_cat">Brightness</string>
     <string name="brightness_slider_title">Show slider</string>
-    <string name="brightness_slider_summary">Show the brightness slider above quick settings</string>
+    <string name="brightness_slider_summary">Show the brightness slider in the quick settings</string>
     <string name="brightness_icon_title">Show icon</string>
-    <string name="brightness_icon_summary">Show a brightness icon to the left of the brighness slider to adjust auto-brightness</string>
+    <string name="brightness_icon_summary">Show a brightness icon to the right of the brighness slider to adjust auto-brightness</string>
 
     <!-- Quick Settings brightness slider -->
     <string name="qs_brightness_position_bottom_title">Brightness slider on bottom</string>
