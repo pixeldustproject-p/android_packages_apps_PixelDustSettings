@@ -756,5 +756,6 @@
   <string name="no_iconpacks_summary">Keine Symbolpakete installiert</string>
   <string name="dialog_pick_iconpack_title">Symbolpaket auswählen</string>
   <string name="default_iconpack_title">Standard Icons</string>
+  <string name="recents_icon_pack_help_text">Sie können neue Symbolpakete aus dem Play Store installieren, indem Sie nach \"icon pack\" und \"theme\" für ADW Launcher, Apex Launcher, GO Launcher, Launcher Pro oder Nova Launcher suchen.</string>
 
 </resources>
