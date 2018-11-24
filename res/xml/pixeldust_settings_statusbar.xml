@@ -163,7 +163,7 @@
             android:title="@string/show_battery_percent_on_qsb"
             android:summary="@string/show_battery_percent_on_qsb_summary"
             android:dependency="status_bar_clock"
-            android:defaultValue="false" />
+            android:defaultValue="true" />
 
     </PreferenceCategory>
 
