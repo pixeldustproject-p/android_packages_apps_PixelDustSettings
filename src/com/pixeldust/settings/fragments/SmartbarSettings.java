@@ -28,6 +28,7 @@ import android.os.UserHandle;
 import android.provider.Settings;
 import android.support.v7.preference.ListPreference;
 import android.support.v7.preference.Preference;
+import android.support.v7.preference.PreferenceScreen;
 import android.support.v7.preference.Preference.OnPreferenceChangeListener;
 import android.support.v14.preference.SwitchPreference;
 import android.text.TextUtils;
@@ -69,6 +70,7 @@ public class SmartbarSettings extends SettingsPreferenceFragment implements
     private static final String PREF_NAVBAR_BUTTONS_ALPHA = "navbar_buttons_alpha";
     private static final String PREF_SMARTBAR_CUSTOM_ICON_SIZE = "smartbar_custom_icon_size";
     private static final String PREF_SMARTBAR_DOUBLE_TAP_SLEEP = "smartbar_doubletap_sleep";
+    private static final String PIXEL = "pixel_anim";
 
     private ListPreference mSmartBarContext;
     private ListPreference mImeActions;
@@ -77,6 +79,7 @@ public class SmartbarSettings extends SettingsPreferenceFragment implements
     private CustomSeekBarPreference mButtonsAlpha;
     private CustomSeekBarPreference mCustomButtonScaling;
     private SwitchPreference mDoubleTapSleep;
+    private PreferenceScreen mPixel;
 
     private static final int MENU_RESET = Menu.FIRST;
     private static final int MENU_SAVE = Menu.FIRST + 1;
@@ -98,6 +101,7 @@ public class SmartbarSettings extends SettingsPreferenceFragment implements
         ContentResolver resolver = getActivity().getContentResolver();
 
         mFooterPreferenceMixin.createFooterPreference().setTitle(R.string.smartbar_help_policy_notice_summary);
+        mPixel = (PreferenceScreen) findPreference(PIXEL);
 
         int contextVal = Settings.Secure.getIntForUser(resolver,
                 Settings.Secure.SMARTBAR_CONTEXT_MENU_MODE, 0, UserHandle.USER_CURRENT);
@@ -138,6 +142,8 @@ public class SmartbarSettings extends SettingsPreferenceFragment implements
         mCustomButtonScaling.setOnPreferenceChangeListener(this);
 
         mDoubleTapSleep = (SwitchPreference) findPreference(PREF_SMARTBAR_DOUBLE_TAP_SLEEP);
+
+        updateAnimDurationPref(buttonAnimVal);
 
         setHasOptionsMenu(true);
     }
@@ -283,6 +289,7 @@ public class SmartbarSettings extends SettingsPreferenceFragment implements
             int val = Integer.parseInt((String) newValue);
             Settings.Secure.putIntForUser(resolver, Settings.Secure.SMARTBAR_BUTTON_ANIMATION_STYLE,
                     val, UserHandle.USER_CURRENT);
+            updateAnimDurationPref(val);
             return true;
         } else if (preference == mImeActions) {
             int val = Integer.parseInt((String) newValue);
@@ -466,5 +473,13 @@ public class SmartbarSettings extends SettingsPreferenceFragment implements
     @Override
     public int getMetricsCategory() {
         return MetricsProto.MetricsEvent.PIXELDUST;
+    }
+
+    public void updateAnimDurationPref(int buttonAnimVal) {
+         if (buttonAnimVal == 0 || buttonAnimVal == 1 || buttonAnimVal == 2) {
+             mPixel.setEnabled(false);
+         } else {
+             mPixel.setEnabled(true);
+         }
     }
 }

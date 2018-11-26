@@ -797,4 +797,17 @@
   <string name="slim_blacklist_add_apps_title">Anwendung hinzufügen</string>
   <string name="slim_blacklist_add_apps_summary">Hier zum Hinzufügen tippen, zum Entfernen auf eine vorhandene App tippen</string>
 
+  <!-- Pixel Animation Duration -->
+  <string name="pixel_anim_title">Dauer der Pixel Tasten-Animation</string>
+  <string name="pixel_anim_summary">Die Dauer der Pixel Tasten-Animation in der Navigationsleiste anpassen</string>
+  <string name="pixel_anim_warning">Die Dauer der Pixel Tasten-Animation in der Navigationsleiste anpassen. Achtung: Das Verändern der Standardwerte kann zu einem Leistungsabfall bei der Animation führen. Auf eigenes Risiko fortfahren.</string>
+  <string name="pixel_anim_x_title">Horizontale Dauer</string>
+  <string name="pixel_anim_y_title">Vertikale Dauer</string>
+  <string name="collapse_anim_duration_ry_title">Dauer für Zusammenklappen</string>
+  <string name="collapse_anim_duration_bg_title">Hintergund für Zusammenklappen</string>
+  <string name="retract_anim_duration_title">Dauer für Einfahren</string>
+  <string name="diamond_anim_duration_title">Dauer für Diamant</string>
+  <string name="dots_anim_duration_title">Dauer für Punkte</string>
+  <string name="home_resize_anim_duration_title">Dauer für Schaltflächenänderung</string>
+
 </resources>
