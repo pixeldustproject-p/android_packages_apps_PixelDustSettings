@@ -797,10 +797,10 @@
   <string name="slim_blacklist_add_apps_title">Anwendung hinzufügen</string>
   <string name="slim_blacklist_add_apps_summary">Hier zum Hinzufügen tippen, zum Entfernen auf eine vorhandene App tippen</string>
 
-  <!-- Pixel Animation Duration -->
-  <string name="pixel_anim_title">Dauer der Pixel Tasten-Animation</string>
-  <string name="pixel_anim_summary">Die Dauer der Pixel Tasten-Animation in der Navigationsleiste anpassen</string>
-  <string name="pixel_anim_warning">Die Dauer der Pixel Tasten-Animation in der Navigationsleiste anpassen. Achtung: Das Verändern der Standardwerte kann zu einem Leistungsabfall bei der Animation führen. Auf eigenes Risiko fortfahren.</string>
+  <!-- Pixel Animation Settings -->
+  <string name="pixel_anim_title">Pixel Tasten-Animation</string>
+  <string name="pixel_anim_summary">Die Elemente der Pixel Tasten-Animation in der Navigationsleiste anpassen</string>
+  <string name="pixel_anim_warning">Die Elemente der Pixel Tasten-Animation in der Navigationsleiste anpassen. Achtung: Das Verändern der Standardwerte kann zu einem Leistungsabfall bei der Animation führen. Auf eigenes Risiko fortfahren.</string>
   <string name="pixel_anim_x_title">Horizontale Dauer</string>
   <string name="pixel_anim_y_title">Vertikale Dauer</string>
   <string name="collapse_anim_duration_ry_title">Dauer für Zusammenklappen</string>
@@ -809,5 +809,17 @@
   <string name="diamond_anim_duration_title">Dauer für Diamant</string>
   <string name="dots_anim_duration_title">Dauer für Punkte</string>
   <string name="home_resize_anim_duration_title">Dauer für Schaltflächenänderung</string>
+  <string name="pixel_anim_color_title">Farben der Punkte</string>
+  <string name="dot_top_color_title">Punkt oben</string>
+  <string name="dot_bottom_color_title">Punkt unten</string>
+  <string name="dot_left_color_title">Punkt links</string>
+  <string name="dot_right_color_title">Punkt rechts</string>
+  <string name="dot_obey_themes">Standard (Theme-Farbe)</string>
+  <string name="dot_custom_color">Benutzerdefiniert</string>
+  <string name="dot_random_color">Zufällig</string>
+  <string name="dot_random_color_more">Sehr zufällig</string>
+  <string name="dot_color_switch_title">Stil</string>
+  <string name="dlg_reset_android">Standard</string>
+  <string name="dlg_reset_bliss">Benutzerdefiniert</string>
 
 </resources>
