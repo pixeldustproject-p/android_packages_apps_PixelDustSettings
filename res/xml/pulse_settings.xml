@@ -52,6 +52,12 @@
         android:dependency="eos_fling_show_pulse" />
 
     <SwitchPreference
+        android:key="pulse_accent_color_enabled"
+        android:title="@string/pulse_accent_color_title"
+        android:summary="@string/pulse_accent_color_summary"
+        android:dependency="eos_fling_show_pulse" />
+
+    <SwitchPreference
         android:key="fling_smoothing_enabled"
         android:title="@string/fling_smoothing_enabled_title"
         android:summary="@string/fling_smoothing_enabled_summary"

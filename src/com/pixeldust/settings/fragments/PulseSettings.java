@@ -72,6 +72,7 @@ public class PulseSettings extends SettingsPreferenceFragment implements
     ListPreference mRenderMode;
     SwitchPreference mAutoColor;
     ColorPickerPreference mPulseColor;
+    SwitchPreference mPulseAccentColorEnabled;
     ColorPickerPreference mLavaLampColorFrom;
     ColorPickerPreference mLavaLampColorTo;
     SwitchPreference mLavaLampEnabled;
@@ -121,9 +122,16 @@ public class PulseSettings extends SettingsPreferenceFragment implements
         PreferenceCategory solidBarsCat = (PreferenceCategory) findPreference("pulse_2");
         solidBarsCat.setEnabled(renderMode == RENDER_STYLE_SOLID_LINES);
 
+        mPulseAccentColorEnabled = (SwitchPreference) findPreference("pulse_accent_color_enabled");
+        mPulseAccentColorEnabled.setChecked(Settings.Secure.getIntForUser(resolver,
+                Settings.Secure.PULSE_ACCENT_COLOR_ENABLED, 0, UserHandle.USER_CURRENT) == 1);
+        mPulseAccentColorEnabled.setOnPreferenceChangeListener(this);
+
         int pulseColor = Settings.Secure.getIntForUser(resolver,
                 Settings.Secure.FLING_PULSE_COLOR, Color.WHITE, UserHandle.USER_CURRENT);
         mPulseColor = (ColorPickerPreference) findPreference("eos_fling_pulse_color");
+        mPulseColor.setEnabled(Settings.Secure.getIntForUser(getContentResolver(),
+                Settings.Secure.PULSE_ACCENT_COLOR_ENABLED, 0, UserHandle.USER_CURRENT) == 0);
         mPulseColor.setNewPreviewColor(pulseColor);
         mPulseColor.setOnPreferenceChangeListener(this);
 
@@ -140,6 +148,8 @@ public class PulseSettings extends SettingsPreferenceFragment implements
         mLavaLampColorTo.setOnPreferenceChangeListener(this);
 
         mLavaLampEnabled = (SwitchPreference) findPreference("eos_fling_lavalamp");
+        mLavaLampEnabled.setEnabled(Settings.Secure.getIntForUser(resolver,
+                Settings.Secure.PULSE_ACCENT_COLOR_ENABLED, 0, UserHandle.USER_CURRENT) == 0);
         mLavaLampEnabled.setChecked(Settings.Secure.getIntForUser(resolver,
                 Settings.Secure.FLING_PULSE_LAVALAMP_ENABLED, 1, UserHandle.USER_CURRENT) == 1);
         mLavaLampEnabled.setOnPreferenceChangeListener(this);
@@ -253,9 +263,17 @@ public class PulseSettings extends SettingsPreferenceFragment implements
             Settings.Secure.putIntForUser(resolver,
                     Settings.Secure.PULSE_AUTO_COLOR, enabled ? 1 : 0, UserHandle.USER_CURRENT);
             return true;
-        } else if (preference == mPulseColor) {
-            int color = (Integer) newValue;
-            Settings.Secure.putIntForUser(resolver,
+        } else if (preference.equals(mPulseAccentColorEnabled)) {
+            boolean enabled = ((Boolean) newValue).booleanValue();
+            Settings.Secure.putIntForUser(getContentResolver(),
+                    Settings.Secure.PULSE_ACCENT_COLOR_ENABLED, enabled ? 1 : 0,
+                    UserHandle.USER_CURRENT);
+            mPulseColor.setEnabled(!enabled);
+            mLavaLampEnabled.setEnabled(!enabled);
+            return true;
+        } else if (preference.equals(mPulseColor)) {
+            int color = ((Integer) newValue).intValue();
+            Settings.Secure.putIntForUser(getContentResolver(),
                     Settings.Secure.FLING_PULSE_COLOR, color, UserHandle.USER_CURRENT);
             return true;
         } else if (preference == mLavaLampEnabled) {
