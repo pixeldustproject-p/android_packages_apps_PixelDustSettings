@@ -49,9 +49,6 @@ import java.util.List;
 public class ButtonSettings extends ActionFragment implements
         OnPreferenceChangeListener, Indexable {
 
-    private static final String KILL_APP_LONGPRESS_BACK = "kill_app_longpress_back";
-    private SwitchPreference mKillAppLongPressBack;
-
     private static final String TORCH_POWER_BUTTON_GESTURE = "torch_power_button_gesture";
     private ListPreference mTorchPowerButton;
 
@@ -92,15 +89,8 @@ public class ButtonSettings extends ActionFragment implements
         super.onCreate(icicle);
 
         addPreferencesFromResource(R.xml.pixeldust_settings_button);
-
+        ContentResolver resolver = getActivity().getContentResolver();
         final PreferenceScreen prefScreen = getPreferenceScreen();
-
-        // kill-app long press back
-        mKillAppLongPressBack = (SwitchPreference) findPreference(KILL_APP_LONGPRESS_BACK);
-        mKillAppLongPressBack.setOnPreferenceChangeListener(this);
-        int killAppLongPressBack = Settings.Secure.getInt(getContentResolver(),
-                KILL_APP_LONGPRESS_BACK, 0);
-        mKillAppLongPressBack.setChecked(killAppLongPressBack != 0);
 
         // screen off torch
         mTorchPowerButton = (ListPreference) findPreference(TORCH_POWER_BUTTON_GESTURE);
@@ -116,7 +106,7 @@ public class ButtonSettings extends ActionFragment implements
         int keysDisabled = 0;
         if (!needsNavbar) {
             mHwKeyDisable = (SwitchPreference) findPreference(HWKEY_DISABLE);
-            keysDisabled = Settings.Secure.getIntForUser(getContentResolver(),
+            keysDisabled = Settings.Secure.getIntForUser(resolver,
                     Settings.Secure.HARDWARE_KEYS_DISABLE, 0,
                     UserHandle.USER_CURRENT);
             mHwKeyDisable.setChecked(keysDisabled != 0);
@@ -192,7 +182,7 @@ public class ButtonSettings extends ActionFragment implements
 
         if (mBacklightTimeout != null) {
             mBacklightTimeout.setOnPreferenceChangeListener(this);
-            int BacklightTimeout = Settings.System.getInt(getContentResolver(),
+            int BacklightTimeout = Settings.System.getInt(resolver,
                     Settings.System.BUTTON_BACKLIGHT_TIMEOUT, 5000);
             mBacklightTimeout.setValue(Integer.toString(BacklightTimeout));
             mBacklightTimeout.setSummary(mBacklightTimeout.getEntry());
@@ -201,7 +191,7 @@ public class ButtonSettings extends ActionFragment implements
         if (variableBrightness) {
             if (mButtonBrightness_sw != null) prefScreen.removePreference(mButtonBrightness_sw);
             if (mButtonBrightness != null) {
-                int ButtonBrightness = Settings.System.getInt(getContentResolver(),
+                int ButtonBrightness = Settings.System.getInt(resolver,
                         Settings.System.BUTTON_BRIGHTNESS, 255);
                 mButtonBrightness.setValue(ButtonBrightness / 1);
                 mButtonBrightness.setOnPreferenceChangeListener(this);
@@ -209,7 +199,7 @@ public class ButtonSettings extends ActionFragment implements
         } else {
             if (mButtonBrightness != null) prefScreen.removePreference(mButtonBrightness);
             if (mButtonBrightness_sw != null) {
-                mButtonBrightness_sw.setChecked((Settings.System.getInt(getContentResolver(),
+                mButtonBrightness_sw.setChecked((Settings.System.getInt(resolver,
                         Settings.System.BUTTON_BRIGHTNESS, 1) == 1));
                 mButtonBrightness_sw.setOnPreferenceChangeListener(this);
             }
@@ -220,12 +210,7 @@ public class ButtonSettings extends ActionFragment implements
         ContentResolver resolver = getActivity().getContentResolver();
         boolean DoubleTapPowerGesture = Settings.Secure.getInt(resolver,
                     Settings.Secure.CAMERA_DOUBLE_TAP_POWER_GESTURE_DISABLED, 1) == 0;
-        if (preference == mKillAppLongPressBack) {
-            boolean value = (Boolean) newValue;
-            Settings.Secure.putInt(getContentResolver(),
-		KILL_APP_LONGPRESS_BACK, value ? 1 : 0);
-            return true;
-        } else if (preference == mTorchPowerButton) {
+        if (preference == mTorchPowerButton) {
             int mTorchPowerButtonValue = Integer.valueOf((String) newValue);
             int index = mTorchPowerButton.findIndexOfValue((String) newValue);
             mTorchPowerButton.setSummary(
@@ -243,14 +228,14 @@ public class ButtonSettings extends ActionFragment implements
             return true;
         } else if (preference == mHwKeyDisable) {
             boolean value = (Boolean) newValue;
-            Settings.Secure.putInt(getContentResolver(), Settings.Secure.HARDWARE_KEYS_DISABLE,
+            Settings.Secure.putInt(resolver, Settings.Secure.HARDWARE_KEYS_DISABLE,
                     value ? 1 : 0);
             setActionPreferencesEnabled(!value);
             return true;
         } else if (preference == mBacklightTimeout) {
             String BacklightTimeout = (String) newValue;
             int BacklightTimeoutValue = Integer.parseInt(BacklightTimeout);
-            Settings.System.putInt(getActivity().getContentResolver(),
+            Settings.System.putInt(resolver,
                     Settings.System.BUTTON_BACKLIGHT_TIMEOUT, BacklightTimeoutValue);
             int BacklightTimeoutIndex = mBacklightTimeout
                     .findIndexOfValue(BacklightTimeout);
@@ -259,12 +244,12 @@ public class ButtonSettings extends ActionFragment implements
             return true;
         } else if (preference == mButtonBrightness) {
             int value = (Integer) newValue;
-            Settings.System.putInt(getActivity().getContentResolver(),
+            Settings.System.putInt(resolver,
                     Settings.System.BUTTON_BRIGHTNESS, value * 1);
             return true;
         } else if (preference == mButtonBrightness_sw) {
             boolean value = (Boolean) newValue;
-            Settings.System.putInt(getActivity().getContentResolver(),
+            Settings.System.putInt(resolver,
                     Settings.System.BUTTON_BRIGHTNESS, value ? 1 : 0);
             return true;
         }
