@@ -660,7 +660,6 @@
   <string name="fling_show_pulse_summary">Grafischer Audio-Equalizer in der Navigationsleiste</string>
   <string name="pulse_render_mode_title">Render-Modus</string>
   <string name="pulse_render_mode_fading_bars">Verblassende Blöcke</string>
-  <string name="pulse_fading_blocks_opacity">Undurchsichtigkeit der verblassenden Blöcke</string>
   <string name="pulse_render_mode_solid_lines">Durchgezogene Linien</string>
   <string name="pulse_accent_color_title"> Akzentfarbe für Pulse verwenden</string>
   <string name="pulse_accent_color_summary">Wenn diese Option aktiviert ist, dann verwendet Pulse die aktuelle Akzentfarbe. Dadurch wird die Lavalampe deaktiviert.</string>
