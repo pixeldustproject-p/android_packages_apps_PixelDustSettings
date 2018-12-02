@@ -507,63 +507,63 @@
   <string name="one_hand_mode_title">Einhandmodus aktivieren</string>
   <string name="one_hand_mode_summary">Über die Navigationsleiste nach rechts oder links wischen, um in den Einhandmodus zu wechseln</string>
 
-    <!-- Pie -->
-    <string name="pa_pie_control_summary">Edge- und Navigationssteuerung</string>
-    <string name="pa_pie_control_title">Pie Control</string> 
-    <string name="pie_enable_title">Pie Control verwenden</string>
-    <string name="pie_settings">Pie Control Einstellungen</string>
-    <string name="pie_settings_summary">Pie nach deinem Geschmack anpassen</string>
-    <string name="pie_theme_mode_title">UI Stil</string>
-    <string name="pie_auto">Automatisch</string>
-    <string name="pie_white">Hell</string>
-    <string name="pie_dark">Dunkel</string>
-    <string name="pie_battery_title">Akkuanzeige</string>
-    <string name="pie_battery_text">Nur Text</string>
-    <string name="pie_battery_circle">Nur Kreis</string>
-    <string name="pie_battery_both">Beides</string>
-    <string name="pie_status_indicator">Netzwerkanzeige</string>
-    <string name="pie_status_wifi">Nur WLAN</string>
-    <string name="pie_status_mobile">Nur mobiles Netzwerk</string>
-    <string name="pie_status_none">Keines</string>
-    <string name="pie_status_both">Beides</string>
-    <string name="pa_pie_gravity_title">Pie Position</string>
-    <string name="pa_pie_gravity_summary">Position festlegen, an der Pie Control angezeigt werden sollen</string>
-    <string name="pa_pie_gravity_bottom">Unten</string>
-    <string name="pa_pie_gravity_right">Rechts</string>
-    <string name="pa_pie_gravity_left">Links</string>
+  <!-- Pie -->
+  <string name="pa_pie_control_summary">Edge- und Navigationssteuerung</string>
+  <string name="pa_pie_control_title">Pie Control</string> 
+  <string name="pie_enable_title">Pie Control verwenden</string>
+  <string name="pie_settings">Pie Control Einstellungen</string>
+  <string name="pie_settings_summary">Pie nach deinem Geschmack anpassen</string>
+  <string name="pie_theme_mode_title">UI Stil</string>
+  <string name="pie_auto">Automatisch</string>
+  <string name="pie_white">Hell</string>
+  <string name="pie_dark">Dunkel</string>
+  <string name="pie_battery_title">Akkuanzeige</string>
+  <string name="pie_battery_text">Nur Text</string>
+  <string name="pie_battery_circle">Nur Kreis</string>
+  <string name="pie_battery_both">Beides</string>
+  <string name="pie_status_indicator">Netzwerkanzeige</string>
+  <string name="pie_status_wifi">Nur WLAN</string>
+  <string name="pie_status_mobile">Nur mobiles Netzwerk</string>
+  <string name="pie_status_none">Keines</string>
+  <string name="pie_status_both">Beides</string>
+  <string name="pa_pie_gravity_title">Pie Position</string>
+  <string name="pa_pie_gravity_summary">Position festlegen, an der Pie Control angezeigt werden sollen</string>
+  <string name="pa_pie_gravity_bottom">Unten</string>
+  <string name="pa_pie_gravity_right">Rechts</string>
+  <string name="pa_pie_gravity_left">Links</string>
 
-    <!-- Edge gestures --> 
-    <string name="edge_gestures_title">Edge Gesten</string> 
-    <string name="edge_gestures_feedback_duration_title">Dauer für haptisches Feedback</string> 
-    <string name="edge_gestures_long_press_delay_title">Verzögerung, bis \"lange Drücken\" beginnt</string> 
-    <string name="edge_gestures_back_category_title">\"Zurück\"-Geste</string> 
-    <string name="edge_gestures_back_edges_title">Position zum Auslösen der \"Zurück\"-Geste</string> 
-    <string name="edge_gestures_landscape_back_edges_title">Position im Landscape-Modus zum Auslösen der \"Zurück\"-Geste</string> 
-    <string name="edge_gestures_back_screen_percent_title">Die \"Zurück\"-Geste muss innerhalb des definierten Randbereichs ausgelöst werden</string> 
-    <string name="edge_gestures_back_screen_percent_summary">Größenverhältnis des Randbereichs in Prozent zum gesamten Display</string> 
-    <string name="edge_gestures_summary">Edge-Gesten für die Navigation verwenden</string>
-    <string name="edge_gestures_back_edges_left">Links</string> 
-    <string name="edge_gestures_back_edges_right">Rechts</string> 
-    <string name="edge_gestures_back_edges_both">Beide Seiten</string> 
-    <string name="edge_gestures_back_show_ui_feedback_title">Animation beim Verwenden der \"Zurück\"-Geste</string> 
-    <string name="edge_gestures_back_show_ui_feedback_summary">Im Randbereich eine Animation anzeigen, wenn die \"Zurück\"-Geste verwendet wird</string>
-    <string name="edge_gestures_description_summary">Kurzanleitung:\nVon unten nach oben wischen, um die HOME-Geste auszulösen, dann gedrückt halten, um LETZTE APPS zu öffnen. Vom unteren linken oder unteren rechten Rand aus wischen für die ZURÜCK-Geste.</string>
-    <string name="gesture_nav">Navigation</string>
+  <!-- Edge gestures --> 
+  <string name="edge_gestures_title">Edge Gesten</string> 
+  <string name="edge_gestures_feedback_duration_title">Dauer für haptisches Feedback</string> 
+  <string name="edge_gestures_long_press_delay_title">Verzögerung, bis \"lange Drücken\" beginnt</string> 
+  <string name="edge_gestures_back_category_title">\"Zurück\"-Geste</string> 
+  <string name="edge_gestures_back_edges_title">Position zum Auslösen der \"Zurück\"-Geste</string> 
+  <string name="edge_gestures_landscape_back_edges_title">Position im Landscape-Modus zum Auslösen der \"Zurück\"-Geste</string> 
+  <string name="edge_gestures_back_screen_percent_title">Die \"Zurück\"-Geste muss innerhalb des definierten Randbereichs ausgelöst werden</string> 
+  <string name="edge_gestures_back_screen_percent_summary">Größenverhältnis des Randbereichs in Prozent zum gesamten Display</string> 
+  <string name="edge_gestures_summary">Edge-Gesten für die Navigation verwenden</string>
+  <string name="edge_gestures_back_edges_left">Links</string> 
+  <string name="edge_gestures_back_edges_right">Rechts</string> 
+  <string name="edge_gestures_back_edges_both">Beide Seiten</string> 
+  <string name="edge_gestures_back_show_ui_feedback_title">Animation beim Verwenden der \"Zurück\"-Geste</string> 
+  <string name="edge_gestures_back_show_ui_feedback_summary">Im Randbereich eine Animation anzeigen, wenn die \"Zurück\"-Geste verwendet wird</string>
+  <string name="edge_gestures_description_summary">Kurzanleitung:\nVon unten nach oben wischen, um die HOME-Geste auszulösen, dann gedrückt halten, um LETZTE APPS zu öffnen. Vom unteren linken oder unteren rechten Rand aus wischen für die ZURÜCK-Geste.</string>
+  <string name="gesture_nav">Navigation</string>
 
-    <!-- Buttons backlight timeout -->
-    <string name="backlight_timeout_title">Timeout für die Hintergrundbeleuchtung der Tasten</string>
-    <string name="backlight_timeout_on">Immer aktiviert</string>
-    <string name="backlight_timeout_3s">3 sek</string>
-    <string name="backlight_timeout_default">5 sek (Standard)</string>
-    <string name="backlight_timeout_10s">10 sek</string>
-    <string name="backlight_timeout_15s">15 sek</string>
-    <string name="backlight_timeout_20s">20 sek</string>
-    <string name="backlight_timeout_30s">30 sek</string>
+  <!-- Buttons backlight timeout -->
+  <string name="backlight_timeout_title">Timeout für die Hintergrundbeleuchtung der Tasten</string>
+  <string name="backlight_timeout_on">Immer aktiviert</string>
+  <string name="backlight_timeout_3s">3 sek</string>
+  <string name="backlight_timeout_default">5 sek (Standard)</string>
+  <string name="backlight_timeout_10s">10 sek</string>
+  <string name="backlight_timeout_15s">15 sek</string>
+  <string name="backlight_timeout_20s">20 sek</string>
+  <string name="backlight_timeout_30s">30 sek</string>
 
-    <!-- Enable keys backlight-->
-    <string name="button_brightness_title">Hintergrundbeleuchtung</string>
-    <!-- Enable keys backlight-->
-    <string name="button_brightness_sw_title">Hintergrundbeleuchtung aktivieren</string>
+  <!-- Enable keys backlight-->
+  <string name="button_brightness_title">Hintergrundbeleuchtung</string>
+  <!-- Enable keys backlight-->
+  <string name="button_brightness_sw_title">Hintergrundbeleuchtung aktivieren</string>
 
   <!-- Stock Recents/Overview icon pack support -->
   <string name="recents_icon_pack_title">Symbolpaket</string>
