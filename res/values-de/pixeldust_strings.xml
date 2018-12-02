@@ -678,10 +678,6 @@
   <string name="pulse_custom_buttons_opacity_title">Transparenz der Smart-Bar-Tasten bei Pulse</string>
   <string name="pulse_auto_color_title">Automatische Farbauswahl</string>
   <string name="pulse_auto_color_summary">Farbe mit Musikcover synchronisieren. Überschreibt Deckkraft von Lavalampe und Linien.</string>
-  <string name="fling_lavalamp_color_from">Lava-Lampe Startfarbe</string>
-  <string name="fling_lavalamp_color_to">Lava-Lampe Endfarbe</string>
-  <string name="pulse_colors_reset_title">Pulse Farben zurücksetzen</string>
-  <string name="pulse_colors_reset_message">Sind Sie sicher, dass Sie diese Farben auf die Grundeinstellungen zurücksetzen möchten?</string>
   <!-- Pulse config -->
   <string name="pulse_custom_dimen">Breite der Balken</string>
   <string name="pulse_custom_div">Abstand der Balken</string>
