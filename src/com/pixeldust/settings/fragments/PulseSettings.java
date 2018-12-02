@@ -70,7 +70,6 @@ public class PulseSettings extends SettingsPreferenceFragment implements
     ColorPickerPreference mLavaLampColorFrom;
     ColorPickerPreference mLavaLampColorTo;
     SwitchPreference mLavaLampEnabled;
-    SwitchPreference mSmoothingEnabled;
     CustomSeekBarPreference mCustomDimen;
     CustomSeekBarPreference mCustomDiv;
     CustomSeekBarPreference mFilled;
@@ -133,11 +132,6 @@ public class PulseSettings extends SettingsPreferenceFragment implements
         mLavaLampEnabled.setChecked(Settings.System.getIntForUser(getContentResolver(),
                 Settings.System.FLING_PULSE_LAVALAMP_ENABLED, 1, UserHandle.USER_CURRENT) == 1);
         mLavaLampEnabled.setOnPreferenceChangeListener(this);
-
-        mSmoothingEnabled = (SwitchPreference) findPreference("fling_smoothing_enabled");
-        mSmoothingEnabled.setChecked(Settings.System.getIntForUser(getContentResolver(),
-                Settings.System.FLING_PULSE_SMOOTHING_ENABLED, 0, UserHandle.USER_CURRENT) == 1);
-        mSmoothingEnabled.setOnPreferenceChangeListener(this);
 
         int customdimen = Settings.System.getIntForUser(getContentResolver(),
                 Settings.System.PULSE_CUSTOM_DIMEN, 14, UserHandle.USER_CURRENT);
@@ -245,12 +239,6 @@ public class PulseSettings extends SettingsPreferenceFragment implements
             boolean enabled = ((Boolean) newValue).booleanValue();
             Settings.System.putIntForUser(getContentResolver(),
                     Settings.System.FLING_PULSE_LAVALAMP_ENABLED, enabled ? 1 : 0,
-                    UserHandle.USER_CURRENT);
-            return true;
-        } else if (preference.equals(mSmoothingEnabled)) {
-            boolean enabled = ((Boolean) newValue).booleanValue();
-            Settings.System.putIntForUser(getContentResolver(),
-                    Settings.System.FLING_PULSE_SMOOTHING_ENABLED, enabled ? 1 : 0,
                     UserHandle.USER_CURRENT);
             return true;
         } else if (preference == mCustomDimen) {
