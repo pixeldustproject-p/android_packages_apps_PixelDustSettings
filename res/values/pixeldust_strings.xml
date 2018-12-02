@@ -101,7 +101,6 @@
     <string name="custom_back_key_title">Kill app back button</string>
     <string name="kill_app_longpress_back">Enable kill app back button</string>
     <string name="kill_app_longpress_back_summary">Kill the foreground app by long-pressing the back key</string>
-    <string name="long_press_kill_delay">App kill delay</string>
 
     <!-- Lockscreen charging current indicator  -->
     <string name="lockscreen_charging_current_title">Lockscreen charging info</string>

@@ -20,7 +20,6 @@ import android.content.ContentResolver;
 import android.content.res.Resources;
 import android.content.Context;
 import android.os.Bundle;
-import android.os.Handler;
 import android.os.RemoteException;
 import android.os.UserHandle;
 import android.provider.SearchIndexableResource;
@@ -52,9 +51,6 @@ public class ButtonSettings extends ActionFragment implements
 
     private static final String KILL_APP_LONGPRESS_BACK = "kill_app_longpress_back";
     private SwitchPreference mKillAppLongPressBack;
-
-    private static final String LONG_PRESS_KILL_DELAY = "long_press_kill_delay";
-    private CustomSeekBarPreference mLongpressKillDelay;
 
     private static final String TORCH_POWER_BUTTON_GESTURE = "torch_power_button_gesture";
     private ListPreference mTorchPowerButton;
@@ -96,23 +92,15 @@ public class ButtonSettings extends ActionFragment implements
         super.onCreate(icicle);
 
         addPreferencesFromResource(R.xml.pixeldust_settings_button);
-        ContentResolver resolver = getActivity().getContentResolver();
 
         final PreferenceScreen prefScreen = getPreferenceScreen();
 
         // kill-app long press back
         mKillAppLongPressBack = (SwitchPreference) findPreference(KILL_APP_LONGPRESS_BACK);
         mKillAppLongPressBack.setOnPreferenceChangeListener(this);
-        int killAppLongPressBack = Settings.Secure.getInt(resolver,
+        int killAppLongPressBack = Settings.Secure.getInt(getContentResolver(),
                 KILL_APP_LONGPRESS_BACK, 0);
         mKillAppLongPressBack.setChecked(killAppLongPressBack != 0);
-
-        // kill-app long press back delay
-        mLongpressKillDelay = (CustomSeekBarPreference) findPreference(LONG_PRESS_KILL_DELAY);
-        int killconf = Settings.System.getInt(resolver,
-                Settings.System.LONG_PRESS_KILL_DELAY, 1000);
-        mLongpressKillDelay.setValue(killconf);
-        mLongpressKillDelay.setOnPreferenceChangeListener(this);
 
         // screen off torch
         mTorchPowerButton = (ListPreference) findPreference(TORCH_POWER_BUTTON_GESTURE);
@@ -234,13 +222,8 @@ public class ButtonSettings extends ActionFragment implements
                     Settings.Secure.CAMERA_DOUBLE_TAP_POWER_GESTURE_DISABLED, 1) == 0;
         if (preference == mKillAppLongPressBack) {
             boolean value = (Boolean) newValue;
-            Settings.Secure.putInt(resolver,
+            Settings.Secure.putInt(getContentResolver(),
 		KILL_APP_LONGPRESS_BACK, value ? 1 : 0);
-            return true;
-        } else if (preference == mLongpressKillDelay) {
-            int killconf = (Integer) newValue;
-            Settings.System.putInt(resolver,
-                    Settings.System.LONG_PRESS_KILL_DELAY, killconf);
             return true;
         } else if (preference == mTorchPowerButton) {
             int mTorchPowerButtonValue = Integer.valueOf((String) newValue);
