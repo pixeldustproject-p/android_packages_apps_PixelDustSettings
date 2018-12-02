@@ -39,7 +39,7 @@ import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settings.search.Indexable;
 import com.android.settings.SettingsPreferenceFragment;
 
-import com.pixeldust.settings.preferences.SystemSettingSwitchPreference;
+import com.pixeldust.settings.preferences.SecureSettingSwitchPreference;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -47,9 +47,9 @@ import java.util.List;
 public class NavigationBarSettings extends SettingsPreferenceFragment implements
          OnPreferenceChangeListener, Indexable {
 
-    private static final String NAVIGATION_BAR_SHOW = "navigation_bar_show";
+    private static final String NAVIGATION_BAR_VISIBLE = "navigation_bar_visible";
 
-    private SystemSettingSwitchPreference mNavigationBarShow;
+    private SecureSettingSwitchPreference mNavigationBarShow;
 
     @Override
     public void onCreate(Bundle icicle) {
@@ -58,10 +58,10 @@ public class NavigationBarSettings extends SettingsPreferenceFragment implements
         addPreferencesFromResource(R.xml.pixeldust_settings_navigation);
 
         // navigation bar show
-        mNavigationBarShow = (SystemSettingSwitchPreference) findPreference(NAVIGATION_BAR_SHOW);
+        mNavigationBarShow = (SecureSettingSwitchPreference) findPreference(NAVIGATION_BAR_VISIBLE);
         mNavigationBarShow.setOnPreferenceChangeListener(this);
-        int navigationBarShow = Settings.System.getInt(getContentResolver(),
-                NAVIGATION_BAR_SHOW, 0);
+        int navigationBarShow = Settings.Secure.getInt(getContentResolver(),
+                NAVIGATION_BAR_VISIBLE, 0);
         mNavigationBarShow.setChecked(navigationBarShow != 0);
     }
 
@@ -69,8 +69,8 @@ public class NavigationBarSettings extends SettingsPreferenceFragment implements
         ContentResolver resolver = getActivity().getContentResolver();
         if (preference == mNavigationBarShow) {
             boolean value = (Boolean) newValue;
-            Settings.System.putInt(getContentResolver(),
-		NAVIGATION_BAR_SHOW, value ? 1 : 0);
+            Settings.Secure.putInt(getContentResolver(),
+		NAVIGATION_BAR_VISIBLE, value ? 1 : 0);
             return true;
         }
         return false;

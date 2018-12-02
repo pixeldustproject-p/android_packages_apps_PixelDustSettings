@@ -85,13 +85,13 @@ public class EdgeGesturesSettings extends SettingsPreferenceFragment implements
             //Settings.Secure.putIntForUser(getContentResolver(), Settings.Secure.EDGE_GESTURES_ENABLED, enabled, UserHandle.USER_CURRENT); 
  
             if (enabled == 1) { 
-                Settings.System.putInt(getContentResolver(), 
-                        Settings.System.NAVIGATION_BAR_SHOW, 
+                Settings.Secure.putInt(getContentResolver(), 
+                        Settings.Secure.NAVIGATION_BAR_VISIBLE, 
                         0); 
             } else { 
                 if (ActionUtils.hasNavbarByDefault(getPrefContext())) { 
-                    Settings.System.putInt(getContentResolver(), 
-                            Settings.System.NAVIGATION_BAR_SHOW, 
+                    Settings.Secure.putInt(getContentResolver(), 
+                            Settings.Secure.NAVIGATION_BAR_VISIBLE, 
                             1); 
                 } 
             } 
