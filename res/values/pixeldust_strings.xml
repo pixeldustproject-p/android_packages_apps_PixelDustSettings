@@ -90,9 +90,6 @@
     <string name="enable_navigation_bar_title">Enable navigation bar</string>
     <string name="enable_navigation_bar_summary">Option to enable or disable the navigation bar</string>
 
-    <!-- Navbar Animation -->
-    <string name="pixel_navbar_anim_title">Pixel navbar animation</string>
-
     <!-- Lockscreen charging current indicator  -->
     <string name="lockscreen_charging_current_title">Lockscreen charging info</string>
     <string name="lockscreen_charging_current_summary">Display negociated charger max current and voltage on lockscreen</string>
@@ -402,8 +399,6 @@
     <string name="select_custom_activity_title">Select custom activity</string>
     <string name="profile_applist_title">Applications</string>
     <string name="default_string">Stock</string>
-    <string name="default_settings">Stock settings</string>
-    <string name="default_settings_summary">Stock AOSP navigation bar</string>
     <string name="choose_action_title">Choose action</string>
     <string name="action_entry_default_action">Default settings</string>
     <string name="action_entry_select_app">Select application</string>
@@ -739,10 +734,16 @@
     <string name="positive_done">Done</string>
 
     <!-- Stock navbar -->
-    <string name="navbar_settings_title">Stock navbar settings</string>
+    <string name="stocknavbar_settings_title">Stock navigation bar</string>
+    <string name="stocknavbar_settings_summary">For those who like it stock and want to use basic tweaks</string>
+    <string name="stocknavbar_interface">Navigation bar</string>
+    <string name="navbar_tuner_title">Navigation bar layout</string>
     <string name="navbar_tuner_summary">Customize buttons and layout</string>
     <string name="show_navbar_arrow_keys_title">Show arrow keys while typing</string>
     <string name="show_navbar_arrow_keys_summary">Display left and right cursor buttons in navigation bar while typing</string>
+    <string name="gesture_settings">Gesture Mode</string>
+    <string name="gesture_settings_summary">Enable Swipe up on Home button and Full gesture mode</string>
+    <string name="pixel_navbar_anim_title">Pixel button animation</string>
 
     <!-- SmartBar -->
     <string name="smartbar_category">Smartbar</string>

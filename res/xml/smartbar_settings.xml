@@ -73,10 +73,4 @@
         android:summary="@string/smartbar_doubletap_sleep_summary"
         android:defaultValue="false" />
 
-    <com.pixeldust.settings.preferences.SystemSettingSwitchPreference
-        android:key="one_hand_mode_enabled"
-        android:title="@string/one_hand_mode_title"
-        android:summary="@string/one_hand_mode_summary"
-        android:defaultValue="false" />
-
 </PreferenceScreen>

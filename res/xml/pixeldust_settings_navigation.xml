@@ -24,19 +24,6 @@
         android:summary="@string/enable_navigation_bar_summary"
         android:defaultValue="true" />
 
-    <com.pixeldust.settings.preferences.SystemSettingSwitchPreference
-        android:key="pixel_nav_animation"
-        android:title="@string/pixel_navbar_anim_title"
-        android:dependency="navigation_bar_visible"
-        android:defaultValue="true" />
-
-    <com.pixeldust.settings.preferences.SystemSettingSwitchPreference
-        android:key="navigation_bar_menu_arrow_keys"
-        android:title="@string/show_navbar_arrow_keys_title"
-        android:summary="@string/show_navbar_arrow_keys_summary"
-        android:dependency="navigation_bar_visible"
-        android:defaultValue="false" />
-
     <PreferenceCategory
         android:key="category_navbar_interface"
         android:title="@string/navbar_interface_title" >
@@ -52,15 +39,12 @@
             android:defaultValue="0"/>
 
         <Preference
-            android:key="stock_settings"
+            android:key="stocknavbar_settings"
             android:icon="@drawable/ic_shapes"
-            android:title="@string/navbar_settings_title"
+            android:title="@string/stocknavbar_settings_title"
+            android:summary="@string/stocknavbar_settings_summary"
             android:dependency="navigation_bar_visible"
-            android:summary="@string/navbar_tuner_summary">
-            <intent android:action="android.intent.action.MAIN"
-                android:targetPackage="com.android.systemui"
-                android:targetClass="com.android.systemui.tuner.NavBarActivity" />
-        </Preference>
+            android:fragment="com.pixeldust.settings.fragments.StockNavBarSettings" />
 
         <Preference
             android:key="smartbar_settings"
@@ -77,12 +61,6 @@
             android:summary="@string/fling_settings_summary"
             android:dependency="navigation_bar_visible"
             android:fragment="com.pixeldust.settings.fragments.FlingSettings" />
-
-        <Preference
-            android:key="default_settings"
-            android:title="@string/default_settings"
-            android:summary="@string/default_settings_summary"
-            android:fragment="com.android.settings.gestures.SwipeUpGestureSettings" />
 
     </PreferenceCategory>
     
@@ -116,6 +94,13 @@
             settings:min="65"
             settings:units="%"
             android:dependency="navigation_bar_visible" />
+
+        <com.pixeldust.settings.preferences.SystemSettingSwitchPreference
+            android:key="one_hand_mode_enabled"
+            android:title="@string/one_hand_mode_title"
+            android:summary="@string/one_hand_mode_summary"
+            android:dependency="navigation_bar_visible"
+            android:defaultValue="false" />
 
         <Preference
             android:key="pulse_settings"

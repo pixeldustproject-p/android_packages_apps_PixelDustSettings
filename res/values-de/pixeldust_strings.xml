@@ -93,9 +93,6 @@
   <string name="enable_navigation_bar_title">Navigationsleiste anzeigen</string>
   <string name="enable_navigation_bar_summary">Ermöglicht es die Navigationsleiste zu aktivieren oder zu deaktivieren</string>
 
-  <!-- Navbar Animation -->
-  <string name="pixel_navbar_anim_title">Pixel Homebutton Animation aktivieren</string>
-
   <!-- kill app long press back -->
   <string name="custom_back_key_title">App beenden mittels Zurück-Taste</string>
   <string name="kill_app_longpress_back">Zurück-Taste zum App beenden verwenden</string>
@@ -411,9 +408,7 @@
   <string name="select_custom_app_title">Benutzerdefinierte App auswählen</string>
   <string name="select_custom_activity_title">Benutzerdefinierte Aktivität auswählen</string>
   <string name="profile_applist_title">Anwendungen</string>
-  <string name="default_string">AOSP-Navigationsleiste</string>
-  <string name="default_settings">Einstellungen für AOSP-Navigationsleiste</string>
-  <string name="default_settings_summary">Standard-AOSP-Navigationsleiste</string>
+  <string name="default_string">Standard</string>
   <string name="choose_action_title">Aktion auswählen</string>
   <string name="action_entry_default_action">Standardeinstellungen</string>
   <string name="action_entry_select_app">Anwendung auswählen</string>
@@ -704,10 +699,16 @@
   <string name="positive_done">Fertig</string>
 
   <!-- Stock navbar -->
-  <string name="navbar_settings_title">Standard-Navigationsleiste konfigurieren</string>
+  <string name="stocknavbar_settings_title">Standard Navigationsleiste</string>
+  <string name="stocknavbar_settings_summary">Für diejenigen, die Originalität mögen und einige Anpassungen vornehmen möchten</string>
+  <string name="stocknavbar_interface">Navigationsleiste</string>
+  <string name="navbar_tuner_title">Layout konfigurieren</string>
   <string name="navbar_tuner_summary">Tasten und Layout konfigurieren</string>
   <string name="show_navbar_arrow_keys_title">Cursor-Tasten bei Tastatureingabe anzeigen</string>
   <string name="show_navbar_arrow_keys_summary">Während der Tastatureingabe Cursor-Tasten links und rechts in der Navigationsleiste anzeigen</string>
+  <string name="gesture_settings">Gesten-Modus</string>
+  <string name="gesture_settings_summary">Auf Startbildschirmtaste nach oben wischen und vollständigen Gesten-Modus aktivieren</string>
+  <string name="pixel_navbar_anim_title">Pixel Homebutton Animation</string>
 
   <!-- SmartBar -->
   <string name="smartbar_category">Smart-Bar</string>
