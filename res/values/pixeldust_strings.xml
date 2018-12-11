@@ -398,7 +398,6 @@
     <string name="select_custom_app_title">Select custom app</string>
     <string name="select_custom_activity_title">Select custom activity</string>
     <string name="profile_applist_title">Applications</string>
-    <string name="default_string">Stock</string>
     <string name="choose_action_title">Choose action</string>
     <string name="action_entry_default_action">Default settings</string>
     <string name="action_entry_select_app">Select application</string>
@@ -596,6 +595,8 @@
     <string name="weather_unit_imperial" translatable="false">Fahrenheit</string>
 
     <!-- Navigation Bar -->
+    <string name="default_settings">Stock settings</string>
+    <string name="default_string">Stock</string>
     <string name="navbar_interface_title">Interface</string>
     <string name="navbar_size">Bar size</string>
     <string name="navbar_mode">Navigation mode</string>
@@ -744,6 +745,9 @@
     <string name="gesture_settings">Gesture Mode</string>
     <string name="gesture_settings_summary">Enable Swipe up on Home button and Full gesture mode</string>
     <string name="pixel_navbar_anim_title">Pixel button animation</string>
+    <string name="kill_app_longpress_back">Kill app back button</string>
+    <string name="kill_app_longpress_back_summary">Kill the foreground app by long-pressing the back key</string>
+    <string name="long_press_kill_delay">App kill delay</string>
 
     <!-- SmartBar -->
     <string name="smartbar_category">Smartbar</string>

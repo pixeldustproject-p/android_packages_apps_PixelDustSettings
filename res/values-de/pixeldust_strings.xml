@@ -408,7 +408,6 @@
   <string name="select_custom_app_title">Benutzerdefinierte App auswählen</string>
   <string name="select_custom_activity_title">Benutzerdefinierte Aktivität auswählen</string>
   <string name="profile_applist_title">Anwendungen</string>
-  <string name="default_string">Standard</string>
   <string name="choose_action_title">Aktion auswählen</string>
   <string name="action_entry_default_action">Standardeinstellungen</string>
   <string name="action_entry_select_app">Anwendung auswählen</string>
@@ -699,6 +698,8 @@
   <string name="positive_done">Fertig</string>
 
   <!-- Stock navbar -->
+  <string name="default_settings">Standard Einstellungen</string>
+  <string name="default_string">Standard</string>
   <string name="stocknavbar_settings_title">Standard Navigationsleiste</string>
   <string name="stocknavbar_settings_summary">Für diejenigen, die Originalität mögen und einige Anpassungen vornehmen möchten</string>
   <string name="stocknavbar_interface">Navigationsleiste</string>
