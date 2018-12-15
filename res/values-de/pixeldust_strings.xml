@@ -754,4 +754,39 @@
   <string name="smartbar_longpress_delay_long">Lange Verzögerung</string>
   <string name="smartbar_custom_icon_size_title">Benutzerdefinierte Symbolgröße</string>
 
+  <!-- Recents categories-->
+  <string name="stock_recents_category">Standard Anwendungsverlauf</string>
+  <string name="alternative_recents_category">Alternativer Anwendungsverlauf</string>
+  <string name="alternative_recents_swipe_up_enabled_warning_summary">Falls die Wischgesten-Steuerung verwendet wird, um den Anwendungsverlauf zu öffnen, wird lediglich der Standard Anwendungsverlauf unterstützt.</string>
+
+  <!-- Slim recents -->
+  <string name="slim_recents_title">Slim Recents</string>
+  <string name="slim_recents_settings_title">Einstellungen für Slim Recents</string>
+  <string name="recents_max_apps_title">max. zulässige App-Anzahl</string>
+  <string name="recent_panel_scale_title">Größe</string>
+  <string name="recent_panel_expanded_mode_title">Erweiterter Modus</string>
+  <string name="recent_panel_expanded_mode_summary">Erweiterter Vorschaumodus</string>
+  <string name="recent_panel_expanded_mode_auto">Auto (Standard)</string>
+  <string name="recent_panel_expanded_mode_always">Immer</string>
+  <string name="recent_panel_expanded_mode_never">Nie</string>
+  <string name="recent_panel_expanded_mode_disabled">Aus</string>
+  <string name="recent_panel_bg_color_title">Panel Hintergrundfarbe</string>
+  <string name="recent_card_bg_color_title">Karten Hintergrundfarbe</string>
+  <string name="slim_recents_mem_display_long_click_clear_title">Arbeitsspeicher-Anzeige lange drücken</string>
+  <string name="slim_recents_mem_display_long_click_clear_summary">Durch langes Drücken der Arbeitsspeicher-Anzeige den Anwendungsverlauf löschen</string>
+  <string name="slim_icon_pack_title">Symbol-Paket</string>
+  <string name="slim_icon_pack_summary">Benutzerdefiniertes Symbol-Paket den Apps im Verlauf zuweisen</string>
+  <string name="slim_recents_corner_radius_title">Abgerundete Ecken für Karten verwenden</string>
+  <!-- ATTENTION: RTL languages need to replace left with right -->
+  <string name="recent_panel_lefty_mode_title">Am linken Rand anzeigen</string>
+  <string name="recent_panel_lefty_mode_summary">Panel am linken Rand anzeigen</string>
+  <string name="profile_choose_app">Anwendung auswählen</string>
+  <string name="dialog_delete_title">Löschen</string>
+  <string name="dialog_delete_message">Markiertes Element löschen?</string>
+  <string name="slim_blacklist_apps_cat_title">Blacklist</string>
+  <string name="slim_blacklist_apps_title">Blockierte Anwendungen</string>
+  <string name="slim_blacklist_apps_summary">Nicht anzuzeigende bzw. blockierte Anwendungen</string>
+  <string name="slim_blacklist_add_apps_title">Anwendung hinzufügen</string>
+  <string name="slim_blacklist_add_apps_summary">Hier zum Hinzufügen tippen, zum Entfernen auf eine vorhandene App tippen</string>
+
 </resources>

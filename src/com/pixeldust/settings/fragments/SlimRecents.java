@@ -14,163 +14,121 @@
  * limitations under the License.
  */
 
+
 package com.pixeldust.settings.fragments;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
-import android.content.ContentResolver;
 import android.content.Context;
 import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.content.res.Resources;
-import android.graphics.drawable.Drawable;
-import android.os.Bundle;
-import android.os.Handler;
-import android.os.UserHandle;
-import android.provider.SearchIndexableResource;
-import android.provider.Settings;
-import android.support.v7.preference.ListPreference;
 import android.support.v7.preference.Preference;
-import android.support.v7.preference.PreferenceCategory;
-import android.support.v7.preference.PreferenceScreen;
 import android.support.v7.preference.Preference.OnPreferenceChangeListener;
 import android.support.v14.preference.SwitchPreference;
+import android.graphics.drawable.Drawable;
+import android.os.Bundle;
+import android.provider.Settings;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.BaseAdapter;
 import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemClickListener;
+import android.widget.BaseAdapter;
 import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.widget.ListView;
 
-import com.android.internal.logging.nano.MetricsProto;
-import com.android.internal.util.pixeldust.PixeldustUtils;
 import com.android.settings.R;
-import com.android.settings.search.BaseSearchIndexProvider;
-import com.android.settings.search.Indexable;
+import com.android.internal.logging.nano.MetricsProto;
 import com.android.settings.SettingsPreferenceFragment;
-import com.android.settingslib.widget.FooterPreference;
+
+import com.pixeldust.settings.preferences.SystemSettingSwitchPreference;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
-public class RecentsSettings extends SettingsPreferenceFragment implements Indexable, OnPreferenceChangeListener, DialogInterface.OnDismissListener {
+public class SlimRecents extends SettingsPreferenceFragment
+        implements Preference.OnPreferenceChangeListener, DialogInterface.OnDismissListener {
 
+    private static final String RECENT_PANEL_LEFTY_MODE = "recent_panel_lefty_mode";
+
+    private static final String RECENT_ICON_PACK = "slim_icon_pack";
+
+    private SwitchPreference mRecentPanelLeftyMode;
+    private Preference mAppSidebar;
+    private Preference mIconPack;
+
+    // Icon pack
     private final static String[] sSupportedActions = new String[] {
         "org.adw.launcher.THEMES",
         "com.gau.go.launcherex.theme"
     };
-
     private static final String[] sSupportedCategories = new String[] {
         "com.fede.launcher.THEME_ICONPACK",
         "com.anddoes.launcher.THEME",
         "com.teslacoilsw.launcher.THEME"
     };
-
     private AlertDialog mDialog;
     private ListView mListView;
-
-    private static final String RECENTS_COMPONENT_TYPE = "recents_component";
-    private static final String PREF_STOCK_HAFR = "hide_app_from_recents";
-    private static final String PREF_STOCK_ICON_PACK = "recents_icon_pack";
-    private static final String PREF_SLIM_RECENTS_SETTINGS = "slim_recents_settings";
-    private static final String PREF_SLIM_RECENTS = "use_slim_recents";
-
-    private ListPreference mRecentsComponentType;
-    private SwitchPreference mSlimToggle;
-    private Preference mSlimSettings;
-    private Preference mStockHAFR;
-    private Preference mStockIconPack;
 
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
 
-        addPreferencesFromResource(R.xml.pixeldust_settings_recents);
+        addPreferencesFromResource(R.xml.slim_recents);
 
-        // recents component type
-        mRecentsComponentType = (ListPreference) findPreference(RECENTS_COMPONENT_TYPE);
-        int type = Settings.System.getInt(getActivity().getContentResolver(),
-                Settings.System.RECENTS_COMPONENT, 0);
-        mRecentsComponentType.setValue(String.valueOf(type));
-        mRecentsComponentType.setSummary(mRecentsComponentType.getEntry());
-        mRecentsComponentType.setOnPreferenceChangeListener(this);
-
-        mStockHAFR = (Preference) findPreference(PREF_STOCK_HAFR);
-        mStockIconPack = (Preference) findPreference(PREF_STOCK_ICON_PACK);
-
-        // Slim Recents
-        mSlimSettings = (Preference) findPreference(PREF_SLIM_RECENTS_SETTINGS);
-        mSlimToggle = (SwitchPreference) findPreference(PREF_SLIM_RECENTS);
-        mSlimToggle.setOnPreferenceChangeListener(this);
-
-        updateRecentsPreferences();
-    }
-
-    private void updateRecentsPreferences() {
-        boolean slimEnabled = Settings.System.getIntForUser(
-                getActivity().getContentResolver(), Settings.System.USE_SLIM_RECENTS, 0,
-                UserHandle.USER_CURRENT) == 1;
-        // Either Stock or Slim Recents can be active at a time
-        mRecentsComponentType.setEnabled(!slimEnabled);
-        mStockHAFR.setEnabled(!slimEnabled);
-        mStockIconPack.setEnabled(!slimEnabled);
-        mSlimToggle.setChecked(slimEnabled);
+        mRecentPanelLeftyMode = (SwitchPreference) findPreference(RECENT_PANEL_LEFTY_MODE);
+        mRecentPanelLeftyMode.setOnPreferenceChangeListener(this);
+        mAppSidebar =
+                (Preference) findPreference(Settings.System.USE_RECENT_APP_SIDEBAR);
+        mIconPack = findPreference(RECENT_ICON_PACK);
     }
 
     @Override
-    public boolean onPreferenceChange(Preference preference, Object objValue) {
-        if (preference == mRecentsComponentType) {
-            int type = Integer.valueOf((String) objValue);
-            int index = mRecentsComponentType.findIndexOfValue((String) objValue);
-            Settings.System.putInt(getActivity().getContentResolver(),
-                    Settings.System.RECENTS_COMPONENT, type);
-            mRecentsComponentType.setSummary(mRecentsComponentType.getEntries()[index]);
-            if (type == 1) { // Disable swipe up gesture, if oreo type selected
-               Settings.Secure.putInt(getActivity().getContentResolver(),
-                    Settings.Secure.SWIPE_UP_TO_SWITCH_APPS_ENABLED, 0);
-            }
-            PixeldustUtils.showSystemUiRestartDialog(getContext());
+    public void onResume() {
+        super.onResume();
+
+        boolean recentLeftyMode = Settings.System.getInt(getContext().getContentResolver(),
+                Settings.System.RECENT_PANEL_GRAVITY, Gravity.END) == Gravity.START;
+        mRecentPanelLeftyMode.setChecked(recentLeftyMode);
+    }
+
+    @Override
+    public boolean onPreferenceChange(Preference preference, Object newValue) {
+        if (preference == mRecentPanelLeftyMode) {
+            Settings.System.putInt(getContext().getContentResolver(),
+                    Settings.System.RECENT_PANEL_GRAVITY,
+                    ((Boolean) newValue) ? Gravity.START : Gravity.END);
             return true;
-        } else if (preference == mSlimToggle) {
-            boolean value = (Boolean) objValue;
-            int type = Settings.System.getInt(
-                getActivity().getContentResolver(), Settings.System.RECENTS_COMPONENT, 0);
-            if (value && (type == 0)) { // change recents type to oreo when we are about to switch to slimrecents
-               Settings.System.putInt(getActivity().getContentResolver(),
-                    Settings.System.RECENTS_COMPONENT, 1);
-               PixeldustUtils.showSystemUiRestartDialog(getContext());
-            }
-            Settings.System.putIntForUser(getActivity().getContentResolver(),
-                    Settings.System.USE_SLIM_RECENTS, value ? 1 : 0,
-                    UserHandle.USER_CURRENT);
-            updateRecentsPreferences();
-            return true;
+        } else {
+            return false;
         }
-        return false;
     }
 
     @Override
     public boolean onPreferenceTreeClick(Preference preference) {
-        if (preference == findPreference(PREF_STOCK_ICON_PACK)) {
+        if (preference == mIconPack) {
             pickIconPack(getContext());
             return true;
+        } else {
+            return super.onPreferenceTreeClick(preference);
         }
-        return super.onPreferenceTreeClick(preference);
     }
 
-    /** Recents Icon Pack Dialog **/
+    @Override
+    public int getMetricsCategory() {
+        return MetricsProto.MetricsEvent.PIXELDUST;
+    }
+
+     /** Slim Recents Icon Pack Dialog **/
     private void pickIconPack(final Context context) {
         if (mDialog != null) {
             return;
@@ -196,7 +154,7 @@ public class RecentsSettings extends SettingsPreferenceFragment implements Index
 
         mListView = (ListView) view.findViewById(R.id.iconpack_list);
         mListView.setAdapter(adapter);
-        mListView.setOnItemClickListener(new OnItemClickListener() {
+        mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view,
                         int position, long id) {
@@ -205,7 +163,7 @@ public class RecentsSettings extends SettingsPreferenceFragment implements Index
                 }
                 String selectedPackage = adapter.getItem(position);
                 Settings.System.putString(getContext().getContentResolver(),
-                        Settings.System.RECENTS_ICON_PACK, selectedPackage);
+                        Settings.System.SLIM_RECENTS_ICON_PACK, selectedPackage);
                 mDialog.dismiss();
             }
         });
@@ -241,7 +199,7 @@ public class RecentsSettings extends SettingsPreferenceFragment implements Index
             Drawable icon = res.getDrawable(android.R.drawable.sym_def_app_icon);
             mSupportedPackages.add(0, new IconPackInfo(defaultLabel, icon, ""));
             mCurrentIconPack = Settings.System.getString(ctx.getContentResolver(),
-                Settings.System.RECENTS_ICON_PACK);
+                Settings.System.SLIM_RECENTS_ICON_PACK);
         }
 
         @Override
@@ -306,7 +264,7 @@ public class RecentsSettings extends SettingsPreferenceFragment implements Index
         return packages;
     }
 
-    static class IconPackInfo {
+    private static class IconPackInfo {
         String packageName;
         CharSequence label;
         Drawable icon;
@@ -326,28 +284,4 @@ public class RecentsSettings extends SettingsPreferenceFragment implements Index
             this.packageName = packageName;
         }
     }
-
-    @Override
-    public int getMetricsCategory() {
-        return MetricsProto.MetricsEvent.PIXELDUST;
-    }
-
-    public static final Indexable.SearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
-            new BaseSearchIndexProvider() {
-                @Override
-                public List<SearchIndexableResource> getXmlResourcesToIndex(Context context,
-                        boolean enabled) {
-                    ArrayList<SearchIndexableResource> result =
-                            new ArrayList<SearchIndexableResource>();
-                     SearchIndexableResource sir = new SearchIndexableResource(context);
-                    sir.xmlResId = R.xml.pixeldust_settings_recents;
-                    result.add(sir);
-                    return result;
-                }
-                @Override
-                public List<String> getNonIndexableKeys(Context context) {
-                    ArrayList<String> result = new ArrayList<String>();
-                    return result;
-                }
-    };
 }

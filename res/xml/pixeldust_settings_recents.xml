@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2017 The Pixel Dust Project
+<!-- Copyright (C) 2018 The Pixel Dust Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -18,31 +18,59 @@
     android:title="@string/recents_title"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
-    <ListPreference
-        android:key="recents_component"
-        android:title="@string/recents_component_type_title"
-        android:dialogTitle="@string/recents_component_type_title"
-        android:entries="@array/recents_component_type_title_entries"
-        android:defaultValue="0"
-        android:entryValues="@array/recents_component_type_title_values"/>
+    <PreferenceCategory
+        android:key="stock_recents_category"
+        android:title="@string/stock_recents_category">
 
-    <Preference
-        android:key="hide_app_from_recents"
-        android:title="@string/hide_apps_from_recents_title"
-        android:summary="@string/hide_apps_from_recents_summary" >
-             <intent android:action="android.intent.action.MAIN"
-                 android:targetPackage="com.android.settings"
-                 android:targetClass="com.pixeldust.settings.hideappfromrecents.HAFRAppListActivity" />
-    </Preference>
+        <ListPreference
+            android:key="recents_component"
+            android:title="@string/recents_component_type_title"
+            android:dialogTitle="@string/recents_component_type_title"
+            android:entries="@array/recents_component_type_title_entries"
+            android:defaultValue="0"
+            android:entryValues="@array/recents_component_type_title_values"/>
 
-    <Preference
-        android:key="recents_icon_pack"
-        android:title="@string/recents_icon_pack_title"
-        android:summary="@string/recents_icon_pack_summary" />
+        <Preference
+            android:key="hide_app_from_recents"
+            android:title="@string/hide_apps_from_recents_title"
+            android:summary="@string/hide_apps_from_recents_summary" >
+                 <intent android:action="android.intent.action.MAIN"
+                     android:targetPackage="com.android.settings"
+                     android:targetClass="com.pixeldust.settings.hideappfromrecents.HAFRAppListActivity" />
+        </Preference>
 
-    <com.android.settingslib.widget.FooterPreference
-        android:key="recents_icon_pack_footer_preference"
-        android:selectable="false"
-        android:title="@string/recents_icon_pack_help_text" />
+        <Preference
+            android:key="recents_icon_pack"
+            android:title="@string/recents_icon_pack_title"
+            android:summary="@string/recents_icon_pack_summary" />
+
+        <com.android.settingslib.widget.FooterPreference
+            android:key="recents_icon_pack_footer_preference"
+            android:selectable="false"
+            android:title="@string/recents_icon_pack_help_text" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="alternative_recents_category"
+        android:title="@string/alternative_recents_category">
+
+        <com.android.settingslib.widget.FooterPreference
+            android:key="swipe_up_enabled_warning"
+            android:selectable="false"
+            android:title="@string/alternative_recents_swipe_up_enabled_warning_summary" />
+
+        <SwitchPreference
+            android:key="use_slim_recents"
+            android:title="@string/slim_recents_title"
+            android:defaultValue="false" />
+
+        <Preference
+            android:key="slim_recents_settings"
+            android:title="@string/slim_recents_settings_title"
+            android:fragment="com.pixeldust.settings.fragments.SlimRecents"
+            android:dependency="use_slim_recents" />
+
+    </PreferenceCategory>
 
 </PreferenceScreen>
