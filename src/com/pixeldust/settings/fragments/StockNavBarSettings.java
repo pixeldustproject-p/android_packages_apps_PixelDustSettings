@@ -37,10 +37,12 @@ import com.pixeldust.settings.preferences.CustomSeekBarPreference;
 public class StockNavBarSettings extends SettingsPreferenceFragment implements
         OnPreferenceChangeListener {
 
+    private static final String PREF_GESTURES = "gesture_settings";
     private static final String KILL_APP_LONGPRESS_BACK = "kill_app_longpress_back";
     private static final String LONG_PRESS_KILL_DELAY = "long_press_kill_delay";
     private CustomSeekBarPreference mLongpressKillDelay;
     private SwitchPreference mKillAppLongPressBack;
+    private Preference mGestures;
 
     @Override
     public void onCreate(Bundle icicle) {
@@ -61,6 +63,14 @@ public class StockNavBarSettings extends SettingsPreferenceFragment implements
                 Settings.Secure.LONG_PRESS_KILL_DELAY, 1000);
         mLongpressKillDelay.setValue(killconf);
         mLongpressKillDelay.setOnPreferenceChangeListener(this);
+
+        // Disable gesture settings if recents type is different from Stock Pie
+        mGestures = (Preference) findPreference(PREF_GESTURES);
+        final int swipeUpDefaultValue = getActivity().getResources()
+                .getBoolean(com.android.internal.R.bool.config_swipe_up_gesture_default) ? 1: 0;
+        final int swipeUpEnabled = Settings.Secure.getInt(getActivity().getContentResolver(),
+                Settings.Secure.SWIPE_UP_TO_SWITCH_APPS_ENABLED, swipeUpDefaultValue);
+        mGestures.setEnabled(swipeUpEnabled != 0);
     }
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
