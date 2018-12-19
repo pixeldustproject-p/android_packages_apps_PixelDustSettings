@@ -22,6 +22,7 @@ import android.content.res.Resources;
 import android.hardware.fingerprint.FingerprintManager;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.UserHandle;
 import android.provider.SearchIndexableResource;
 import android.provider.Settings;
 import android.support.v14.preference.SwitchPreference;
@@ -31,6 +32,7 @@ import android.support.v7.preference.PreferenceCategory;
 import android.support.v7.preference.PreferenceScreen;
 
 import com.android.internal.logging.nano.MetricsProto;
+import com.android.internal.util.pixeldust.PixeldustUtils;
 import com.android.internal.util.weather.WeatherClient;
 import com.android.settings.R;
 import com.android.settings.search.BaseSearchIndexProvider;
@@ -45,10 +47,13 @@ public class LockScreenSettings extends SettingsPreferenceFragment implements In
     private static final String FINGERPRINT_VIB = "fingerprint_success_vib";
     private static final String LOCK_CLOCK_FONTS = "lock_clock_fonts";
     private static final String WEATHER_LS_CAT = "weather_lockscreen_key";
+    private static final String FACE_UNLOCK_PREF = "face_auto_unlock";
+    private static final String FACE_UNLOCK_PACKAGE = "com.android.facelock";
 
     private FingerprintManager mFingerprintManager;
     private SwitchPreference mFingerprintVib;
     private ListPreference mLockClockFonts;
+    private SwitchPreference mFaceUnlock;
 
     @Override
     public void onCreate(Bundle icicle) {
@@ -77,6 +82,20 @@ public class LockScreenSettings extends SettingsPreferenceFragment implements In
 
         if (!WeatherClient.isAvailable(getContext())) {
             prefScreen.removePreference(weatherCategory);
+        }
+
+        boolean mFaceUnlockEnabled = Settings.Secure.getIntForUser(getActivity().getContentResolver(),
+                Settings.Secure.FACE_AUTO_UNLOCK, getActivity().getResources().getBoolean(
+                com.android.internal.R.bool.config_face_unlock_enabled_by_default) ? 1 : 0,
+                UserHandle.USER_CURRENT) != 0;
+
+        mFaceUnlock = (SwitchPreference) findPreference(FACE_UNLOCK_PREF);
+        mFaceUnlock.setChecked(mFaceUnlockEnabled);
+
+        if (!PixeldustUtils.isPackageInstalled(getActivity(), FACE_UNLOCK_PACKAGE)) {
+            mFaceUnlock.setEnabled(false);
+            mFaceUnlock.setSummary(getActivity().getString(
+                    R.string.face_auto_unlock_not_available));
         }
     }
 

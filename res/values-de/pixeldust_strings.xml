@@ -109,6 +109,7 @@
 
   <string name="face_auto_unlock_title">Entsperren anhand Gesichtserkennungs-Funktion</string>
   <string name="face_auto_unlock_summary">Sperrbildschirm nach Gesichtserkennung automatisch übergehen</string>
+  <string name="face_auto_unlock_not_available">Erforderliches Modul für Gesichtserkennung ist nicht verfügbar</string>
 
   <!-- Statusbar double tap to sleep -->
   <string name="double_tap_to_sleep_title">Statusleiste</string>
