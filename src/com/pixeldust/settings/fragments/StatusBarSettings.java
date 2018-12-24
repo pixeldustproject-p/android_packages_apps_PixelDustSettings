@@ -45,6 +45,7 @@ import android.view.View;
 import android.widget.EditText;
 
 import com.android.internal.logging.nano.MetricsProto;
+import com.android.internal.util.pixeldust.PixeldustUtils;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settings.search.Indexable;
 import com.android.settings.SettingsPreferenceFragment;
@@ -85,6 +86,8 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements
     private static final String SHOW_BATTERY_PERCENT = "show_battery_percent";
     private static final String TEXT_CHARGING_SYMBOL = "text_charging_symbol";
 
+    private static final String USE_OLD_MOBILETYPE = "use_old_mobiletype";
+
     public static final int BATTERY_STYLE_PORTRAIT = 0;
     public static final int BATTERY_STYLE_CIRCLE = 1;
     public static final int BATTERY_STYLE_DOTTED_CIRCLE = 2;
@@ -107,6 +110,8 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements
     private ListPreference mBatteryPercent;
     private ListPreference mTextSymbol;
 
+    private SwitchPreference mOldMobiletype;
+
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
@@ -128,6 +133,10 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements
         mThreshold.setValue(value);
         mThreshold.setOnPreferenceChangeListener(this);
         mThreshold.setEnabled(isNetMonitorEnabled);
+
+        //Use pre P_mobile type icon style
+        mOldMobiletype = (SwitchPreference) findPreference(USE_OLD_MOBILETYPE);
+        mOldMobiletype.setOnPreferenceChangeListener(this);
 
 	// clock settings
         mStatusBarClockShow = (SystemSettingSwitchPreference) findPreference(STATUS_BAR_CLOCK);
@@ -249,6 +258,9 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements
             Settings.System.putIntForUser(getContentResolver(),
                     Settings.System.NETWORK_TRAFFIC_AUTOHIDE_THRESHOLD, val,
                     UserHandle.USER_CURRENT);
+            return true;
+        } else if (preference == mOldMobiletype) {
+            PixeldustUtils.showSystemUiRestartDialog(getContext());
             return true;
         } else if (preference == mStatusBarClockShow) {
             boolean value = (Boolean) objValue;
