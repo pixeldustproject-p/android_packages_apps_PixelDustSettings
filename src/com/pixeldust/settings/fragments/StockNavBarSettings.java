@@ -66,11 +66,9 @@ public class StockNavBarSettings extends SettingsPreferenceFragment implements
 
         // Disable gesture settings if recents type is different from Stock Pie
         mGestures = (Preference) findPreference(PREF_GESTURES);
-        final int swipeUpDefaultValue = getActivity().getResources()
-                .getBoolean(com.android.internal.R.bool.config_swipe_up_gesture_default) ? 1: 0;
-        final int swipeUpEnabled = Settings.Secure.getInt(getActivity().getContentResolver(),
-                Settings.Secure.SWIPE_UP_TO_SWITCH_APPS_ENABLED, swipeUpDefaultValue);
-        mGestures.setEnabled(swipeUpEnabled != 0);
+        final int recentsType = Settings.System.getInt(getActivity().getContentResolver(),
+                Settings.System.RECENTS_COMPONENT, 0);
+        mGestures.setEnabled(recentsType != 1);
     }
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
