@@ -31,6 +31,7 @@
     <string name="recents_title">Recents apps</string>
     <string name="statusbar_title">Status bar</string>
     <string name="volume_title">Volume Settings</string>
+    <string name="keyboard_ime_title">Keyboard and IME</string>
 
     <!-- Color picker -->
     <string name="dialog_color_picker">Color Picker</string>
@@ -892,5 +893,14 @@
     <string name="burn_in_protection_title">Burn-in Protection</string>
     <string name="burn_in_protection_summary">Shift navbar and statusbar icons to prevent burn-in</string>
     <string name="burn_in_protection_interval_title">Interval of shift</string>
+
+    <!-- IME General -->
+    <string name="default_string_ime">Default</string>
+    <string name="add">Add</string>
+    <string name="enabled">Enabled</string>
+    <string name="choose_app">Choose application</string>
+    <string name="help">Help</string>
+    <string name="reset_message">Reset all entries to default?</string>
+    <string name="attention">Attention</string>
 
 </resources>

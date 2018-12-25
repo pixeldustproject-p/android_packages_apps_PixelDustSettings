@@ -87,6 +87,13 @@
             android:fragment="com.pixeldust.settings.fragments.AnimationsSettings"
             android:icon="@drawable/ic_homepage_animations"/>
 
+        <!-- Stock Keyboard -->
+        <Preference
+            android:key="inputmethod_category"
+            android:title="@string/keyboard_ime_title" 
+            android:fragment="com.pixeldust.settings.fragments.InputMethodsSettings"
+            android:icon="@drawable/ic_homepage_ime"/>
+
         <!-- Misc -->
         <Preference
             android:key="misc_category"

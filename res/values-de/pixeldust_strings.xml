@@ -29,6 +29,7 @@
   <string name="statusbar_title">Statusleiste</string>
   <string name="volume_title">Lautstärke-Taste konfigurieren</string>
   <string name="notifications_title">Benachrichtigungen</string>
+  <string name="keyboard_ime_title">Tastatur und Eingabemethoden</string>
 
   <!-- General strings -->
   <string name="ok">OK</string>
@@ -827,5 +828,14 @@
   <string name="burn_in_protection_title">Einbrennschutz</string>
   <string name="burn_in_protection_summary">Navigationsleisten- und Statuszeilen-Symbole verschieben, um ein Einbrennen zu verhindern</string>
   <string name="burn_in_protection_interval_title">Zeitabstand zwischen den Verschiebungen</string>
+
+  <!-- IME General -->
+  <string name="default_string_ime">Standard</string>
+  <string name="add">Hinzufügen</string>
+  <string name="enabled">Aktiviert</string>
+  <string name="choose_app">Anwendung auswählen</string>
+  <string name="help">Hilfe</string>
+  <string name="reset_message">Alle Einstellungen auf die Grundeinstellungen zurücksetzen?</string>
+  <string name="attention">Achtung</string>
 
 </resources>
