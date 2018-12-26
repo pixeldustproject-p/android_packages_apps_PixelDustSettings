@@ -51,6 +51,13 @@
             android:fragment="com.pixeldust.settings.fragments.VolumeSettings"
             android:title="@string/volume_title" />
 
+        <!-- Audio Panel view  -->
+        <PreferenceScreen
+            android:key="volume_panel"
+            android:title="@string/audio_panel_view_title"
+            android:summary="@string/audio_panel_view_summary"
+            android:fragment="com.pixeldust.settings.fragments.VolumePanel" />
+
     </PreferenceCategory>
 
     <PreferenceCategory
