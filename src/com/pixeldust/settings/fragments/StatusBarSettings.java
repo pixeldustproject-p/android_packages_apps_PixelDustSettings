@@ -94,8 +94,6 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements
     public static final int BATTERY_STYLE_TEXT = 3;
     public static final int BATTERY_STYLE_HIDDEN = 4;
 
-    private SystemSettingSwitchPreference mStatusBarClockShow;
-    private SystemSettingSwitchPreference mStatusBarSecondsShow;
     private ListPreference mStatusBarClock;
     private ListPreference mStatusBarAmPm;
     private ListPreference mClockDateDisplay;
@@ -139,21 +137,11 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements
         mOldMobiletype.setOnPreferenceChangeListener(this);
 
 	// clock settings
-        mStatusBarClockShow = (SystemSettingSwitchPreference) findPreference(STATUS_BAR_CLOCK);
-        mStatusBarSecondsShow = (SystemSettingSwitchPreference) findPreference(STATUS_BAR_CLOCK_SECONDS);
         mStatusBarClock = (ListPreference) findPreference(STATUS_BAR_CLOCK_STYLE);
         mStatusBarAmPm = (ListPreference) findPreference(STATUS_BAR_AM_PM);
         mClockDateDisplay = (ListPreference) findPreference(STATUS_BAR_CLOCK_DATE_DISPLAY);
         mClockDateStyle = (ListPreference) findPreference(STATUS_BAR_CLOCK_DATE_STYLE);
         mClockDatePosition = (ListPreference) findPreference(STATUS_BAR_CLOCK_DATE_POSITION);
-
-        mStatusBarClockShow.setChecked((Settings.System.getInt(resolver,
-                Settings.System.STATUS_BAR_CLOCK, 1) == 1));
-        mStatusBarClockShow.setOnPreferenceChangeListener(this);
-
-        mStatusBarSecondsShow.setChecked((Settings.System.getInt(resolver,
-                Settings.System.STATUS_BAR_CLOCK_SECONDS, 0) == 1));
-        mStatusBarSecondsShow.setOnPreferenceChangeListener(this);
 
         int clockStyle = Settings.System.getInt(resolver,
                 Settings.System.STATUSBAR_CLOCK_STYLE, 0);
@@ -261,16 +249,6 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements
             return true;
         } else if (preference == mOldMobiletype) {
             PixeldustUtils.showSystemUiRestartDialog(getContext());
-            return true;
-        } else if (preference == mStatusBarClockShow) {
-            boolean value = (Boolean) objValue;
-            Settings.System.putInt(resolver,
-                    Settings.System.STATUS_BAR_CLOCK, value ? 1 : 0);
-            return true;
-        } else if (preference == mStatusBarSecondsShow) {
-            boolean value = (Boolean) objValue;
-            Settings.System.putInt(resolver,
-                    Settings.System.STATUS_BAR_CLOCK_SECONDS, value ? 1 : 0);
             return true;
         } else if (preference == mStatusBarClock) {
             int clockStyle = Integer.parseInt((String) objValue);
