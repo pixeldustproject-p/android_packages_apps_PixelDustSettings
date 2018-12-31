@@ -109,22 +109,19 @@
             android:key="clock_date_style"
             android:title="@string/clock_date_style"
             android:entries="@array/clock_date_style_entries"
-            android:entryValues="@array/clock_date_style_values"
-            android:dependency="clock_date_display" />
+            android:entryValues="@array/clock_date_style_values" />
 
         <ListPreference
             android:key="clock_date_format"
             android:title="@string/clock_date_format"
             android:entries="@array/clock_date_format_entries_values"
-            android:entryValues="@array/clock_date_format_entries_values"
-            android:dependency="clock_date_display" />
+            android:entryValues="@array/clock_date_format_entries_values" />
 
         <ListPreference
             android:key="statusbar_clock_date_position"
             android:title="@string/clock_date_position"
             android:entries="@array/clock_date_position_entries"
-            android:entryValues="@array/clock_date_position_values"
-            android:dependency="clock_date_display" />
+            android:entryValues="@array/clock_date_position_values" />
 
     </PreferenceCategory>
 
