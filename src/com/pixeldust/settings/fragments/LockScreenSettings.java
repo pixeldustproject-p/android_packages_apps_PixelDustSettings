@@ -33,7 +33,6 @@ import android.support.v7.preference.PreferenceScreen;
 
 import com.android.internal.logging.nano.MetricsProto;
 import com.android.internal.util.pixeldust.PixeldustUtils;
-import com.android.internal.util.weather.WeatherClient;
 import com.android.settings.R;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settings.search.Indexable;
@@ -46,7 +45,6 @@ public class LockScreenSettings extends SettingsPreferenceFragment implements In
 
     private static final String FINGERPRINT_VIB = "fingerprint_success_vib";
     private static final String LOCK_CLOCK_FONTS = "lock_clock_fonts";
-    private static final String WEATHER_LS_CAT = "weather_lockscreen_key";
     private static final String FACE_UNLOCK_PREF = "face_auto_unlock";
     private static final String FACE_UNLOCK_PACKAGE = "com.android.facelock";
 
@@ -76,13 +74,6 @@ public class LockScreenSettings extends SettingsPreferenceFragment implements In
                 getContentResolver(), Settings.System.LOCK_CLOCK_FONTS, 4)));
         mLockClockFonts.setSummary(mLockClockFonts.getEntry());
         mLockClockFonts.setOnPreferenceChangeListener(this);
-
-        final PreferenceCategory weatherCategory = (PreferenceCategory) prefScreen
-                .findPreference(WEATHER_LS_CAT);
-
-        if (!WeatherClient.isAvailable(getContext())) {
-            prefScreen.removePreference(weatherCategory);
-        }
 
         boolean mFaceUnlockEnabled = Settings.Secure.getIntForUser(getActivity().getContentResolver(),
                 Settings.Secure.FACE_AUTO_UNLOCK, getActivity().getResources().getBoolean(
