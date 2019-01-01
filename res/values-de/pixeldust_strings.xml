@@ -253,20 +253,6 @@
   <string name="lockscreen_power_menu_disabled_title">Ein-/Aus-Menü verbergen</string>
   <string name="lockscreen_power_menu_disabled_summary">Ein-/Aus-Menü auf abgesichertem Sperrbildschirm verbergen</string>
 
-  <!-- Battery Styles -->
-  <string name="battery_style_category_title">Akku-Symbol</string>
-  <string name="battery_style_title">Akku-Symbol (Design)</string>
-  <string name="battery_style_port">Porträt</string>
-  <string name="battery_style_circle">Kreis</string>
-  <string name="battery_style_dotted_circle">Kreis (gepunktet)</string>
-  <string name="battery_style_big_circle">Großer Kreis</string>
-  <string name="battery_style_big_dotted_circle">Großer gepunkteter Kreis</string>
-  <string name="battery_style_text">Text</string>
-  <string name="show_battery_percent_title">Akkustand in Prozent anzeigen</string>
-  <string name="battery_percent_none">Nicht anzeigen</string>
-  <string name="battery_percent_outside">Neben dem Symbol anzeigen</string>
-  <string name="battery_percent_inside">Im Symbol anzeigen</string>
-
   <!-- Show percent on QSB --> 
   <string name="show_battery_percent_on_qsb">Akkustand in Prozent auch beim Herunterziehen</string>
   <string name="show_battery_percent_on_qsb_summary">Akkustand in Prozent auch beim Herunterziehen der Schnelleinstellungenleiste anzeigen</string>
@@ -470,6 +456,31 @@
   <string name="lock_clock_font_medium_italic">Mittel Kursiv</string>
   <string name="lock_clock_font_black">Schwarz</string>
   <string name="lock_clock_font_black_italic">Schwarz Kursiv</string>
+
+  <!-- Battery Styles -->
+  <string name="battery_style_category_title">Akkustandanzeige</string>
+  <string name="battery_percent_title">Akku-Prozentsatz</string>
+
+  <!-- Status bar - Battery -->
+  <string name="status_bar_battery_style_title">Stil der Akkuanzeige</string>
+  <string name="status_bar_battery_style_icon_portrait">Batterie Porträt</string>
+  <string name="status_bar_battery_style_circle">Kreis</string>
+  <string name="status_bar_battery_style_dotted_circle">Gepunkteter Kreis</string>
+  <string name="status_bar_battery_style_text">Text</string>
+  <string name="status_bar_battery_style_hidden">Nicht anzeigen</string>
+
+  <!-- Status bar - Battery percentage -->
+  <string name="status_bar_battery_percentage_title">Akku-Prozentsatz</string>
+  <string name="status_bar_battery_percentage_default">Nicht anzeigen</string>
+  <string name="status_bar_battery_percentage_text_inside">Im Symbol anzeigen</string>
+  <string name="status_bar_battery_percentage_text_next">Neben dem Symbol anzeigen</string>
+
+  <!-- Status bar - Battery custom charging symbol -->
+  <string name="text_charging_symbol_title">Benutzerdefiniertes Ladesymbol bei Text-Stil</string>
+  <string name="text_charging_symbol_dialog">Benutzerdefiniertes Ladesymbol neben dem Akku-Prozentsatz anzeigen</string>
+  <string name="text_charging_symbol_default">Deaktiviert</string>
+  <string name="text_charging_symbol_flash">Blitz</string>
+  <string name="text_charging_symbol_tilde">Tilde</string>
 
   <!-- Bluetooth battery status --> 
   <string name="bluetooth_battery_title">Bluetooth Akkuladezustand</string> 
@@ -781,8 +792,8 @@
   <string name="recent_panel_expanded_mode_disabled">Aus</string>
   <string name="recent_panel_bg_color_title">Panel Hintergrundfarbe</string>
   <string name="recent_card_bg_color_title">Karten Hintergrundfarbe</string>
-  <string name="slim_recents_mem_display_long_click_clear_title">Arbeitsspeicher-Anzeige lange drücken</string>
-  <string name="slim_recents_mem_display_long_click_clear_summary">Durch langes Drücken der Arbeitsspeicher-Anzeige den Anwendungsverlauf löschen</string>
+  <string name="slim_recents_mem_display_long_click_clear_title">Speicheranzeige lange drücken</string>
+  <string name="slim_recents_mem_display_long_click_clear_summary">Durch langes Drücken der Speicheranzeige den Anwendungsverlauf löschen</string>
   <string name="slim_icon_pack_title">Symbol-Paket</string>
   <string name="slim_icon_pack_summary">Benutzerdefiniertes Symbol-Paket den Apps im Verlauf zuweisen</string>
   <string name="slim_recents_corner_radius_title">Abgerundete Ecken für Karten verwenden</string>
@@ -797,6 +808,30 @@
   <string name="slim_blacklist_apps_summary">Nicht anzuzeigende bzw. blockierte Anwendungen</string>
   <string name="slim_blacklist_add_apps_title">Anwendung hinzufügen</string>
   <string name="slim_blacklist_add_apps_summary">Hier zum Hinzufügen tippen, zum Entfernen auf eine vorhandene App tippen</string>
+
+    <!-- Slim Recent App Sidebar  -->
+    <string name="recent_app_sidebar_title">App-Seitenleiste</string>
+    <string name="recent_app_sidebar_summary">App-Seitenleiste am anderen Rand anzeigen</string>
+    <string name="use_recent_app_sidebar_title">App-Seitenleiste aktivieren</string>
+    <string name="use_recent_app_sidebar_summary">App-Seitenleiste am anderen Rand anzeigen</string>
+    <string name="recent_app_sidebar_content_title">Inhalt der Seitenleiste</string>
+    <string name="recent_app_sidebar_content_summary">Inhalt der Seitenleiste konfigurieren</string>
+    <string name="recent_app_sidebar_style_title">Stil der Seitenleiste</string>
+    <string name="recent_app_sidebar_style_summary">Das Aussehen der Seitenleiste ändern</string>
+    <string name="recent_app_sidebar_hide_labels_title">Symbolbeschriftungen ausblenden</string>
+    <string name="recent_app_sidebar_label_color_title">Beschriftungsfarbe</string>
+    <string name="recent_app_sidebar_bg_color_title">Hintergrundfarbe</string>
+    <string name="recent_app_sidebar_scale_title">Größe</string>
+    <string name="recent_app_sidebar_open_simultaneously_title">Gleichzeitig mit Slim Recents öffnen</string>
+    <string name="recent_app_sidebar_open_simultaneously_summary">Das Deaktivieren dieser Option kann eine eventuell auftretende Verzögerung bei der Anzeige der Slim Recents verringern</string>
+
+    <!-- Slim recents membar -->
+    <string name="slim_recents_mem_display_category_title">Speicheranzeige</string>
+    <string name="slim_recents_mem_display_title">Speicheranzeige aktivieren</string>
+    <string name="slim_recents_mem_display_summaryOn">Speicheranzeige aktiviert</string>
+    <string name="slim_recents_mem_display_summaryOff">Speicheranzeige deaktiviert</string>
+    <string name="slim_recents_mem_display_color">Speicheranzeige Leistenfarbe</string>
+    <string name="slim_recents_mem_display_text_color">Speicheranzeige Textfarbe</string>
 
   <!-- Pixel Animation Settings -->
   <string name="pixel_anim_title">Pixel Tasten-Animation</string>
