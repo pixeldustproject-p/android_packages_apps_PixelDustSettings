@@ -809,22 +809,6 @@
   <string name="slim_blacklist_add_apps_title">Anwendung hinzufügen</string>
   <string name="slim_blacklist_add_apps_summary">Hier zum Hinzufügen tippen, zum Entfernen auf eine vorhandene App tippen</string>
 
-    <!-- Slim Recent App Sidebar  -->
-    <string name="recent_app_sidebar_title">App-Seitenleiste</string>
-    <string name="recent_app_sidebar_summary">App-Seitenleiste am anderen Rand anzeigen</string>
-    <string name="use_recent_app_sidebar_title">App-Seitenleiste aktivieren</string>
-    <string name="use_recent_app_sidebar_summary">App-Seitenleiste am anderen Rand anzeigen</string>
-    <string name="recent_app_sidebar_content_title">Inhalt der Seitenleiste</string>
-    <string name="recent_app_sidebar_content_summary">Inhalt der Seitenleiste konfigurieren</string>
-    <string name="recent_app_sidebar_style_title">Stil der Seitenleiste</string>
-    <string name="recent_app_sidebar_style_summary">Das Aussehen der Seitenleiste ändern</string>
-    <string name="recent_app_sidebar_hide_labels_title">Symbolbeschriftungen ausblenden</string>
-    <string name="recent_app_sidebar_label_color_title">Beschriftungsfarbe</string>
-    <string name="recent_app_sidebar_bg_color_title">Hintergrundfarbe</string>
-    <string name="recent_app_sidebar_scale_title">Größe</string>
-    <string name="recent_app_sidebar_open_simultaneously_title">Gleichzeitig mit Slim Recents öffnen</string>
-    <string name="recent_app_sidebar_open_simultaneously_summary">Das Deaktivieren dieser Option kann eine eventuell auftretende Verzögerung bei der Anzeige der Slim Recents verringern</string>
-
     <!-- Slim recents membar -->
     <string name="slim_recents_mem_display_category_title">Speicheranzeige</string>
     <string name="slim_recents_mem_display_title">Speicheranzeige aktivieren</string>

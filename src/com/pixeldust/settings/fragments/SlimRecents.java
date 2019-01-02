@@ -63,7 +63,6 @@ public class SlimRecents extends SettingsPreferenceFragment
     private static final String RECENT_ICON_PACK = "slim_icon_pack";
 
     private SwitchPreference mRecentPanelLeftyMode;
-    private Preference mAppSidebar;
     private Preference mIconPack;
 
     // Icon pack
@@ -87,8 +86,6 @@ public class SlimRecents extends SettingsPreferenceFragment
 
         mRecentPanelLeftyMode = (SwitchPreference) findPreference(RECENT_PANEL_LEFTY_MODE);
         mRecentPanelLeftyMode.setOnPreferenceChangeListener(this);
-        mAppSidebar =
-                (Preference) findPreference(Settings.System.USE_RECENT_APP_SIDEBAR);
         mIconPack = findPreference(RECENT_ICON_PACK);
     }
 

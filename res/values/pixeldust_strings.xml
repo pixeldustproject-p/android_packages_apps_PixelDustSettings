@@ -839,22 +839,6 @@
     <string name="slim_blacklist_add_apps_title">Add app</string>
     <string name="slim_blacklist_add_apps_summary">Tap here to add, tap on added app to remove it</string>
 
-    <!-- Slim Recent App Sidebar  -->
-    <string name="recent_app_sidebar_title">Recents app sidebar</string>
-    <string name="recent_app_sidebar_summary">Show app shortcuts on the other edge</string>
-    <string name="use_recent_app_sidebar_title">Enable app sidebar</string>
-    <string name="use_recent_app_sidebar_summary">Show app shortcuts on the other edge</string>
-    <string name="recent_app_sidebar_content_title">Sidebar content</string>
-    <string name="recent_app_sidebar_content_summary">Configure the content of the app sidebar</string>
-    <string name="recent_app_sidebar_style_title">Sidebar style</string>
-    <string name="recent_app_sidebar_style_summary">Change the look of the sidebar</string>
-    <string name="recent_app_sidebar_hide_labels_title">Hide icon labels</string>
-    <string name="recent_app_sidebar_label_color_title">Label color</string>
-    <string name="recent_app_sidebar_bg_color_title">Background color</string>
-    <string name="recent_app_sidebar_scale_title">Size</string>
-    <string name="recent_app_sidebar_open_simultaneously_title">Open simultaneously with recents</string>
-    <string name="recent_app_sidebar_open_simultaneously_summary">Reduce recents opening lag by disabling this</string>
-
     <!-- Slim recents membar -->
     <string name="slim_recents_mem_display_category_title">Memory bar</string>
     <string name="slim_recents_mem_display_title">Show memory bar</string>
