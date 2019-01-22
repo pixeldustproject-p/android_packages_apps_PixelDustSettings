@@ -176,10 +176,6 @@ public class RecentsSettings extends SettingsPreferenceFragment implements Index
             return;
         }
         Map<String, IconPackInfo> supportedPackages = getSupportedPackages(context);
-        if (supportedPackages.isEmpty()) {
-            Toast.makeText(context, R.string.no_iconpacks_summary, Toast.LENGTH_SHORT).show();
-            return;
-        }
         AlertDialog.Builder builder = new AlertDialog.Builder(context)
         .setTitle(R.string.dialog_pick_iconpack_title)
         .setOnDismissListener(this)
@@ -242,6 +238,10 @@ public class RecentsSettings extends SettingsPreferenceFragment implements Index
             mSupportedPackages.add(0, new IconPackInfo(defaultLabel, icon, ""));
             mCurrentIconPack = Settings.System.getString(ctx.getContentResolver(),
                 Settings.System.RECENTS_ICON_PACK);
+            if (mCurrentIconPack == null || /* only defaultPackage */ getCount() <= 1) {
+                // An icon pack has never been set, let's set it to our default package.
+                mCurrentIconPack = "";
+            }
         }
 
         @Override
