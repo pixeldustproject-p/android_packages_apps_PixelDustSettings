@@ -39,7 +39,7 @@
                      android:targetClass="com.pixeldust.settings.hideappfromrecents.HAFRAppListActivity" />
         </Preference>
 
-        <Preference
+        <com.pixeldust.settings.fragments.RecentsIconPackPreference
             android:key="recents_icon_pack"
             android:title="@string/recents_icon_pack_title"
             android:summary="@string/recents_icon_pack_summary" />
