@@ -64,10 +64,10 @@
             settings:units=""
             android:persistent="false" />
 
-        <com.pixeldust.settings.preferences.SecureSettingSwitchPreference
+        <Preference
             android:key="quick_settings_quick_pull_down"
-            android:title="@string/quick_settings_quick_pull_down"
-            android:defaultValue="false" />
+            android:icon="@drawable/ic_action_reset"
+            android:title="@string/quick_settings_quick_pull_down" />
 
         <com.pixeldust.settings.preferences.SecureSettingSwitchPreference
             android:key="status_bar_locked_on_secure_keyguard"

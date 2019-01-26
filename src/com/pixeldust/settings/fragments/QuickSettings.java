@@ -30,6 +30,7 @@ import android.support.v7.preference.ListPreference;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceScreen;
 import android.support.v7.preference.Preference.OnPreferenceChangeListener;
+import android.support.v7.preference.Preference.OnPreferenceClickListener;
 import android.support.v14.preference.SwitchPreference;
 import android.text.TextUtils;
 import android.view.View;
@@ -46,10 +47,12 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
-public class QuickSettings extends SettingsPreferenceFragment implements OnPreferenceChangeListener, Indexable {
+public class QuickSettings extends SettingsPreferenceFragment implements OnPreferenceChangeListener, OnPreferenceClickListener, Indexable {
 
     private static final String QS_PANEL_ALPHA = "qs_panel_alpha";
     private CustomSeekBarPreference mQsPanelAlpha;
+    private static final String QS_QUICK_PULLDOWN = "quick_settings_quick_pull_down";
+    private Preference mQsQuickPulldown;
 
     @Override
     public void onCreate(Bundle icicle) {
@@ -63,6 +66,9 @@ public class QuickSettings extends SettingsPreferenceFragment implements OnPrefe
                 Settings.System.QS_PANEL_BG_ALPHA, 255, UserHandle.USER_CURRENT);
         mQsPanelAlpha.setValue(qsPanelAlpha);
         mQsPanelAlpha.setOnPreferenceChangeListener(this);
+
+        mQsQuickPulldown = (Preference) findPreference(QS_QUICK_PULLDOWN);
+        mQsQuickPulldown.setOnPreferenceClickListener(this);
     }
 
     @Override
@@ -76,7 +82,17 @@ public class QuickSettings extends SettingsPreferenceFragment implements OnPrefe
                     UserHandle.USER_CURRENT);
             return true;
         }
+        return false;
+    }
 
+    @Override
+    public boolean onPreferenceClick (Preference preference) {
+        if (preference == mQsQuickPulldown) {
+            Settings.Secure.putIntForUser(getContentResolver(),
+                    Settings.Secure.QUICK_SETTINGS_QUICK_PULL_DOWN, 0,
+                    UserHandle.USER_CURRENT);
+            return true;
+        }
         return false;
     }
 

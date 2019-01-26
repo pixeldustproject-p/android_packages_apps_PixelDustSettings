@@ -209,8 +209,8 @@
   <string name="panel_cat">Panel</string>
   <string name="qs_panel_alpha_title">Transparenz</string>
 
-  <!-- Quick Pulldown OS panel -->
-  <string name="quick_settings_quick_pull_down">Mit einem Finger die Statusleiste von rechts herunterziehen, um die Schnelleinstellungen anzuzeigen</string>
+  <!-- Quick Pulldown QS panel -->
+  <string name="quick_settings_quick_pull_down">Die Entscheidung bzgl. \"Mit einem Finger die Statusleiste von rechts herunterziehen, um die Schnelleinstellungen anzuzeigen\" widerrufen</string>
 
   <!-- Heads up options -->
   <string name="heads_up_cat_title">Pop-up-Benachrichtigungen</string>
