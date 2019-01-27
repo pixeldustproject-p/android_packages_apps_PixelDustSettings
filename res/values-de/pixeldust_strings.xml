@@ -890,7 +890,7 @@
   <!-- Ambient Music ticker -->
   <string name="force_ambient_for_media_pref_title">Ambient Musik Ticker</string>
   <string name="force_ambient_for_media_pref_summary">Musik Ticker konfigurieren</string>
-  <string name="ambient_ticker_footer">Dieses Feature zeigt Informationen über den gerade wiedergegebenen Song auf dem Sperrbildschirm und auf dem Inaktivitätsdisplay an.\n\nDies funktioniert sobald ein Song im Gerät wiedergegeben wird und ohne dass das Inaktivitätsdisplay aktiviert ist.\n\nDie Ansicht stellt den Songtitel mittig auf dem Bildschirms dar.\n\nSie können auf den Songtitel doppeltippen, um zum nächsten Song zu springen.\n\nWenn Sie ein Pixel (ab der 2. Generation) besitzen und \"Now Playing\" sowie die zugehörige Benachrichtigung in den System-Audioeinstellungen aktivieren, dann funktioniert der Ambient Musik Ticker auch hiermit.</string>
+  <string name="ambient_ticker_footer">Dieses Feature zeigt Informationen über den gerade wiedergegebenen Song auf Sperrbildschirm und Inaktivitätsdisplay an.\n\nDies funktioniert sobald das Smartphone einen Song abspielt und ohne dass das Inaktivitätsdisplay aktiviert ist.\n\nDer Songtitel wird mittig auf dem Bildschirm dargestellt.\n\nSie können den Songtitel doppelt antippen, um zum nächsten Song zu wechseln.\n\nWenn Sie ein Pixel Smartphone (ab der 2. Generation) besitzen und \"Now Playing\" sowie die zugehörige Benachrichtigung in den System-Audioeinstellungen aktivieren, dann funktioniert der Ambient Musik Ticker auch hiermit.</string>
   <string name="force_ambient_for_media_title">Musik Ticker auf Sperrbildschirm zeigen</string>
   <string name="ambient_title">Ambient Musik</string>
 
