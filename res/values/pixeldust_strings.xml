@@ -921,4 +921,13 @@
     <string name="force_ambient_for_media_title">Show music ticker on lock screen</string>
     <string name="ambient_title">Ambient Music</string>
 
+    <!-- Active edge -->
+    <string name="active_edge_title">Active Edge</string>
+    <string name="active_edge_summary">Configure Active Edge options</string>
+    <string name="active_edge_actions_title">Squeeze action</string>
+    <string name="active_edge_sensitivity_title">Squeeze sensitivity</string>
+    <string name="active_edge_wake_title">Allow when screen is off</string>
+    <string name="active_edge_wake_summary">Trigger an action when the screen is off</string>
+    <string name="active_edge_footer_info">Not all squeeze actions within Active Edge have the capability to activate the display</string>
+
 </resources>

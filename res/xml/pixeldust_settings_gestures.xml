@@ -18,6 +18,13 @@
     android:title="@string/gestures_title"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
+    <Preference
+        android:key="active_edge_category"
+        android:icon="@drawable/dt_active_edge"
+        android:title="@string/active_edge_title"
+        android:summary="@string/active_edge_summary"
+        android:fragment="com.pixeldust.settings.fragments.ActiveEdge" />
+
     <com.pixeldust.settings.preferences.SystemSettingSwitchPreference
          android:key="double_tap_sleep_gesture"
          android:title="@string/double_tap_to_sleep_title"

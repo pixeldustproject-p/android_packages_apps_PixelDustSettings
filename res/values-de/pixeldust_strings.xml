@@ -891,4 +891,13 @@
   <string name="force_ambient_for_media_title">Musik Ticker auf Sperrbildschirm zeigen</string>
   <string name="ambient_title">Ambient Musik</string>
 
+  <!-- Active edge -->
+  <string name="active_edge_title">Active Edge</string>
+  <string name="active_edge_summary">Active Edge-Optionen konfigurieren</string>
+  <string name="active_edge_actions_title">Aktion beim Zusammendrücken</string>
+  <string name="active_edge_sensitivity_title">Druckstärke</string>
+  <string name="active_edge_wake_title">Bei deaktiviertem Bildschirm zulassen</string>
+  <string name="active_edge_wake_summary">Die eingestellte Aktion auch bei deaktiviertem Bildschirm auslösen</string>
+  <string name="active_edge_footer_info">Nicht alle Active Edge-Aktionen können auch den Bildschirm einschalten</string>
+
 </resources>
