@@ -21,6 +21,6 @@
     <bool name="showFullColorPickSummary">true</bool>
 
     <!-- Whether to display active edge category -->
-    <bool name="has_active_edge">true</bool>
+    <bool name="has_active_edge">false</bool>
 
 </resources>
