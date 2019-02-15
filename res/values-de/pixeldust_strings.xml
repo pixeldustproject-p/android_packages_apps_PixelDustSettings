@@ -900,4 +900,17 @@
   <string name="active_edge_wake_summary">Die eingestellte Aktion auch bei deaktiviertem Bildschirm auslösen</string>
   <string name="active_edge_footer_info">Nicht alle Active Edge-Aktionen können auch den Bildschirm einschalten</string>
 
+  <!-- Possible actions for Active edge -->
+  <string name="action_nothing">Keine Aktion</string>
+  <string name="action_search">Google Assistant</string>
+  <string name="action_voice_search">Sprachsuche</string>
+  <string name="action_launch_camera">Kamera</string>
+  <string name="action_flashlight">Taschenlampe</string>
+  <string name="action_clear_notifications">Benachrichtigungen löschen</string>
+  <string name="action_volume_panel">Lautstärkeregelung</string>
+  <string name="action_screen_off">Ruhezustand</string>
+  <string name="action_notifications">Benachrichtigungen</string>
+  <string name="action_screenshot">Bildschirmfoto</string>
+  <string name="action_qs_panel">Schnelleinstellungen</string>
+
 </resources>

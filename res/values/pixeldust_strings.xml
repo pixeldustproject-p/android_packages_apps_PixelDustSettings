@@ -930,4 +930,17 @@
     <string name="active_edge_wake_summary">Trigger an action when the screen is off</string>
     <string name="active_edge_footer_info">Not all squeeze actions within Active Edge have the capability to activate the display</string>
 
+    <!-- Possible actions for Active edge -->
+    <string name="action_nothing">No action</string>
+    <string name="action_search">Assistant</string>
+    <string name="action_voice_search">Voice search</string>
+    <string name="action_launch_camera">Camera</string>
+    <string name="action_flashlight">Flashlight</string>
+    <string name="action_clear_notifications">Clear notifications</string>
+    <string name="action_volume_panel">Volume panel</string>
+    <string name="action_screen_off">Screen off</string>
+    <string name="action_notifications">Notifications</string>
+    <string name="action_screenshot">Screenshot</string>
+    <string name="action_qs_panel">QS panel</string>
+
 </resources>
