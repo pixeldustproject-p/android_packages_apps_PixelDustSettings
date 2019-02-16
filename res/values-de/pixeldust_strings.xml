@@ -927,4 +927,8 @@
   <string name="action_mediaplay_action">Track abspielen/pausieren</string>
   <string name="action_ringer_modes">Ruftonmodus</string>
 
+  <!-- QSTile requires unlocking before being accessible -->
+  <string name="qstile_requires_unlocking_title">Sicherheitskritische Kacheln müssen entsperrt werden</string>
+  <string name="qstile_requires_unlocking_summary">Die folgenden Kacheln erfordern das Entsperren bevor sie genutzt werden können: Flugmodus, Energiesparmodus, Bluetooth, Mobile Daten, Datensync, NFC und WLAN.</string>
+
 </resources>

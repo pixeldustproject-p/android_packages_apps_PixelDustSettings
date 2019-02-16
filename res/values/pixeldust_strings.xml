@@ -957,4 +957,8 @@
     <string name="action_mediaplay_action">Media Play/Pause</string>
     <string name="action_ringer_modes">Ringer modes</string>
 
+    <!-- QSTile requires unlocking before being accessible -->
+    <string name="qstile_requires_unlocking_title">Secure tiles require unlocking</string>
+    <string name="qstile_requires_unlocking_summary">The following quick tiles require unlocking before you can acccess them from lock screen: airplane, battery saver, bluetooth, cellular, data saver, nfc and wifi.</string>
+
 </resources>

@@ -75,6 +75,12 @@
             android:summary="@string/block_on_secure_keyguard_summary"
             android:defaultValue="false"/>
 
+        <com.pixeldust.settings.preferences.SecureSettingSwitchPreference
+            android:key="qstile_requires_unlocking"
+            android:title="@string/qstile_requires_unlocking_title"
+            android:summary="@string/qstile_requires_unlocking_summary"
+            android:defaultValue="true"/>
+
         <com.pixeldust.settings.preferences.SystemSettingSwitchPreference
             android:key="bluetooth_qs_show_battery"
             android:title="@string/bluetooth_battery_title"
