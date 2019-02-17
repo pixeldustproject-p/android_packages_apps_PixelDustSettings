@@ -898,6 +898,8 @@
   <string name="active_edge_sensitivity_title">Druckstärke</string>
   <string name="active_edge_wake_title">Bei deaktiviertem Bildschirm zulassen</string>
   <string name="active_edge_wake_summary">Die eingestellte Aktion auch bei deaktiviertem Bildschirm auslösen</string>
+  <string name="active_edge_app_select_title">App auswählen</string>
+  <string name="active_edge_app_select_summary">App auswählen, die bei der Zusammendrücken-Aktion gestartet werden soll</string>
   <string name="active_edge_footer_info">Nicht alle Active Edge-Aktionen können auch den Bildschirm einschalten</string>
 
   <!-- Possible actions for Active edge -->
@@ -912,5 +914,6 @@
   <string name="action_notifications">Benachrichtigungen</string>
   <string name="action_screenshot">Bildschirmfoto</string>
   <string name="action_qs_panel">Schnelleinstellungen</string>
+  <string name="action_app_action">Anwendung</string>
 
 </resources>

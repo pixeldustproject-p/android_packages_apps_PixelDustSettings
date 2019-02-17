@@ -51,8 +51,13 @@ public class ActiveEdge extends SettingsPreferenceFragment
 
     private boolean mVideoPaused;
 
+    private static final String KEY_SQUEEZE_APP_SELECTION = "squeeze_app_selection";
+
+    private int activeEdgeActions;
+
     private CustomSeekBarPreference mActiveEdgeSensitivity;
     private ListPreference mActiveEdgeActions;
+    private Preference mActiveEdgeAppSelection;
     private SwitchPreference mActiveEdgeWake;
     private VideoPreference mVideoPreference;
 
@@ -69,7 +74,7 @@ public class ActiveEdge extends SettingsPreferenceFragment
 
         mVideoPreference = (VideoPreference) findPreference(KEY_SQUEEZE_VIDEO);
 
-        int activeEdgeActions = Settings.Secure.getIntForUser(resolver,
+        activeEdgeActions = Settings.Secure.getIntForUser(resolver,
                 Settings.Secure.SQUEEZE_SELECTION, 0,
                 UserHandle.USER_CURRENT);
         mActiveEdgeActions = (ListPreference) findPreference("squeeze_selection");
@@ -88,6 +93,11 @@ public class ActiveEdge extends SettingsPreferenceFragment
                 Settings.Secure.ASSIST_GESTURE_WAKE_ENABLED, 1,
                 UserHandle.USER_CURRENT) == 1));
         mActiveEdgeWake.setOnPreferenceChangeListener(this);
+
+        mActiveEdgeAppSelection = (Preference) findPreference(KEY_SQUEEZE_APP_SELECTION);
+
+        mActiveEdgeAppSelection.setEnabled(mActiveEdgeActions.getEntryValues()
+                [activeEdgeActions].equals("11"));
     }
 
     @Override
@@ -115,13 +125,15 @@ public class ActiveEdge extends SettingsPreferenceFragment
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         if (preference == mActiveEdgeActions) {
-            int value = Integer.valueOf((String) newValue);
+            int activeEdgeActions = Integer.valueOf((String) newValue);
             Settings.Secure.putIntForUser(getContentResolver(),
-                    Settings.Secure.SQUEEZE_SELECTION, value,
+                    Settings.Secure.SQUEEZE_SELECTION, activeEdgeActions,
                     UserHandle.USER_CURRENT);
             int index = mActiveEdgeActions.findIndexOfValue((String) newValue);
             mActiveEdgeActions.setSummary(
                     mActiveEdgeActions.getEntries()[index]);
+            mActiveEdgeAppSelection.setEnabled(mActiveEdgeActions.getEntryValues()
+                    [activeEdgeActions].equals("11"));
             return true;
         } else if (preference == mActiveEdgeSensitivity) {
             int val = (Integer) newValue;
