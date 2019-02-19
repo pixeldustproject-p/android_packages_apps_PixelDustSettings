@@ -96,6 +96,7 @@ public class ActiveEdge extends SettingsPreferenceFragment
 
         mActiveEdgeAppSelection = (Preference) findPreference(KEY_SQUEEZE_APP_SELECTION);
 
+        customAppCheck();
         mActiveEdgeAppSelection.setEnabled(mActiveEdgeActions.getEntryValues()
                 [activeEdgeActions].equals("11"));
     }
@@ -112,6 +113,7 @@ public class ActiveEdge extends SettingsPreferenceFragment
             mVideoPaused = mVideoPreference.isVideoPaused();
             mVideoPreference.onViewInvisible();
         }
+        customAppCheck();
     }
 
     @Override
@@ -120,6 +122,7 @@ public class ActiveEdge extends SettingsPreferenceFragment
         if (mVideoPreference != null) {
             mVideoPreference.onViewVisible(mVideoPaused);
         }
+        customAppCheck();
     }
 
     @Override
@@ -132,6 +135,7 @@ public class ActiveEdge extends SettingsPreferenceFragment
             int index = mActiveEdgeActions.findIndexOfValue((String) newValue);
             mActiveEdgeActions.setSummary(
                     mActiveEdgeActions.getEntries()[index]);
+            customAppCheck();
             mActiveEdgeAppSelection.setEnabled(mActiveEdgeActions.getEntryValues()
                     [activeEdgeActions].equals("11"));
             return true;
@@ -149,6 +153,11 @@ public class ActiveEdge extends SettingsPreferenceFragment
             return true;
         }
         return false;
+    }
+
+    private void customAppCheck() {
+        mActiveEdgeAppSelection.setSummary(Settings.Secure.getString(getActivity().getContentResolver(),
+                String.valueOf(Settings.Secure.SQUEEZE_CUSTOM_APP_FR_NAME)));
     }
 
     @Override
