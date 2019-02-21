@@ -33,10 +33,10 @@ import android.support.v7.preference.Preference.OnPreferenceChangeListener;
 import android.support.v14.preference.SwitchPreference;
 
 import com.android.internal.logging.nano.MetricsProto;
-import com.android.internal.util.hwkeys.Config;
-import com.android.internal.util.hwkeys.Config.ButtonConfig;
-import com.android.internal.util.hwkeys.ActionConstants;
-import com.android.internal.util.hwkeys.ActionUtils;
+import com.android.internal.utils.Config;
+import com.android.internal.utils.Config.ButtonConfig;
+import com.android.internal.utils.ActionConstants;
+import com.android.internal.utils.ActionUtils;
 import com.android.settings.R;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settings.search.Indexable;

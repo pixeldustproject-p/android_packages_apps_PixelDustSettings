@@ -47,10 +47,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.internal.logging.nano.MetricsProto;
-import com.android.internal.util.hwkeys.ActionConstants;
-import com.android.internal.util.hwkeys.ActionHandler;
-import com.android.internal.util.hwkeys.ActionUtils;
-import com.android.internal.util.hwkeys.Config.ButtonConfig;
+import com.android.internal.utils.ActionConstants;
+import com.android.internal.utils.ActionHandler;
+import com.android.internal.utils.ActionUtils;
+import com.android.internal.utils.Config.ButtonConfig;
 import com.android.settings.R;
 
 import com.pixeldust.settings.preferences.ActionFragment;

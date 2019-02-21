@@ -44,8 +44,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.AdapterView.OnItemClickListener;
 
-import com.android.internal.util.hwkeys.ActionHandler;
-import com.android.internal.util.hwkeys.ActionUtils;
+import com.android.internal.utils.ActionHandler;
+import com.android.internal.utils.ActionUtils;
 import com.android.settings.R;
 
 import java.io.InputStream;

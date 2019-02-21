@@ -33,8 +33,8 @@ import android.widget.ImageView.ScaleType;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.android.internal.util.hwkeys.ActionHandler;
-import com.android.internal.util.hwkeys.Config.ActionConfig;
+import com.android.internal.utils.ActionHandler;
+import com.android.internal.utils.Config.ActionConfig;
 
 import com.android.settings.R;
 

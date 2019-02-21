@@ -22,11 +22,11 @@ package com.pixeldust.settings.preferences;
 
 import java.util.Map;
 
-import com.android.internal.util.hwkeys.ActionConstants.ConfigMap;
-import com.android.internal.util.hwkeys.ActionConstants.Defaults;
-import com.android.internal.util.hwkeys.ActionHolder;
-import com.android.internal.util.hwkeys.Config.ActionConfig;
-import com.android.internal.util.hwkeys.Config.ButtonConfig;
+import com.android.internal.utils.ActionConstants.ConfigMap;
+import com.android.internal.utils.ActionConstants.Defaults;
+import com.android.internal.utils.ActionHolder;
+import com.android.internal.utils.Config.ActionConfig;
+import com.android.internal.utils.Config.ButtonConfig;
 
 import android.content.Context;
 import android.support.v7.preference.Preference;

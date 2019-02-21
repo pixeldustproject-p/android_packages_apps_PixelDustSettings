@@ -19,9 +19,9 @@
 
 package com.pixeldust.settings.preferences;
 
-import com.android.internal.util.hwkeys.ActionHandler;
-import com.android.internal.util.hwkeys.ActionUtils;
-import com.android.internal.util.hwkeys.Config.ActionConfig;
+import com.android.internal.utils.ActionHandler;
+import com.android.internal.utils.ActionUtils;
+import com.android.internal.utils.Config.ActionConfig;
 
 import android.app.Activity;
 import android.app.AlertDialog;

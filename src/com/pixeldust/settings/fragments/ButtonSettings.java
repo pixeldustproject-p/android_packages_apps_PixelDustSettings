@@ -33,8 +33,8 @@ import android.support.v14.preference.SwitchPreference;
 import android.widget.Toast;
 
 import com.android.internal.logging.nano.MetricsProto;
-import com.android.internal.util.hwkeys.ActionConstants;
-import com.android.internal.util.hwkeys.ActionUtils;
+import com.android.internal.utils.ActionConstants;
+import com.android.internal.utils.ActionUtils;
 import com.android.settings.R;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settings.search.Indexable;

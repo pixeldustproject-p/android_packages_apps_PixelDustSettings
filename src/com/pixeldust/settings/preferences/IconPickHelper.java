@@ -27,8 +27,8 @@ import android.os.Environment;
 import android.util.Log;
 import android.widget.Toast;
 
-import com.android.internal.util.hwkeys.ImageHelper;
-import com.android.internal.util.hwkeys.ActionUtils;
+import com.android.internal.utils.ImageHelper;
+import com.android.internal.utils.ActionUtils;
 import com.android.settings.R;
 
 import java.io.File;
