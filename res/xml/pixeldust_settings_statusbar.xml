@@ -38,6 +38,15 @@
         settings:min="0"
         settings:units="" />
 
+    <com.pixeldust.settings.preferences.CustomSeekBarPreference
+        android:key="network_traffic_refresh_interval"
+        android:title="@string/network_traffic_refresh_interval_title"
+        android:summary="@string/network_traffic_refresh_interval_summary"
+        android:defaultValue="2"
+        android:max="10"
+        settings:min="1"
+        settings:units="@string/unit_seconds" />
+
     <com.pixeldust.settings.preferences.SystemSettingSwitchPreference
         android:key="use_old_mobiletype"
         android:title="@string/use_old_mobiletype_title"

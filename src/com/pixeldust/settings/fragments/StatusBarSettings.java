@@ -67,6 +67,7 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements
         OnPreferenceChangeListener, Indexable {
 
     private CustomSeekBarPreference mThreshold;
+    private CustomSeekBarPreference mNetTrafficRefreshInterval;
     private SystemSettingSwitchPreference mNetMonitor;
 
     private static final String STATUS_BAR_CLOCK = "status_bar_clock";
@@ -133,6 +134,14 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements
         mThreshold.setValue(value);
         mThreshold.setOnPreferenceChangeListener(this);
         mThreshold.setEnabled(isNetMonitorEnabled);
+
+        value = Settings.System.getIntForUser(resolver,
+                Settings.System.NETWORK_TRAFFIC_REFRESH_INTERVAL, 2, UserHandle.USER_CURRENT);
+        mNetTrafficRefreshInterval = (CustomSeekBarPreference)
+                findPreference("network_traffic_refresh_interval");
+        mNetTrafficRefreshInterval.setValue(value);
+        mNetTrafficRefreshInterval.setOnPreferenceChangeListener(this);
+        mNetTrafficRefreshInterval.setEnabled(isNetMonitorEnabled);
 
         //Use pre P_mobile type icon style
         mOldMobiletype = (SwitchPreference) findPreference(USE_OLD_MOBILETYPE);
@@ -242,11 +251,18 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements
                     UserHandle.USER_CURRENT);
             mNetMonitor.setChecked(value);
             mThreshold.setEnabled(value);
+            mNetTrafficRefreshInterval.setEnabled(value);
             return true;
         } else if (preference == mThreshold) {
             int val = (Integer) objValue;
             Settings.System.putIntForUser(getContentResolver(),
                     Settings.System.NETWORK_TRAFFIC_AUTOHIDE_THRESHOLD, val,
+                    UserHandle.USER_CURRENT);
+            return true;
+        } else if (preference == mNetTrafficRefreshInterval) {
+            int val = (Integer) objValue;
+            Settings.System.putIntForUser(getContentResolver(),
+                    Settings.System.NETWORK_TRAFFIC_REFRESH_INTERVAL, val,
                     UserHandle.USER_CURRENT);
             return true;
         } else if (preference == mOldMobiletype) {

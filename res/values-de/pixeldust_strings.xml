@@ -163,6 +163,11 @@
   <string name="network_traffic_state_title">Netzwerkverkehr</string>
   <string name="network_traffic_state_summary">Netzwerkaktivität in Statusleiste anzeigen</string>
   <string name="network_traffic_autohide_threshold_title">Netzwerkaktivität anzeigen ab (kB/s)</string>
+  <string name="network_traffic_refresh_interval_title">Aktualisierungsintervall</string>
+  <string name="network_traffic_refresh_interval_summary">Dauer, nach der die Netzwerkaktivität erneut gemessen wird</string>
+
+  <!-- Units -->
+  <string name="unit_seconds">Sekunden</string>
 
   <!-- Statusbar Clock & Date -->
   <string name="date_cat">Datum</string>
