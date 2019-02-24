@@ -899,11 +899,13 @@
   <!-- Active edge -->
   <string name="active_edge_title">Active Edge</string>
   <string name="active_edge_summary">Active Edge-Optionen konfigurieren, funktioniert noch nicht mit Smartbar oder Fling</string>
-  <string name="active_edge_actions_title">Aktion beim Zusammendrücken</string>
+  <string name="active_edge_short_actions_title">Aktion bei kurzem Zusammendrücken</string>
+  <string name="active_edge_long_actions_title">Aktion bei langem Zusammendrücken</string>
   <string name="active_edge_sensitivity_title">Druckstärke</string>
   <string name="active_edge_wake_title">Bei deaktiviertem Bildschirm zulassen</string>
   <string name="active_edge_wake_summary">Die eingestellte Aktion auch bei deaktiviertem Bildschirm auslösen</string>
-  <string name="active_edge_app_select_title">App auswählen</string>
+  <string name="active_edge_ss_app_select_title">App bei kurzem Zusammendrücken auswählen</string>
+  <string name="active_edge_ls_app_select_title">App bei langem Zusammendrücken auswählen</string>
   <string name="active_edge_app_select_summary">App auswählen, die bei der Zusammendrücken-Aktion gestartet werden soll</string>
   <string name="active_edge_footer_info">Nicht alle Active Edge-Aktionen können auch den Bildschirm einschalten</string>
 
