@@ -907,7 +907,7 @@
   <string name="active_edge_ss_app_select_title">App bei kurzem Zusammendrücken auswählen</string>
   <string name="active_edge_ls_app_select_title">App bei langem Zusammendrücken auswählen</string>
   <string name="active_edge_app_select_summary">App auswählen, die bei der Zusammendrücken-Aktion gestartet werden soll</string>
-  <string name="active_edge_footer_info">Nicht alle Active Edge-Aktionen können auch den Bildschirm einschalten</string>
+  <string name="active_edge_footer_info">Nicht alle Active Edge-Aktionen können auch den Bildschirm einschalten.\n\nApps im App-Auswahl-Menü lange drücken, um eine bestimmte Aktivität anzeigen und auswählen zu können.</string>
 
   <!-- Possible actions for Active edge -->
   <string name="action_nothing">Keine Aktion</string>
