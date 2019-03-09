@@ -78,6 +78,7 @@
   <string name="powermenu_users">Benutzer</string>
   <string name="powermenu_logout">Abmelden</string>
   <string name="powermenu_torch">Taschenlampe</string>
+  <string name="powermenu_soundpanel">Ton-Einstellungen</string>
 
   <!-- QS Brightness -->
   <string name="brightness_cat">Helligkeit</string>

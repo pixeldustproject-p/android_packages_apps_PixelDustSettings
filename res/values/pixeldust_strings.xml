@@ -75,6 +75,7 @@
     <string name="powermenu_users">Users</string>
     <string name="powermenu_logout">Logout</string>
     <string name="powermenu_torch">Flashlight</string>
+    <string name="powermenu_soundpanel">Soundpanel</string>
 
     <!-- QS Brightness -->
     <string name="brightness_cat">Brightness</string>

@@ -41,6 +41,11 @@
             android:defaultValue="true" />
 
          <com.pixeldust.settings.preferences.SystemSettingSwitchPreference
+            android:key="powermenu_lockdown"
+            android:title="@string/powermenu_lockdown"
+            android:defaultValue="false" />
+
+         <com.pixeldust.settings.preferences.SystemSettingSwitchPreference
             android:key="powermenu_screenshot"
             android:title="@string/powermenu_screenshot"
             android:defaultValue="false" />
@@ -61,11 +66,6 @@
             android:defaultValue="false" />
 
          <com.pixeldust.settings.preferences.SystemSettingSwitchPreference
-            android:key="powermenu_lockdown"
-            android:title="@string/powermenu_lockdown"
-            android:defaultValue="false" />
-
-         <com.pixeldust.settings.preferences.SystemSettingSwitchPreference
             android:key="powermenu_users"
             android:title="@string/powermenu_users"
             android:defaultValue="false" />
@@ -74,4 +74,10 @@
             android:key="powermenu_logout"
             android:title="@string/powermenu_logout"
             android:defaultValue="false" />
+
+         <com.pixeldust.settings.preferences.SystemSettingSwitchPreference
+            android:key="powermenu_soundpanel"
+            android:title="@string/powermenu_soundpanel"
+            android:defaultValue="false" />
+
 </PreferenceScreen>
